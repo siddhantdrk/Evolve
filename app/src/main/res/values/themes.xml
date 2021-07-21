@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Evolve" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Evolve" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_color</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -12,5 +12,23 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="latoregularfont">
+        <item name="fontFamily">@fonts/Lato-Regular</item>
+        <item name="android:fontFamily">@fonts/Lato-Regular</item>
+    </style>
+
+    <style name="Baroque" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#F2BAD0</item>
+        <item name="android:textSize">14pt</item>
+        <item name="fontFamily">@fonts/Lato-Regular</item>
+    </style>
+
+    <style name="latoboldfont" parent="TextAppearance.AppCompat.Body1">
+        <item name="fontFamily">@fonts/Lato-Bold.ttf</item>
+        <item name="android:fontFamily">@fonts/Lato-Boldttf</item>
     </style>
 </resources>

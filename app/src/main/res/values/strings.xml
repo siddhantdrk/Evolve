@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Evolve</string>
+
+    <!--font name-->
+    <string name="lato_regular">fonts/Lato-Regular.ttf</string>
+    <string name="lato_bold">fonts/Lato-Bold.ttf</string>
+    <string name="lato_ligth">fonts/Lato-Light.ttf</string>
+
+
+    <string name="manage_your_career_and_live_a_more_enriched_lifestyle_the_evolution_of_the_athlete_lives_here">Manage your career and live a more enriched lifestyle. The evolution of the athlete lives here!</string>
+    <string name="get_started">Get Started</string>
+    <string name="login">Login</string>
+    <string name="email">EMAIL</string>
+    <string name="password">PASSWORD</string>
+    <string name="create_your_account">Create your account</string>
+    <string name="full_name">FULL NAME</string>
+    <string name="phone_number">PHONE NUMBER</string>
+    <string name="confirm_password">CONFIRM PASSWORD</string>
+    <string name="request_access">Request Access</string>
+    <string name="request_sent">Request Sent</string>
+    <string name="request_sent_summary">A member of our team is reviewing your details. We’ll text you when your account is ready.</string>
 </resources>
