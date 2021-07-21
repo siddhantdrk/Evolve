@@ -17,6 +17,6 @@
     <string name="phone_number">PHONE NUMBER</string>
     <string name="confirm_password">CONFIRM PASSWORD</string>
     <string name="request_access">Request Access</string>
-    <string name="request_sent">Request Sent</string>
+    <string name="request_sent">Request Sent !</string>
     <string name="request_sent_summary">A member of our team is reviewing your details. We’ll text you when your account is ready.</string>
 </resources>
