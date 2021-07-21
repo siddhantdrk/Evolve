@@ -15,10 +15,12 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/tv_request_access"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_create_account">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+            android:layout_gravity="center"
             android:layout_height="wrap_content">
 
             <LinearLayout
@@ -43,8 +45,8 @@
                 <com.android.hauntapp.CommonUtils.CustomViews.CustomRegularEditText
                     android:id="@+id/et_phone_number"
                     android:layout_width="0dp"
-                    android:layout_marginStart="8dp"
                     android:layout_height="@dimen/edit_text_height"
+                    android:layout_marginStart="8dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:inputType="phone"
