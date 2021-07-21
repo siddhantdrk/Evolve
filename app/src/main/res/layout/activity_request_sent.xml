@@ -35,13 +35,13 @@
         android:id="@+id/txt_request_summary"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
         android:gravity="center"
         android:text="@string/request_sent_summary"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_request_sent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
