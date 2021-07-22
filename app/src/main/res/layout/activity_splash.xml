@@ -14,47 +14,50 @@
         android:layout_height="0dp"
         android:layout_marginStart="37dp"
         android:layout_marginEnd="225dp"
+        android:layout_marginBottom="17.38dp"
         android:scaleType="fitXY"
-        app:layout_constraintDimensionRatio="166:32.55"
-        android:src="@mipmap/ic_launcher_round"
+        android:src="@mipmap/ic_launcher"
         app:layout_constraintBottom_toTopOf="@+id/splash_app_content"
+        app:layout_constraintDimensionRatio="166:32.55"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.android.hauntapp.CommonUtils.CustomViews.CustomRegurlarTextView
+    <TextView
         android:id="@+id/splash_app_content"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="162dp"
+        android:fontFamily="@font/lato"
         android:text="@string/manage_your_career_and_live_a_more_enriched_lifestyle_the_evolution_of_the_athlete_lives_here"
         android:textColor="@color/light_grey"
-        android:textSize="16sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.android.hauntapp.CommonUtils.CustomViews.CustomRegurlarTextView
+    <TextView
         android:id="@+id/tv_get_started"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="45.99dp"
+        android:fontFamily="@font/lato_bold"
         android:text="@string/get_started"
         android:textColor="@color/primary_color"
-        app:fontFamily="@string/lato_regular"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/splash_app_content" />
 
-    <com.android.hauntapp.CommonUtils.CustomViews.CustomBoldTextView
+    <TextView
         android:id="@+id/tv_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="71dp"
+        android:fontFamily="@font/lato_bold"
         android:text="@string/login"
         android:textColor="@color/primary_color"
-        android:textSize="20sp"
-        app:fontFamily="@string/lato_regular"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
