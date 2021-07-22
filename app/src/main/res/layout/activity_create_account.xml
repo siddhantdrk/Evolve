@@ -77,7 +77,7 @@
                 android:fontFamily="@font/lato"
                 android:textColorHighlight="@color/text_color"
                 android:backgroundTint="@color/border_color"
-                android:text="Jori Davis"
+                android:text="Davis.jori@gmail.com"
                 android:textColor="@color/text_color"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
