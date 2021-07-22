@@ -5,222 +5,212 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_background"
-    android:padding="20dp"
     tools:context=".CreateAccount">
-
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_request_access"
+        android:layout_marginBottom="86.25dp"
+        android:layout_marginTop="48.25dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_request_access"
         app:layout_constraintTop_toBottomOf="@+id/txt_create_account">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/ll_phone_number"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txt_phone_number">
-
-                <com.rilixtech.widget.countrycodepicker.CountryCodePicker
-                    android:layout_width="0dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="bottom"
-                    android:layout_weight="0.2"
-                    android:background="#e3e3e3"
-                    android:gravity="center"
-                    app:ccp_defaultCode="91"
-                    app:ccp_hideNameCode="true"
-                    app:ccp_showFlag="false" />
-
-                <com.android.hauntapp.CommonUtils.CustomViews.CustomRegularEditText
-                    android:id="@+id/et_phone_number"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/edit_text_height"
-                    android:layout_marginStart="8dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    android:inputType="phone"
-                    android:text="1234567890"
-                    android:textColor="@color/text_color"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_full_name" />
-
-            </LinearLayout>
-
-
-            <View
-                android:id="@+id/password_view"
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp"
-                android:background="@color/border_color"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_password" />
-
-            <View
-                android:id="@+id/confirm_password_view"
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp"
-                android:background="@color/border_color"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_confirm_password" />
-
-            <View
-                android:id="@+id/phone_view"
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp"
-                android:background="@color/border_color"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ll_phone_number" />
-
-
-            <View
-                android:id="@+id/email_view"
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp"
-                android:background="@color/border_color"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_email" />
-
-            <View
-                android:id="@+id/full_name_view"
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp"
-                android:background="@color/border_color"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_full_name" />
-
-            <com.android.hauntapp.CommonUtils.CustomViews.CustomRegularEditText
-                android:id="@+id/et_password"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/edit_text_height"
-                android:background="@android:color/transparent"
-                android:inputType="textPassword"
-                android:text="Jori Davis"
-                android:textColor="@color/text_color"
-                app:layout_constraintTop_toBottomOf="@+id/txt_password" />
-
-
-            <com.android.hauntapp.CommonUtils.CustomViews.CustomRegularEditText
-                android:id="@+id/et_confirm_password"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/edit_text_height"
-                android:background="@android:color/transparent"
-                android:inputType="textPassword"
-                android:text="Jori Davis"
-                android:textColor="@color/text_color"
-                app:layout_constraintTop_toBottomOf="@+id/txt_confirm_password" />
-
-            <com.android.hauntapp.CommonUtils.CustomViews.CustomRegularEditText
-                android:id="@+id/et_email"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/edit_text_height"
-                android:background="@android:color/transparent"
-                android:inputType="textEmailAddress"
-                android:text="Davis.jori@gmail.com"
-                android:textColor="@color/text_color"
-                app:layout_constraintTop_toBottomOf="@+id/txt_email" />
-
-            <com.android.hauntapp.CommonUtils.CustomViews.CustomRegularEditText
-                android:id="@+id/et_full_name"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/edit_text_height"
-                android:background="@android:color/transparent"
-                android:text="Jori Davis"
-                android:textColor="@color/text_color"
-                app:layout_constraintTop_toBottomOf="@+id/txt_full_name" />
-
-            <com.android.hauntapp.CommonUtils.CustomViews.CustomRegurlarTextView
-                android:id="@+id/txt_password"
+            <TextView
+                android:id="@+id/txt_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/password"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="38dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/full_name"
                 android:textColor="@color/text_color"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/phone_view" />
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/et_email"
+                app:layout_constraintStart_toStartOf="parent" />
 
-            <com.android.hauntapp.CommonUtils.CustomViews.CustomRegurlarTextView
-                android:id="@+id/txt_confirm_password"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/et_fullname"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/confirm_password"
+                android:paddingBottom="18dp"
+                android:layout_marginStart="37dp"
+                android:layout_marginEnd="37dp"
+                android:fontFamily="@font/lato"
+                android:textColorHighlight="@color/text_color"
+                android:backgroundTint="@color/border_color"
+                android:text="Jori Davis"
                 android:textColor="@color/text_color"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/password_view" />
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <com.android.hauntapp.CommonUtils.CustomViews.CustomRegurlarTextView
+            <TextView
                 android:id="@+id/txt_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="38dp"
+                android:fontFamily="@font/lato"
+                android:layout_marginTop="35.5dp"
                 android:text="@string/email"
                 android:textColor="@color/text_color"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/full_name_view" />
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/et_email"
+                app:layout_constraintStart_toStartOf="parent" />
 
-
-            <com.android.hauntapp.CommonUtils.CustomViews.CustomRegurlarTextView
-                android:id="@+id/txt_phone_number"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/phone_number"
+                android:paddingBottom="18dp"
+                android:layout_marginStart="37dp"
+                android:layout_marginEnd="37dp"
+                android:inputType="textEmailAddress"
+                android:fontFamily="@font/lato"
+                android:textColorHighlight="@color/text_color"
+                android:backgroundTint="@color/border_color"
+                android:text="Jori Davis"
                 android:textColor="@color/text_color"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/email_view" />
-
-            <com.android.hauntapp.CommonUtils.CustomViews.CustomRegurlarTextView
-                android:id="@+id/txt_full_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/full_name"
-                android:textColor="@color/text_color"
-                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/txt_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="38dp"
+                android:fontFamily="@font/lato"
+                android:layout_marginTop="35.5dp"
+                android:text="@string/phone_number"
+                android:textColor="@color/text_color"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/et_email"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginEnd="37dp">
+
+                <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                    android:layout_width="50dp"
+                    android:background="#B9B9B9"
+                    app:ccp_showFlag="false"
+                    app:ccp_hideNameCode="true"
+                    android:gravity="center"
+                    android:layout_height="32dp"/>
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/border_color"
+                    android:fontFamily="@font/lato"
+                    android:inputType="phone"
+                    android:paddingStart="52dp"
+                    android:paddingBottom="18dp"
+                    android:text="1234567890"
+                    android:textColor="@color/text_color"
+                    android:textColorHighlight="@color/text_color"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="38dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/password"
+                android:textColor="@color/text_color"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="8dp"
+                android:textColorHighlight="@color/text_color"
+                android:backgroundTint="@color/border_color"
+                android:layout_marginEnd="37dp"
+                android:fontFamily="@font/lato"
+                android:paddingBottom="18dp"
+                android:inputType="textPassword"
+                android:text="1234567890"
+                android:textColor="@color/text_color"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/txt_confrim_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="38dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/confirm_password"
+                android:textColor="@color/text_color"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="8dp"
+                android:textColorHighlight="@color/text_color"
+                android:backgroundTint="@color/border_color"
+                android:layout_marginEnd="37dp"
+                android:fontFamily="@font/lato"
+                android:paddingBottom="18dp"
+                android:inputType="textPassword"
+                android:text="1234567890"
+                android:textColor="@color/text_color"
+                android:textSize="20sp" />
+
+        </LinearLayout>
     </ScrollView>
 
 
-    <com.android.hauntapp.CommonUtils.CustomViews.CustomBoldTextView
-        android:id="@+id/txt_create_account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_marginTop="52dp"
-        android:text="@string/create_your_account"
-        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
-        android:textColor="@color/primary_color"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.android.hauntapp.CommonUtils.CustomViews.CustomBoldTextView
+    <TextView
         android:id="@+id/tv_request_access"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:drawableEnd="@drawable/ic_arrow_right"
-        android:textSize="16sp"
+        android:layout_marginBottom="122dp"
+        android:fontFamily="@font/lato_bold"
         android:text="@string/request_access"
         android:textColor="@color/primary_color"
-        app:fontFamily="@string/lato_bold"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:drawableEndCompat="@drawable/ic_arrow_right" />
+
+    <TextView
+        android:id="@+id/txt_create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="142dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/create_your_account"
+        android:textColor="@color/primary_color"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
