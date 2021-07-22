@@ -13,6 +13,7 @@
         android:layout_marginBottom="86.25dp"
         android:layout_marginTop="48.25dp"
         app:layout_constraintEnd_toEndOf="parent"
+        android:scrollbarSize="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tv_request_access"
         app:layout_constraintTop_toBottomOf="@+id/txt_create_account">
