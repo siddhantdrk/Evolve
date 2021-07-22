@@ -26,13 +26,14 @@
         android:id="@+id/splash_app_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
         android:layout_marginEnd="162dp"
+        android:layout_marginStart="37dp"
         android:fontFamily="@font/lato"
         android:text="@string/manage_your_career_and_live_a_more_enriched_lifestyle_the_evolution_of_the_athlete_lives_here"
         android:textColor="@color/light_grey"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
