@@ -107,13 +107,13 @@
                     android:layout_width="50dp"
                     android:background="@drawable/ccp_round_corner_bg"
                     app:ccp_showFlag="false"
-                    android:layout_marginStart="2dp"
-                    android:layout_marginTop="4dp"
-                    android:padding="4dp"
-                    app:ccp_textSize="16sp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="2dp"
+                    app:ccp_arrowSize="20dp"
+                    app:ccp_textSize="14sp"
                     app:ccp_hideNameCode="true"
                     android:gravity="center"
-                    android:layout_height="32dp"/>
+                    android:layout_height="32dp" />
 
                 <EditText
                     android:id="@+id/et_phone"
@@ -122,12 +122,12 @@
                     android:backgroundTint="@color/border_color"
                     android:fontFamily="@font/lato"
                     android:inputType="phone"
-                    android:paddingStart="60dp"
+                    android:paddingStart="64dp"
                     android:paddingBottom="18dp"
                     android:text="1234567890"
                     android:textColor="@color/text_color"
                     android:textColorHighlight="@color/text_color"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="RtlSymmetry" />
