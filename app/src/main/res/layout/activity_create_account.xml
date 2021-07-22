@@ -105,8 +105,10 @@
 
                 <com.rilixtech.widget.countrycodepicker.CountryCodePicker
                     android:layout_width="50dp"
-                    android:background="#B9B9B9"
+                    android:background="@drawable/ccp_round_corner_bg"
                     app:ccp_showFlag="false"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="4dp"
                     app:ccp_hideNameCode="true"
                     android:gravity="center"
                     android:layout_height="32dp"/>
@@ -118,14 +120,15 @@
                     android:backgroundTint="@color/border_color"
                     android:fontFamily="@font/lato"
                     android:inputType="phone"
-                    android:paddingStart="52dp"
+                    android:paddingStart="60dp"
                     android:paddingBottom="18dp"
                     android:text="1234567890"
                     android:textColor="@color/text_color"
                     android:textColorHighlight="@color/text_color"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlSymmetry" />
             </RelativeLayout>
 
             <TextView
