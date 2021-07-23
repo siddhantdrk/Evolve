@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/app_background"
-    tools:context=".CreateAccount">
+    android:fillViewport="true"
+    android:layout_height="match_parent">
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="86.25dp"
-        android:layout_marginTop="48.25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:scrollbarSize="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tv_request_access"
-        app:layout_constraintTop_toBottomOf="@+id/txt_create_account">
+        android:layout_height="wrap_content"
+        android:paddingBottom="122dp"
+        android:background="@color/app_background"
+        tools:context=".CreateAccount">
+
 
         <LinearLayout
+            android:id="@+id/ll_create_account"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="0dp"
+            android:layout_marginTop="48.25dp"
+            android:layout_marginBottom="86.25dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_create_account">
 
             <TextView
                 android:id="@+id/txt_name"
@@ -190,34 +192,33 @@
                 android:textSize="20sp" />
 
         </LinearLayout>
-    </ScrollView>
 
+        <TextView
+            android:id="@+id/tv_request_access"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/request_access"
+            android:layout_marginTop="86.25dp"
+            android:textColor="@color/primary_color"
+            android:textSize="18sp"
+            app:drawableEndCompat="@drawable/ic_arrow_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_create_account" />
 
-    <TextView
-        android:id="@+id/tv_request_access"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="122dp"
-        android:fontFamily="@font/lato_bold"
-        android:text="@string/request_access"
-        android:textColor="@color/primary_color"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:drawableEndCompat="@drawable/ic_arrow_right" />
+        <TextView
+            android:id="@+id/txt_create_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="142dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/create_your_account"
+            android:textColor="@color/primary_color"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txt_create_account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="142dp"
-        android:fontFamily="@font/lato_bold"
-        android:text="@string/create_your_account"
-        android:textColor="@color/primary_color"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
