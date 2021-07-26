@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/profile_setup_bg"
     android:background="@color/profile_setup_bg">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -124,7 +125,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="188dp"
-            android:fontFamily="@font/lato"
+            android:fontFamily="@font/lato_bold"
             android:text="@string/continue_"
             android:textColor="@color/app_background"
             android:textSize="14sp"

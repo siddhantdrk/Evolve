@@ -41,6 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="23dp"
             android:layout_marginEnd="38dp"
+            android:lineSpacingExtra="4dp"
             android:fontFamily="@font/lato"
             android:layout_marginTop="22.76dp"
             android:text="@string/onboarding_content"
