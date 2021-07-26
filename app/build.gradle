@@ -45,4 +45,7 @@ dependencies {
 
     //ccp
     implementation 'com.github.joielechong:countrycodepicker:2.4.2'
+
+    //circular imageview
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

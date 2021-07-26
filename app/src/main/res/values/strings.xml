@@ -19,4 +19,17 @@
     <string name="request_access">Request Access</string>
     <string name="request_sent">Request Sent !</string>
     <string name="request_sent_summary">A member of our team is reviewing your details. We’ll text you when your account is ready.</string>
+    <string name="choose">Choose</string>
+    <string name="onboarding_content">Add your bio and team history so that you can track your career growth and connect with teammates.</string>
+    <string name="step_1">STEP 1</string>
+    <string name="step_1_bio_and_team_history">Step 1: Bio and Team History</string>
+    <string name="enter_your_birthdate">Enter your Birthdate</string>
+    <string name="month">Month</string>
+    <string name="day">Day</string>
+    <string name="year">Year</string>
+    <string name="where_are_you_from">Where are you from?</string>
+    <string name="begin_typing_your_city">Begin typing your city</string>
+    <string name="where_are_you_currently_located">Where are you currently located?</string>
+    <string name="use_current_location">Use current location</string>
+    <string name="continue_">Continue</string>
 </resources>
