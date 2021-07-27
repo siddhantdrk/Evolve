@@ -134,11 +134,12 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_user_current_location"
             app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:id="@+id/layout_birthday"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="37dp"
+            android:orientation="horizontal"
             android:layout_marginTop="17.5dp"
             android:layout_marginEnd="37dp"
             app:layout_constraintTop_toBottomOf="@+id/txt_birthdate">
@@ -146,6 +147,7 @@
             <EditText
                 android:id="@+id/et_month"
                 android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/app_background"
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
@@ -153,6 +155,7 @@
                 android:fontFamily="@font/lato"
                 android:hint="@string/month"
                 android:maxEms="2"
+                android:drawablePadding="11dp"
                 android:maxLines="1"
                 android:paddingBottom="18dp"
                 android:singleLine="true"
@@ -169,11 +172,13 @@
             <EditText
                 android:id="@+id/et_day"
                 android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="45.79dp"
                 android:backgroundTint="@color/app_background"
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
                 android:fontFamily="@font/lato"
+                android:drawablePadding="11dp"
                 android:hint="@string/day"
                 android:paddingBottom="18dp"
                 android:textColor="@color/app_background"
@@ -190,9 +195,11 @@
             <EditText
                 android:id="@+id/et_year"
                 android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="45.79dp"
                 android:backgroundTint="@color/app_background"
+                android:drawablePadding="11dp"
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
                 android:fontFamily="@font/lato"
                 android:hint="@string/year"
@@ -209,7 +216,7 @@
                 app:layout_constraintVertical_bias="1.0" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
