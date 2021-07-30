@@ -42,27 +42,39 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_step_1" />
 
-        <com.google.android.material.button.MaterialButton
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/button_add_team"
             android:layout_width="match_parent"
-            android:layout_height="104dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
             android:layout_marginTop="26.2dp"
             android:layout_marginEnd="21dp"
-            android:insetTop="0dp"
             android:layout_marginBottom="416dp"
-            android:insetBottom="0dp"
-            android:text="@string/add_a_team"
-            app:backgroundTint="#18F9FAF9"
+            app:cardBackgroundColor="#18F9FAF9"
+            app:cardCornerRadius="13dp"
+            app:cardElevation="0.3dp"
             app:cornerRadius="13dp"
-            app:icon="@drawable/ic_add"
-            app:iconGravity="textStart"
             app:layout_constraintBottom_toTopOf="@+id/tv_continue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_recently_played_team"
-            app:strokeColor="#18F9FAF9"
-            app:strokeWidth="0dp" />
+            app:strokeColor="#18F9FAF9">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="41dp"
+                android:layout_marginBottom="41dp"
+                android:drawablePadding="7.7dp"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:text="@string/add_a_team"
+                android:textColor="@color/app_background"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_add" />
+
+        </com.google.android.material.card.MaterialCardView>
 
         <TextView
             android:id="@+id/tv_continue"
