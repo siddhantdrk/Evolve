@@ -32,4 +32,6 @@
     <string name="where_are_you_currently_located">Where are you currently located?</string>
     <string name="use_current_location">Use current location</string>
     <string name="continue_">Continue</string>
+    <string name="what_team_s_have_you_most_recently_played_for">What team(s) have you most recently played for?</string>
+    <string name="add_a_team">Add a team</string>
 </resources>

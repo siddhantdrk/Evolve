@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/profile_setup_bg"
+    android:backgroundTint="@color/profile_setup_bg"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".AddTeam">
+
+        <TextView
+            android:id="@+id/txt_step_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="89dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/step_1_bio_and_team_history"
+            android:textColor="@color/app_background"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_recently_played_team"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="75.8dp"
+            android:layout_marginEnd="106dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/what_team_s_have_you_most_recently_played_for"
+            android:textAllCaps="true"
+            android:textColor="@color/app_background"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_step_1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_add_team"
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="26.2dp"
+            android:layout_marginEnd="21dp"
+            android:insetTop="0dp"
+            android:layout_marginBottom="416dp"
+            android:insetBottom="0dp"
+            android:text="@string/add_a_team"
+            app:backgroundTint="#18F9FAF9"
+            app:cornerRadius="13dp"
+            app:icon="@drawable/ic_add"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toTopOf="@+id/tv_continue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_recently_played_team"
+            app:strokeColor="#18F9FAF9"
+            app:strokeWidth="0dp" />
+
+        <TextView
+            android:id="@+id/tv_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="122dp"
+            android:drawableTint="#3C1550"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:text="@string/continue_"
+            android:textColor="#3C1550"
+            android:textSize="18sp"
+            app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
