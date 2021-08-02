@@ -50,7 +50,7 @@
             android:layout_marginTop="26.2dp"
             android:layout_marginEnd="21dp"
             android:layout_marginBottom="416dp"
-            app:cardBackgroundColor="#18F9FAF9"
+            app:cardBackgroundColor="#30F9FAF9"
             app:cardCornerRadius="13dp"
             app:cardElevation="0.3dp"
             app:cornerRadius="13dp"
@@ -72,7 +72,7 @@
                 android:text="@string/add_a_team"
                 android:textColor="@color/app_background"
                 android:textSize="18sp"
-                app:drawableStartCompat="@drawable/ic_add" />
+                app:drawableStartCompat="@drawable/add_drawable" />
 
         </com.google.android.material.card.MaterialCardView>
 
