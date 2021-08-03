@@ -34,4 +34,9 @@
     <string name="continue_">Continue</string>
     <string name="what_team_s_have_you_most_recently_played_for">What team(s) have you most recently played for?</string>
     <string name="add_a_team">Add a team</string>
+    <string name="add_a_team_">Add a Team</string>
+    <string name="start_date">START DATE</string>
+    <string name="end_date">END DATE</string>
+    <string name="present">Present</string>
+    <string name="done">Done</string>
 </resources>
