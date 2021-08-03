@@ -141,12 +141,12 @@
 
                     <TextView
                         android:id="@+id/txtStartDate"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/lato"
                         android:layout_gravity="center"
                         android:gravity="center|start"
+                        android:layout_marginEnd="9.87dp"
                         android:text="@string/start_date"
                         android:textAllCaps="true"
                         android:textColor="@color/black"
@@ -179,7 +179,6 @@
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/et_day"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -192,13 +191,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="35.87dp"
                 android:layout_weight="1"
+                android:layout_marginTop="2dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/txtEndDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
                     android:fontFamily="@font/lato"
                     android:gravity="center|start"
                     android:text="@string/end_date"

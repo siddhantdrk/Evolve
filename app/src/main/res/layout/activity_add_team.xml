@@ -14,7 +14,7 @@
         tools:context=".AddTeam">
 
         <TextView
-            android:id="@+id/txt_step_1"
+            android:id="@+id/txtStep1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="37dp"
@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/txt_recently_played_team"
+            android:id="@+id/txtRecentlyPlayedTeam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="38dp"
@@ -40,10 +40,10 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_step_1" />
+            app:layout_constraintTop_toBottomOf="@+id/txtStep1" />
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/button_add_team"
+            android:id="@+id/buttonAddTeam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
@@ -57,7 +57,7 @@
             app:layout_constraintBottom_toTopOf="@+id/tv_continue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_recently_played_team"
+            app:layout_constraintTop_toBottomOf="@+id/txtRecentlyPlayedTeam"
             app:strokeColor="#18F9FAF9">
 
             <TextView
