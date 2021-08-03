@@ -17,7 +17,7 @@
             android:id="@+id/cvDismiss"
             android:layout_width="65dp"
             android:layout_height="6dp"
-            app:cardBackgroundColor="#50404040"
+            app:cardBackgroundColor="#404040"
             app:cardCornerRadius="11dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
