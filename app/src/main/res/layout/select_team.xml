@@ -2,7 +2,6 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginTop="70dp"
     android:background="@color/app_background"
     android:layout_width="match_parent"
     android:scrollbarSize="0dp"
@@ -11,6 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
         android:paddingBottom="131dp">
 
         <com.google.android.material.card.MaterialCardView
