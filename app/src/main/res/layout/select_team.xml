@@ -10,7 +10,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
         android:paddingBottom="131dp">
 
         <com.google.android.material.card.MaterialCardView
@@ -108,7 +107,7 @@
             <View
                 app:layout_constraintTop_toBottomOf="@id/ivTeamImage"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="16.29dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
