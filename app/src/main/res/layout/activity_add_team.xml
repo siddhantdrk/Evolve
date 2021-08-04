@@ -52,7 +52,7 @@
             android:layout_marginBottom="416dp"
             app:cardBackgroundColor="#30F9FAF9"
             app:cardCornerRadius="13dp"
-            app:cardElevation="0.3dp"
+            app:cardElevation="0dp"
             app:cornerRadius="13dp"
             app:layout_constraintBottom_toTopOf="@+id/tv_continue"
             app:layout_constraintEnd_toEndOf="parent"
