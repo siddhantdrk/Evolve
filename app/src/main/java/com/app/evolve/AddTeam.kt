@@ -1,11 +1,9 @@
 package com.app.evolve
 
+import android.graphics.Point
 import android.os.Bundle
-import android.view.View
-import android.view.ViewTreeObserver.OnGlobalLayoutListener
-import android.widget.ScrollView
+import android.util.DisplayMetrics
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.card.MaterialCardView
 
@@ -21,9 +19,13 @@ class AddTeam : AppCompatActivity() {
     }
 
     private fun showBottomSheetDialog() {
-        val bottomSheetDialog = BottomSheetDialog(this, R.style.SheetDialog)
+        val metrics = DisplayMetrics()
+        this.windowManager.defaultDisplay.getMetrics(metrics)
+        val height =  metrics.heightPixels
+        val bottomSheetDialog = BottomSheetDialog(this)
         bottomSheetDialog.setContentView(R.layout.select_team)
-        bottomSheetDialog.behavior.state = BottomSheetBehavior.STATE_EXPANDED
+        bottomSheetDialog.behavior.peekHeight = height - 88
+        //bottomSheetDialog.behavior.state = BottomSheetBehavior.STATE_EXPANDED
         bottomSheetDialog.show()
     }
 }
