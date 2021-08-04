@@ -1,6 +1,5 @@
 package com.app.evolve
 
-import android.graphics.Point
 import android.os.Bundle
 import android.util.DisplayMetrics
 import androidx.appcompat.app.AppCompatActivity
@@ -24,7 +23,7 @@ class AddTeam : AppCompatActivity() {
         val height =  metrics.heightPixels
         val bottomSheetDialog = BottomSheetDialog(this)
         bottomSheetDialog.setContentView(R.layout.select_team)
-        bottomSheetDialog.behavior.peekHeight = height - 88
+        bottomSheetDialog.behavior.peekHeight = height - 160
         //bottomSheetDialog.behavior.state = BottomSheetBehavior.STATE_EXPANDED
         bottomSheetDialog.show()
     }
