@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constrainLayout"
-    android:background="@color/app_background"
     android:layout_width="match_parent"
     android:layout_marginTop="62dp"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
