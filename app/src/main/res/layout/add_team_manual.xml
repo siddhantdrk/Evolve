@@ -16,7 +16,8 @@
         android:layout_marginTop="22.69dp"
         android:src="@drawable/ic_arrow_back"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cvDismiss" />
+        app:layout_constraintTop_toBottomOf="@id/cvDismiss"
+        app:tint="@color/black" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cvDismiss"
