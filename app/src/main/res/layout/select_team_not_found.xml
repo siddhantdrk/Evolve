@@ -76,7 +76,7 @@
         android:layout_marginBottom="416dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="13dp"
-        app:cardElevation="0dp"
+        app:cardElevation="0.5dp"
         app:cornerRadius="13dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
