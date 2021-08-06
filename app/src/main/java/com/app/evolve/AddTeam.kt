@@ -29,7 +29,7 @@ class AddTeam : AppCompatActivity() {
         defaultDisplay.getRealMetrics(metrics)
         val height =  metrics.heightPixels
         val bottomSheetDialog = BottomSheetDialog(this, R.style.SheetDialog)
-        bottomSheetDialog.setContentView(R.layout.select_team)
+        bottomSheetDialog.setContentView(R.layout.select_team_not_found)
         val constrainLayout = bottomSheetDialog.findViewById<ConstraintLayout>(R.id.constrainLayout)
         constrainLayout!!.minHeight = height
         bottomSheetDialog.behavior.isFitToContents = false

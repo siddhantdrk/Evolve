@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constrainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="62dp"
+    android:background="@drawable/bottom_sheet_bg"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="22.69dp"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvDismiss" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvDismiss"
+        android:layout_width="65dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="#50404040"
+        app:cardCornerRadius="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtAddaTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22.69dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/add_a_team_"
+        android:textColor="#404040"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvDismiss" />
+
+    <TextView
+        android:id="@+id/txtTeamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="57.94dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/team_name"
+        android:textColor="@color/text_color"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddaTeam"
+        app:layout_goneMarginStart="38dp" />
+
+    <EditText
+        android:id="@+id/etTeamName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37.5dp"
+        android:layout_marginEnd="37dp"
+        android:backgroundTint="@color/border_color"
+        android:fontFamily="@font/lato"
+        android:inputType="textEmailAddress"
+        android:paddingBottom="18dp"
+        android:textColor="@color/text_color"
+        android:textColorHighlight="@color/text_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/txtTeamName" />
+
+    <TextView
+        android:id="@+id/txtCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="57.94dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/country"
+        android:textColor="@color/text_color"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTeamName"
+        app:layout_goneMarginStart="38dp" />
+
+    <EditText
+        android:id="@+id/etCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37.5dp"
+        android:layout_marginTop="35.5dp"
+        android:layout_marginEnd="37dp"
+        android:backgroundTint="@color/border_color"
+        android:fontFamily="@font/lato"
+        android:inputType="textEmailAddress"
+        android:paddingBottom="18dp"
+        android:textColor="@color/text_color"
+        android:textColorHighlight="@color/text_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/txtCountry" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="@string/add_team"
+        android:textColor="@color/primary_color"
+        android:textSize="18sp"
+        app:drawableEndCompat="@drawable/black_arrow_rigth"
+        app:drawableTint="@color/primary_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCountry" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

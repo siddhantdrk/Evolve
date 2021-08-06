@@ -39,4 +39,8 @@
     <string name="end_date">END DATE</string>
     <string name="present">Present</string>
     <string name="done">Done</string>
+    <string name="sorry_we_can_t_find_your_team_try_searching_by_country">Sorry, we can’t find your team Try searching by country</string>
+    <string name="team_name">TEAM NAME</string>
+    <string name="country">COUNTRY</string>
+    <string name="add_team">Add Team</string>
 </resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constrainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="62dp"
+    android:background="@drawable/bottom_sheet_bg"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvDismiss"
+        android:layout_width="65dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="#50404040"
+        app:cardCornerRadius="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtAddaTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/add_a_team_"
+        android:textColor="#404040"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvDismiss" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="52.8dp"
+        android:layout_marginEnd="38dp"
+        android:backgroundTint="@color/black"
+        android:drawableEnd="@drawable/ic_baseline_search_24"
+        android:fontFamily="@font/lato_light"
+        android:paddingBottom="16.5dp"
+        android:text="Olimp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddaTeam" />
+
+    <TextView
+        android:id="@+id/txtNotFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="48.3dp"
+        android:layout_marginEnd="94dp"
+        android:fontFamily="@font/helvetica_neue_regular"
+        android:gravity="center"
+        android:text="@string/sorry_we_can_t_find_your_team_try_searching_by_country"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/buttonAddTeam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="31.2dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="416dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="13dp"
+        app:cardElevation="0dp"
+        app:cornerRadius="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNotFound"
+        app:strokeColor="#18F9FAF9">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="41dp"
+            android:layout_marginBottom="41dp"
+            android:drawablePadding="7.7dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:text="@string/add_a_team"
+            android:textColor="#838383"
+            android:textSize="18sp"
+            app:drawableStartCompat="@drawable/add_drawable"
+            app:drawableTint="#838383" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
