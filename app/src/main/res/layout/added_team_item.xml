@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#30F9FAF9"
+    app:cardCornerRadius="13dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintTeam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp">
+
+
+        <ImageView
+            android:id="@+id/ivTeamImage"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTeamName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Olimpiacos B.C."
+            android:textColor="@color/app_background"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/ivTeamImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTeamLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="28dp"
+            android:alpha="0.6"
+            android:fontFamily="@font/lato"
+            android:text="Piraeus, Greece"
+            android:textColor="@color/app_background"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/ivTeamImage"
+            app:layout_constraintTop_toBottomOf="@id/tvTeamName" />
+
+        <TextView
+            android:id="@+id/tvTeamTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="28dp"
+            android:alpha="0.6"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/lato"
+            android:text="Jan 2021 - Present • 3mons"
+            android:textColor="@color/app_background"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/ivTeamImage"
+            app:layout_constraintTop_toBottomOf="@id/tvTeamLocation" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

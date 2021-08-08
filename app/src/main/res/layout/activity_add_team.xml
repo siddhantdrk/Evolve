@@ -42,14 +42,27 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtStep1" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAddTeam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29.2dp"
+            android:layout_marginStart="22dp"
+            tools:itemCount="1"
+            tools:listitem="@layout/added_team_item"
+            android:layout_marginEnd="21dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtRecentlyPlayedTeam" />
+
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/buttonAddTeam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
-            android:layout_marginTop="26.2dp"
+            android:layout_marginTop="9dp"
             android:layout_marginEnd="21dp"
-            android:layout_marginBottom="416dp"
+            android:layout_marginBottom="223dp"
             app:cardBackgroundColor="#30F9FAF9"
             app:cardCornerRadius="13dp"
             app:cardElevation="0dp"
@@ -57,7 +70,7 @@
             app:layout_constraintBottom_toTopOf="@+id/tv_continue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtRecentlyPlayedTeam"
+            app:layout_constraintTop_toBottomOf="@+id/rvAddTeam"
             app:strokeColor="#18F9FAF9">
 
             <TextView
@@ -81,16 +94,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="122dp"
-            android:drawableTint="#3C1550"
             android:fontFamily="@font/lato_bold"
             android:gravity="center"
             android:text="@string/continue_"
-            android:textColor="#3C1550"
+            android:textColor="@color/app_background"
             android:textSize="18sp"
             app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:drawableTint="@color/app_background" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
