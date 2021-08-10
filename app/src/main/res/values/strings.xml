@@ -43,4 +43,15 @@
     <string name="team_name">TEAM NAME</string>
     <string name="country">COUNTRY</string>
     <string name="add_team">Add Team</string>
+    <string name="step_2_personal_interests">Step 2: Personal Interests</string>
+    <string name="select_your_favorite_topic_s">SELECT YOUR FAVORITE TOPIC(S)</string>
+    <string name="career">CAREER</string>
+    <string name="finance">FINANCE</string>
+    <string name="entrepreneurship">ENTREPRENEURSHIP</string>
+    <string name="community">COMMUNITY</string>
+    <string name="health_wellness"><![CDATA[HEALTH & WELLNESS]]></string>
+    <string name="arts">ARTS</string>
+    <string name="alternative_investments">ALTERNATIVE INVESTMENTS</string>
+    <string name="other">OTHER</string>
+    <string name="add_an_interest">Add an Interest</string>
 </resources>
