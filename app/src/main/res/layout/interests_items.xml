@@ -25,13 +25,15 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_gravity="bottom"
+            android:autoSizeMaxTextSize="16sp"
+            android:autoSizeMinTextSize="14sp"
+            android:autoSizeTextType="uniform"
             android:textColor="@color/app_background"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="14dp"
             android:fontFamily="@font/lato"
             android:gravity="start"
-            android:text="Internships"
-            android:textSize="16sp" />
+            android:text="Internships" />
 
     </com.google.android.material.card.MaterialCardView>
 
