@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary_color"
+        tools:context=".AddVides">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="128dp">
+
+            <TextView
+                android:id="@+id/txtCourtVides"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="151dp"
+                android:layout_marginEnd="37dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/step_3_off_court_vibes"
+                android:textColor="@color/app_background"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtSelectFavouriteTopic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="37.19dp"
+                android:layout_marginEnd="37dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/select_your_favorite_topic_s"
+                android:textColor="@color/app_background"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCourtVides" />
+
+            <TextView
+                android:id="@+id/txtExplore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="36.18dp"
+                android:layout_marginEnd="37dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/explore"
+                android:textColor="@color/app_background"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtSelectFavouriteTopic" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvExplore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="21dp"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtExplore"
+                app:spanCount="3"
+                tools:itemCount="4"
+                tools:listitem="@layout/interests_items" />
+
+            <TextView
+                android:id="@+id/txtAmericanSport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="57dp"
+                android:layout_marginEnd="37dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/american_spots"
+                android:textColor="@color/app_background"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvExplore" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAmericanSport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="21dp"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAmericanSport"
+                app:spanCount="3"
+                tools:itemCount="3"
+                tools:listitem="@layout/interests_items" />
+
+            <TextView
+                android:id="@+id/txtHangout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="61dp"
+                android:layout_marginEnd="37dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/hangout"
+                android:textColor="@color/app_background"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvAmericanSport" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHangout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="21dp"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtHangout"
+                app:spanCount="3"
+                tools:itemCount="3"
+                tools:listitem="@layout/interests_items" />
+
+            <TextView
+                android:id="@+id/txtNature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="61dp"
+                android:layout_marginEnd="37dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/nature"
+                android:textColor="@color/app_background"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvHangout" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="21dp"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtNature"
+                app:spanCount="3"
+                tools:itemCount="3"
+                tools:listitem="@layout/interests_items" />
+
+            <TextView
+                android:id="@+id/txtShopping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="61dp"
+                android:layout_marginEnd="37dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/shopping"
+                android:textColor="@color/app_background"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvNature" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvShopping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="21dp"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtShopping"
+                app:spanCount="3"
+                tools:itemCount="3"
+                tools:listitem="@layout/interests_items" />
+
+            <TextView
+                android:id="@+id/txtOther"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="61dp"
+                android:layout_marginEnd="37dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/other"
+                android:textColor="@color/app_background"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvShopping" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvOther"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="21dp"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtOther"
+                app:spanCount="3"
+                tools:itemCount="2"
+                tools:listitem="@layout/interests_items" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/buttonAddTeam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="79dp"
+                android:layout_marginEnd="21dp"
+                app:cardBackgroundColor="#30F9FAF9"
+                app:cardCornerRadius="13dp"
+                app:cardElevation="0dp"
+                app:cornerRadius="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvOther"
+                app:strokeColor="#18F9FAF9">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="41dp"
+                    android:layout_marginBottom="41dp"
+                    android:drawablePadding="7.7dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:text="@string/add_a_vibe"
+                    android:textColor="@color/app_background"
+                    android:textSize="18sp"
+                    app:drawableStartCompat="@drawable/add_drawable" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#804F0774"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="51dp"
+            android:drawablePadding="7.34dp"
+            android:gravity="center"
+            android:text="@string/done"
+            android:textColor="@color/app_background"
+            app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
+            app:drawableTint="@color/app_background" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

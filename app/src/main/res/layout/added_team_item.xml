@@ -13,15 +13,25 @@
         android:layout_marginBottom="17dp">
 
 
-        <ImageView
-            android:id="@+id/ivTeamImage"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvTeamImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
             android:layout_marginTop="15dp"
-            android:src="@drawable/ic_launcher_background"
+            app:cardCornerRadius="13dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivTeamImage"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.google.android.material.card.MaterialCardView>
 
         <TextView
             android:id="@+id/tvTeamName"
@@ -33,7 +43,7 @@
             android:text="Olimpiacos B.C."
             android:textColor="@color/app_background"
             android:textSize="18sp"
-            app:layout_constraintStart_toEndOf="@+id/ivTeamImage"
+            app:layout_constraintStart_toEndOf="@+id/cvTeamImage"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -48,7 +58,7 @@
             android:text="Piraeus, Greece"
             android:textColor="@color/app_background"
             android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@+id/ivTeamImage"
+            app:layout_constraintStart_toEndOf="@+id/cvTeamImage"
             app:layout_constraintTop_toBottomOf="@id/tvTeamName" />
 
         <TextView
@@ -56,14 +66,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
+            android:layout_marginTop="2dp"
             android:layout_marginEnd="28dp"
             android:alpha="0.6"
-            android:layout_marginTop="2dp"
             android:fontFamily="@font/lato"
             android:text="Jan 2021 - Present • 3mons"
             android:textColor="@color/app_background"
             android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@+id/ivTeamImage"
+            app:layout_constraintStart_toEndOf="@+id/cvTeamImage"
             app:layout_constraintTop_toBottomOf="@id/tvTeamLocation" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
