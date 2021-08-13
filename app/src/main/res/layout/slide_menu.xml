@@ -7,6 +7,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:paddingBottom="68dp"
+        android:layout_height="wrap_content"
+        android:background="@color/border_color">
         android:layout_height="wrap_content">
 
         <View
@@ -82,7 +85,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvUserEmail" />
 
-
         <TextView
             android:id="@+id/tvScanQRCode"
             android:layout_width="wrap_content"
@@ -95,6 +97,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvSenAInvite" />
+
+
+        <TextView
+            android:id="@+id/tvLohout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="279dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/log_out"
+            android:textColor="@color/app_background"
+            android:textSize="18sp"
+            android:drawablePadding="9.86dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSenAInvite"
+            app:drawableEndCompat="@drawable/ic_exit" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
