@@ -61,4 +61,6 @@
     <string name="nature">NATURE</string>
     <string name="shopping">SHOPPING</string>
     <string name="add_a_vibe">Add a vibe</string>
+    <string name="send_an_invite">Send An Invite</string>
+    <string name="scan_qr_code">Scan QR code</string>
 </resources>
