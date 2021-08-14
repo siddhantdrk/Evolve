@@ -96,7 +96,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvSenAInvite" />
 
-
         <TextView
             android:id="@+id/tvLohout"
             android:layout_width="wrap_content"

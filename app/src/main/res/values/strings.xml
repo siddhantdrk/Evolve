@@ -64,4 +64,7 @@
     <string name="send_an_invite">Send An Invite</string>
     <string name="scan_qr_code">Scan QR code</string>
     <string name="log_out">Log Out</string>
+    <string name="invite_a_new_user">Invite A New User</string>
+    <string name="add_from_contacts">Add From Contacts</string>
+    <string name="send_invite">Send Invite</string>
 </resources>

@@ -1,6 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginTop="62dp"
+    android:fillViewport="true">
 
-</LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_sheet_bg"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvDismiss"
+            android:layout_width="65dp"
+            android:layout_height="6dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="#404040"
+            app:cardCornerRadius="11dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvMail"
+            android:layout_width="72dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            app:cardBackgroundColor="#69069A"
+            app:cardCornerRadius="11dp"
+            app:layout_constraintDimensionRatio="72:72"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvDismiss">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="18.27dp"
+                android:layout_marginTop="23.82dp"
+                android:layout_marginEnd="18.27dp"
+                android:layout_marginBottom="23.82dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_email" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:id="@+id/txtInviteUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/invite_a_new_user"
+            android:textColor="@color/text_color"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvMail" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38.13dp"
+            android:layout_marginTop="54dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/full_name"
+            android:textColor="@color/text_color"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInviteUser" />
+
+        <EditText
+            android:id="@+id/etFullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38.13dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="37.88dp"
+            android:backgroundTint="@color/border_color"
+            android:fontFamily="@font/lato"
+            android:paddingBottom="18dp"
+            android:text="Jori Davis"
+            android:textColor="@color/text_color"
+            android:textColorHighlight="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38.13dp"
+            android:layout_marginTop="39.5dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/email"
+            android:textColor="@color/text_color"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etFullname" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37.63dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="36.88dp"
+            android:backgroundTint="@color/border_color"
+            android:fontFamily="@font/lato"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="18dp"
+            android:text="Davis.jori@gmail.com"
+            android:textColor="@color/text_color"
+            android:textColorHighlight="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+        <TextView
+            android:id="@+id/txtPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="39.5dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/phone_number"
+            android:textColor="@color/text_color"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+        <RelativeLayout
+            android:id="@+id/rlPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="37dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPhone">
+
+            <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                android:layout_width="50dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/ccp_round_corner_bg"
+                android:gravity="center"
+                app:ccp_arrowSize="20dp"
+                app:ccp_hideNameCode="true"
+                app:ccp_showFlag="false"
+                app:ccp_textFont="@string/lato_regular"
+                app:ccp_textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/border_color"
+                android:fontFamily="@font/lato"
+                android:inputType="phone"
+                android:paddingStart="64dp"
+                android:paddingBottom="18dp"
+                android:text="123 456 7890"
+                android:textColor="@color/text_color"
+                android:textColorHighlight="@color/text_color"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlSymmetry" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvAddContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="114.5dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/add_from_contacts"
+            android:textColor="@color/primary_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rlPhoneNumber" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="86dp"
+            android:layout_marginEnd="59dp"
+            android:layout_marginBottom="99dp"
+            android:fontFamily="@font/lato_bold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/send_invite"
+            android:textAllCaps="false"
+            android:textColor="@color/app_background"
+            android:textSize="16sp"
+            app:backgroundTint="@color/profile_setup_bg"
+            app:cornerRadius="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddContact" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
