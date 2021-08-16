@@ -78,4 +78,10 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="wevolv_qr_code">Wevolv QR Code</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="share_my_code">SHARE MY CODE</string>
+    <string name="save_to_photos">SAVE TO PHOTOS</string>
+    <string name="share_from_photos">SHARE FROM PHOTOS</string>
 </resources>

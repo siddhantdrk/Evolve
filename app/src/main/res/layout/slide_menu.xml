@@ -3,27 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbarSize="0dp"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:scrollbarSize="0dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.revosleap.blurrylayout.BlurryLayout xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/blurLayout"
+        <com.app.evolve.blurview.BlurAndDimView
+            android:id="@+id/view"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:blurColor="@android:color/transparent"
-            app:blurOpacity=".01"
-            android:alpha="0.7"
-            android:background="@color/border_color"
-            app:blurRadius="1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:context=".Blurry" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="?android:attr/actionBarSize"
+            android:visibility="invisible" />
 
         <!--<View
             android:id="@+id/view"
