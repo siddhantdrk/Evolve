@@ -10,6 +10,7 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView"
         android:layout_width="78dp"
+        android:elevation="5dp"
         android:layout_height="0dp"
         android:src="@drawable/ic_launcher_background"
         app:civ_border_color="@android:color/white"

@@ -1,11 +1,14 @@
 package com.app.evolve.fragments
 
+import android.app.Dialog
 import android.os.Bundle
+import android.view.*
+import android.widget.TextView
+import androidx.appcompat.view.ContextThemeWrapper
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.app.evolve.R
+import com.google.android.material.card.MaterialCardView
+
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -38,5 +41,28 @@ class MyCode : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        view.findViewById<TextView>(R.id.tvShareMyCode).setOnClickListener {
+            showBottomDialog()
+        }
+    }
+
+    private fun showBottomDialog() {
+        val dialog = Dialog(ContextThemeWrapper(requireContext(), R.style.DialogSlideAnim))
+        dialog.setContentView(R.layout.qr_botton_dialog)
+        dialog.window!!.setLayout(
+            WindowManager.LayoutParams.MATCH_PARENT,
+            WindowManager.LayoutParams.MATCH_PARENT
+        )
+        dialog.window!!.setGravity(Gravity.BOTTOM)
+        dialog.window!!.setBackgroundDrawableResource(android.R.color.transparent)
+        dialog.findViewById<MaterialCardView>(R.id.cardCancel).setOnClickListener {
+            dialog.dismiss()
+        }
+        dialog.show()
     }
 }

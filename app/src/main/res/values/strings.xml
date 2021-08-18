@@ -84,4 +84,7 @@
     <string name="share_my_code">SHARE MY CODE</string>
     <string name="save_to_photos">SAVE TO PHOTOS</string>
     <string name="share_from_photos">SHARE FROM PHOTOS</string>
+    <string name="share_with_photo">SHARE WITH PHOTO</string>
+    <string name="share_code_only">SHARE CODE ONLY</string>
+    <string name="cancel">CANCEL</string>
 </resources>
