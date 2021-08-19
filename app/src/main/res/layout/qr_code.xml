@@ -1,76 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginTop="62dp"
     android:background="@drawable/bottom_sheet_bg"
-    android:fillViewport="true">
+    android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constrainLayout"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvDismiss"
+        android:layout_width="65dp"
+        android:layout_height="6dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:alpha="0.5"
+        app:cardBackgroundColor="#404040"
+        app:cardCornerRadius="11dp" />
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cvDismiss"
-            android:layout_width="65dp"
-            android:layout_height="6dp"
-            android:layout_marginTop="8dp"
-            android:alpha="0.5"
-            app:cardBackgroundColor="#404040"
-            app:cardCornerRadius="11dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/txtInviteUser"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrainLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/wevolv_qr_code"
-            android:textColor="@color/text_color"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cvDismiss" />
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            app:layout_constraintTop_toBottomOf="@+id/cvDismiss">
 
-        <FrameLayout
-            android:id="@+id/tabFrame"
-            android:layout_width="match_parent"
-            android:layout_height="42dp"
-            android:layout_marginStart="37dp"
-            android:layout_marginTop="26dp"
-            android:layout_marginEnd="37dp"
-            android:background="@drawable/tab_background"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtInviteUser">
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/qrTabs"
+            <TextView
+                android:id="@+id/txtInviteUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/wevolv_qr_code"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/tabFrame"
                 android:layout_width="match_parent"
-                android:layout_height="29dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_gravity="center"
-                app:tabTextAppearance="@style/MyCustomTabTextAppearance"
-                app:tabBackground="@drawable/tab_selector_bg"
-                app:tabIndicatorHeight="0dp"
-                app:tabSelectedTextColor="@color/text_color" />
-        </FrameLayout>
+                android:layout_height="42dp"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="37dp"
+                android:background="@drawable/tab_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtInviteUser">
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPager"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="31dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tabFrame" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/qrTabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:tabBackground="@drawable/tab_selector_bg"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabSelectedTextColor="@color/text_color"
+                    app:tabTextAppearance="@style/MyCustomTabTextAppearance" />
+            </FrameLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="31dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tabFrame" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</LinearLayout>
