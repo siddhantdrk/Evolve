@@ -52,7 +52,8 @@ class MyCode : Fragment() {
     }
 
     private fun showBottomDialog() {
-        val dialog = Dialog(ContextThemeWrapper(requireContext(), R.style.DialogSlideAnim))
+        val dialog = Dialog(requireContext())
+        dialog.window!!.attributes.windowAnimations = R.style.DialogAnimation
         dialog.setContentView(R.layout.qr_botton_dialog)
         dialog.window!!.setLayout(
             WindowManager.LayoutParams.MATCH_PARENT,
