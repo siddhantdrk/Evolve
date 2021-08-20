@@ -87,7 +87,7 @@ class AddTeam : AppCompatActivity() {
         TabLayoutMediator(
             qrTabs, viewPager!!
         ) { tab, position ->
-            if (position == 0) tab.text = "Scan A Code " else tab.text = "My Code"
+            if (position == 0) tab.text = "Scan" else tab.text = "My Code"
         }.attach()
     }
 }
