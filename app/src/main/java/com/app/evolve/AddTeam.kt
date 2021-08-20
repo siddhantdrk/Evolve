@@ -4,6 +4,8 @@ import android.hardware.display.DisplayManager
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.Display
+import android.widget.FrameLayout
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
@@ -37,17 +39,19 @@ class AddTeam : AppCompatActivity() {
         val bottomSheetDialog = BottomSheetDialog(this, R.style.SheetDialog)
         bottomSheetDialog.setContentView(R.layout.qr_code)
         val constrainLayout = bottomSheetDialog.findViewById<ConstraintLayout>(R.id.constrainLayout)
-        initQRCode(bottomSheetDialog, constrainLayout)
+        val qrParent = bottomSheetDialog.findViewById<LinearLayout>(R.id.qrParent)
+        val tabFrame = bottomSheetDialog.findViewById<FrameLayout>(R.id.tabFrame)
+        initQRCode(bottomSheetDialog, qrParent, tabFrame)
         constrainLayout!!.minHeight = height
         bottomSheetDialog.behavior.isFitToContents = false
         bottomSheetDialog.behavior.state = BottomSheetBehavior.STATE_EXPANDED
         bottomSheetDialog.show()
-
     }
 
     private fun initQRCode(
         bottomSheetDialog: BottomSheetDialog,
-        constrainLayout: ConstraintLayout?
+        qrParent: LinearLayout?,
+        tabFrame: FrameLayout?
     ) {
         val qrTabs = bottomSheetDialog.findViewById<TabLayout>(R.id.qrTabs)
         val adapter = ViewPagerAdapter(this)
@@ -55,28 +59,33 @@ class AddTeam : AppCompatActivity() {
         viewPager?.adapter = adapter
         qrTabs!!.addOnTabSelectedListener(object : OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
-                /*if (tab.position == 0) {
-                    constrainLayout!!.setBackgroundColor(
-                        ContextCompat.getColor(
-                            this@AddTeam,
-                            R.color.black_alpha_70
-                        )
+                if (tab.position == 0) {
+                    qrParent!!.background =
+                        ContextCompat.getDrawable(this@AddTeam, R.drawable.qr_bg)
+                    tabFrame!!.background =
+                        ContextCompat.getDrawable(this@AddTeam, R.drawable.tab_qr_bg)
+                    qrTabs.setTabTextColors(
+                        ContextCompat.getColor(this@AddTeam, R.color.app_background),
+                        ContextCompat.getColor(this@AddTeam, R.color.text_color)
                     )
+
                 } else {
-                    constrainLayout!!.setBackgroundColor(
-                        ContextCompat.getColor(
-                            this@AddTeam,
-                            R.color.app_background
-                        )
+                    qrTabs.setTabTextColors(
+                        ContextCompat.getColor(this@AddTeam, R.color.tab_unselected),
+                        ContextCompat.getColor(this@AddTeam, R.color.text_color)
                     )
-                }*/
+                    qrParent!!.background =
+                        ContextCompat.getDrawable(this@AddTeam, R.drawable.bottom_sheet_bg)
+                    tabFrame!!.background =
+                        ContextCompat.getDrawable(this@AddTeam, R.drawable.tab_background)
+                }
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {}
             override fun onTabReselected(tab: TabLayout.Tab) {}
         })
         TabLayoutMediator(
-            qrTabs!!, viewPager!!
+            qrTabs, viewPager!!
         ) { tab, position ->
             if (position == 0) tab.text = "Scan A Code " else tab.text = "My Code"
         }.attach()

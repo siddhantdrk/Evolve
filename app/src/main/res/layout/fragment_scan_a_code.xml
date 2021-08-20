@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_marginTop="62dp"
     android:layout_height="match_parent"
     tools:context=".fragments.ScanACodeFragment">
-
 
     <com.budiyev.android.codescanner.CodeScannerView
         android:id="@+id/scannerView"
@@ -17,12 +17,12 @@
         app:flashButtonVisible="false"
         app:frameAspectRatioHeight="1"
         app:frameAspectRatioWidth="1"
-        app:frameColor="@android:color/darker_gray"
+        app:frameColor="@color/black_alpha_70"
         app:frameCornersRadius="5dp"
         app:frameCornersSize="50dp"
         app:frameSize="0.75"
         app:frameThickness="0dp"
-        app:maskColor="#77000000" />
+        app:maskColor="@color/black_alpha_70" />
 
     <TextView
         android:layout_width="wrap_content"
