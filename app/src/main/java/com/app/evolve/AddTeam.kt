@@ -26,68 +26,7 @@ class AddTeam : AppCompatActivity() {
         setContentView(R.layout.activity_add_team)
 
         findViewById<MaterialCardView>(R.id.buttonAddTeam).setOnClickListener {
-            showBottomSheetDialog()
+            //showBottomSheetDialog()
         }
-    }
-
-    private fun showBottomSheetDialog() {
-        val metrics = DisplayMetrics()
-        val displayManager = getSystemService<DisplayManager>()!!
-        val defaultDisplay = displayManager.getDisplay(Display.DEFAULT_DISPLAY)
-        defaultDisplay.getRealMetrics(metrics)
-        val height = metrics.heightPixels
-        val bottomSheetDialog = BottomSheetDialog(this, R.style.SheetDialog)
-        bottomSheetDialog.setContentView(R.layout.qr_code)
-        val constrainLayout = bottomSheetDialog.findViewById<ConstraintLayout>(R.id.constrainLayout)
-        val qrParent = bottomSheetDialog.findViewById<LinearLayout>(R.id.qrParent)
-        val tabFrame = bottomSheetDialog.findViewById<FrameLayout>(R.id.tabFrame)
-        initQRCode(bottomSheetDialog, qrParent, tabFrame)
-        constrainLayout!!.minHeight = height
-        bottomSheetDialog.behavior.isFitToContents = false
-        bottomSheetDialog.behavior.state = BottomSheetBehavior.STATE_EXPANDED
-        bottomSheetDialog.show()
-    }
-
-    private fun initQRCode(
-        bottomSheetDialog: BottomSheetDialog,
-        qrParent: LinearLayout?,
-        tabFrame: FrameLayout?
-    ) {
-        val qrTabs = bottomSheetDialog.findViewById<TabLayout>(R.id.qrTabs)
-        val adapter = ViewPagerAdapter(this)
-        val viewPager = bottomSheetDialog.findViewById<ViewPager2>(R.id.viewPager)
-        viewPager?.adapter = adapter
-        qrTabs!!.addOnTabSelectedListener(object : OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab) {
-                if (tab.position == 0) {
-                    qrParent!!.background =
-                        ContextCompat.getDrawable(this@AddTeam, R.drawable.qr_bg)
-                    tabFrame!!.background =
-                        ContextCompat.getDrawable(this@AddTeam, R.drawable.tab_qr_bg)
-                    qrTabs.setTabTextColors(
-                        ContextCompat.getColor(this@AddTeam, R.color.app_background),
-                        ContextCompat.getColor(this@AddTeam, R.color.text_color)
-                    )
-
-                } else {
-                    qrTabs.setTabTextColors(
-                        ContextCompat.getColor(this@AddTeam, R.color.tab_unselected),
-                        ContextCompat.getColor(this@AddTeam, R.color.text_color)
-                    )
-                    qrParent!!.background =
-                        ContextCompat.getDrawable(this@AddTeam, R.drawable.bottom_sheet_bg)
-                    tabFrame!!.background =
-                        ContextCompat.getDrawable(this@AddTeam, R.drawable.tab_background)
-                }
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab) {}
-            override fun onTabReselected(tab: TabLayout.Tab) {}
-        })
-        TabLayoutMediator(
-            qrTabs, viewPager!!
-        ) { tab, position ->
-            if (position == 0) tab.text = "Scan A Code " else tab.text = "My Code"
-        }.attach()
     }
 }

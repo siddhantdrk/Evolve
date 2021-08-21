@@ -19,10 +19,6 @@
         app:cardBackgroundColor="#404040"
         app:cardCornerRadius="11dp" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constrainLayout"
@@ -78,5 +74,4 @@
                 app:layout_constraintTop_toBottomOf="@+id/tabFrame" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </ScrollView>
 </LinearLayout>

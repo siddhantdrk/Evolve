@@ -21,14 +21,14 @@
         app:frameColor="@color/black_alpha_70"
         app:frameCornersRadius="5dp"
         app:frameCornersSize="50dp"
-        app:frameSize="0.75"
+        app:frameSize="0.55"
         app:frameThickness="0dp"
         app:maskColor="@color/black_alpha_70" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="121.5dp"
+        android:layout_marginBottom="190.5dp"
         android:drawablePadding="13.48dp"
         android:fontFamily="@font/lato_bold"
         android:gravity="center"
