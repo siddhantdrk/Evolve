@@ -58,8 +58,6 @@ dependencies {
     //circular imageview
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
-    implementation 'com.revosleap.layout:blurrylayout:2.0.0'
-
     //qr code
     implementation 'com.budiyev.android:code-scanner:2.1.0'
 }
