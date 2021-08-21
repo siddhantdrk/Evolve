@@ -52,7 +52,7 @@ class ScanACodeFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        codeScanner.startPreview()
+        //codeScanner.startPreview()
     }
 
     override fun onPause() {

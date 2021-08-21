@@ -14,12 +14,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <com.google.android.material.navigation.NavigationView
+    <include
         android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
+        layout="@layout/slide_menu"
+        android:layout_width="250dp"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        android:background="@color/black_alpha_70"
-        app:headerLayout="@layout/slide_menu" />
+        android:layout_gravity="start" />
+
+    <!--  <com.google.android.material.navigation.NavigationView
+          android:id="@+id/nav_view"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_gravity="start"
+          android:background="#703C1550"
+          android:fitsSystemWindows="true"
+          app:headerLayout="@layout/slide_menu" />-->
 </androidx.drawerlayout.widget.DrawerLayout>

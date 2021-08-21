@@ -19,6 +19,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.app.evolve.adapter.viewpager.ViewPagerAdapter
 import com.app.evolve.databinding.ActivityMainBinding
+import com.app.evolve.databinding.SlideMenuBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.navigation.NavigationView
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBarMain.toolbar)
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
-        val navView: NavigationView = binding.navView
+        val navView: SlideMenuBinding = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -50,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        //navView.setupWithNavController(navController)
 
         showBottomSheetDialog()
     }

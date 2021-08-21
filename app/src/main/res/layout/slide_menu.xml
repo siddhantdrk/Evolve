@@ -3,6 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:fitsSystemWindows="true"
+    android:layout_gravity="start"
+    android:background="#703C1550"
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:scrollbarSize="0dp">
