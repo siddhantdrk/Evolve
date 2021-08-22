@@ -7,9 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.app.evolve.R
-import com.budiyev.android.codescanner.CodeScanner
-import com.budiyev.android.codescanner.CodeScannerView
-import com.budiyev.android.codescanner.DecodeCallback
+import com.budiyev.android.codescanner.*
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -31,23 +29,40 @@ class ScanACodeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_scan_a_code, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
+        val view = inflater.inflate(R.layout.fragment_scan_a_code, container, false)
         val scannerView = view.findViewById<CodeScannerView>(R.id.scannerView)
         val activity = requireActivity()
         codeScanner = CodeScanner(activity, scannerView)
+        codeScanner.camera = CodeScanner.CAMERA_BACK // or CAMERA_FRONT or specific camera id
+        codeScanner.formats = CodeScanner.ALL_FORMATS // list of type BarcodeFormat,
+        // ex. listOf(BarcodeFormat.QR_CODE)
+        codeScanner.autoFocusMode = AutoFocusMode.SAFE // or CONTINUOUS
+        codeScanner.scanMode = ScanMode.SINGLE // or CONTINUOUS or PREVIEW
+        codeScanner.isAutoFocusEnabled = false // Whether to enable auto focus or not
+        codeScanner.isFlashEnabled = false // Whether to enable flash or not
         codeScanner.decodeCallback = DecodeCallback {
             activity.runOnUiThread {
                 Toast.makeText(activity, it.text, Toast.LENGTH_LONG).show()
             }
         }
-        scannerView.setOnClickListener {
-            //codeScanner.startPreview()
+
+        codeScanner.errorCallback = ErrorCallback { // or ErrorCallback.SUPPRESS
+            activity.runOnUiThread {
+                Toast.makeText(
+                    activity, "Camera initialization error: ${it.message}",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
         }
+
+        scannerView.setOnClickListener {
+            codeScanner.startPreview()
+        }
+        return view;
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 
     override fun onResume() {

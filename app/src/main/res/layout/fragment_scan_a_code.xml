@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_marginTop="62dp"
     android:layout_height="match_parent"
     tools:context=".fragments.ScanACodeFragment">
 
     <com.budiyev.android.codescanner.CodeScannerView
         android:id="@+id/scannerView"
         android:layout_width="match_parent"
-        android:layout_marginTop="62dp"
         android:layout_height="match_parent"
         app:autoFocusButtonColor="@android:color/white"
         app:autoFocusButtonVisible="false"
+        android:fitsSystemWindows="true"
         app:flashButtonColor="@android:color/white"
         app:flashButtonVisible="false"
         app:frameAspectRatioHeight="1"
         app:frameAspectRatioWidth="1"
+        android:layout_marginBottom="128dp"
         app:frameColor="@color/black_alpha_70"
         app:frameCornersRadius="5dp"
         app:frameCornersSize="50dp"
-        app:frameSize="0.55"
+        app:frameSize="0.7"
         app:frameThickness="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:maskColor="@color/black_alpha_70" />
 
     <TextView
@@ -30,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="190.5dp"
         android:drawablePadding="13.48dp"
+        android:layout_gravity="bottom|center_horizontal"
         android:fontFamily="@font/lato_bold"
         android:gravity="center"
         android:text="@string/share_from_photos"
@@ -40,4 +45,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
