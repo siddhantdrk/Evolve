@@ -10,6 +10,7 @@
         android:id="@+id/scannerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="52dp"
         app:autoFocusButtonColor="@android:color/white"
         app:autoFocusButtonVisible="false"
         android:fitsSystemWindows="true"
