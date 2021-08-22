@@ -17,6 +17,7 @@
         app:flashButtonVisible="false"
         app:frameAspectRatioHeight="1"
         app:frameAspectRatioWidth="1"
+        android:layout_marginBottom="128dp"
         app:frameColor="@color/black_alpha_70"
         app:frameCornersRadius="5dp"
         app:frameCornersSize="50dp"
