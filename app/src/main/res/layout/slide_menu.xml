@@ -93,7 +93,7 @@
             android:id="@+id/tvLohout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="279dp"
+            android:layout_marginTop="240dp"
             android:layout_marginBottom="68dp"
             android:drawablePadding="9.86dp"
             android:fontFamily="@font/lato"
