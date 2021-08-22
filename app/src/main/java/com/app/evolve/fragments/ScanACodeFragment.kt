@@ -56,7 +56,7 @@ class ScanACodeFragment : Fragment() {
         }
 
         scannerView.setOnClickListener {
-            codeScanner.startPreview()
+            //codeScanner.startPreview()
         }
         return view;
     }
