@@ -18,7 +18,7 @@
         app:flashButtonVisible="false"
         app:frameAspectRatioHeight="1"
         app:frameAspectRatioWidth="1"
-        android:layout_marginBottom="128dp"
+        android:layout_marginBottom="176dp"
         app:frameColor="@color/black_alpha_70"
         app:frameCornersRadius="5dp"
         app:frameCornersSize="50dp"
@@ -33,7 +33,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="190.5dp"
+        android:layout_marginBottom="264dp"
         android:drawablePadding="13.48dp"
         android:layout_gravity="bottom|center_horizontal"
         android:fontFamily="@font/lato_bold"
