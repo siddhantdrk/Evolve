@@ -18,19 +18,18 @@
             android:id="@+id/ll_create_account"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="48.25dp"
+            android:layout_marginTop="33.25dp"
             android:layout_marginBottom="86.25dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_create_account">
+            app:layout_constraintTop_toBottomOf="@+id/lineView">
 
             <TextView
                 android:id="@+id/txt_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="38dp"
-                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/lato"
                 android:text="@string/full_name"
                 android:textColor="@color/text_color"
@@ -38,21 +37,29 @@
                 app:layout_constraintBottom_toTopOf="@+id/et_email"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <EditText
-                android:id="@+id/et_fullname"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilFullName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="37dp"
-                android:layout_marginEnd="37dp"
-                android:backgroundTint="@color/border_color"
-                android:fontFamily="@font/lato"
-                android:paddingBottom="18dp"
-                android:text="Jori Davis"
-                android:textColor="@color/text_color"
-                android:textColorHighlight="@color/text_color"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_marginEnd="37dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/border_color"
+                    android:fontFamily="@font/lato"
+                    android:paddingBottom="18dp"
+                    android:text="Jori Davis"
+                    android:textColor="@color/text_color"
+                    android:textColorHighlight="@color/text_color"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <TextView
                 android:id="@+id/txt_email"
@@ -60,7 +67,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="38dp"
                 android:layout_marginTop="35.5dp"
-                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/lato"
                 android:text="@string/email"
                 android:textColor="@color/text_color"
@@ -68,22 +74,29 @@
                 app:layout_constraintBottom_toTopOf="@+id/et_email"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <EditText
-                android:id="@+id/et_email"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="37dp"
-                android:layout_marginEnd="37dp"
-                android:backgroundTint="@color/border_color"
-                android:fontFamily="@font/lato"
-                android:inputType="textEmailAddress"
-                android:paddingBottom="18dp"
-                android:text="Davis.jori@gmail.com"
-                android:textColor="@color/text_color"
-                android:textColorHighlight="@color/text_color"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_marginEnd="37dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/border_color"
+                    android:fontFamily="@font/lato"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="18dp"
+                    android:text="Davis.jori@gmail.com"
+                    android:textColor="@color/text_color"
+                    android:textColorHighlight="@color/text_color"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/txt_phone"
@@ -91,7 +104,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="38dp"
                 android:layout_marginTop="35.5dp"
-                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/lato"
                 android:text="@string/phone_number"
                 android:textColor="@color/text_color"
@@ -109,7 +121,8 @@
                     android:layout_width="50dp"
                     android:layout_height="32dp"
                     android:layout_marginStart="4dp"
-                    android:layout_marginTop="2dp"
+                    android:layout_alignBottom="@id/tilPhone"
+                    android:layout_marginBottom="12dp"
                     android:background="@drawable/ccp_round_corner_bg"
                     android:gravity="center"
                     app:ccp_arrowSize="20dp"
@@ -118,22 +131,29 @@
                     app:ccp_textFont="@string/lato_regular"
                     app:ccp_textSize="14sp" />
 
-                <EditText
-                    android:id="@+id/et_phone"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPhone"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/border_color"
-                    android:fontFamily="@font/lato"
-                    android:inputType="phone"
-                    android:paddingStart="64dp"
-                    android:paddingBottom="18dp"
-                    android:text="123 456 7890"
-                    android:textColor="@color/text_color"
-                    android:textColorHighlight="@color/text_color"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="RtlSymmetry" />
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/border_color"
+                        android:fontFamily="@font/lato"
+                        android:inputType="phone"
+                        android:paddingStart="64dp"
+                        android:paddingBottom="18dp"
+                        android:text="123 456 7890"
+                        android:textColor="@color/text_color"
+                        android:textColorHighlight="@color/text_color"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="RtlSymmetry" />
+
+                </com.google.android.material.textfield.TextInputLayout>
             </RelativeLayout>
 
             <TextView
@@ -147,21 +167,29 @@
                 android:textColor="@color/text_color"
                 android:textSize="14sp" />
 
-            <EditText
-                android:id="@+id/et_password"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="37dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginEnd="37dp"
-                android:backgroundTint="@color/border_color"
-                android:fontFamily="@font/lato"
-                android:inputType="textPassword"
-                android:paddingBottom="18dp"
-                android:text="1234567890"
-                android:textColor="@color/text_color"
-                android:textColorHighlight="@color/text_color"
-                android:textSize="20sp" />
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/border_color"
+                    android:fontFamily="@font/lato"
+                    android:inputType="textPassword"
+                    android:paddingBottom="18dp"
+                    android:text="1234567890"
+                    android:textColor="@color/text_color"
+                    android:textColorHighlight="@color/text_color"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <TextView
@@ -175,21 +203,29 @@
                 android:textColor="@color/text_color"
                 android:textSize="14sp" />
 
-            <EditText
-                android:id="@+id/et_confirm_password"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilConfirmPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="37dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginEnd="37dp"
-                android:backgroundTint="@color/border_color"
-                android:fontFamily="@font/lato"
-                android:inputType="textPassword"
-                android:paddingBottom="18dp"
-                android:text="1234567890"
-                android:textColor="@color/text_color"
-                android:textColorHighlight="@color/text_color"
-                android:textSize="20sp" />
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/border_color"
+                    android:fontFamily="@font/lato"
+                    android:inputType="textPassword"
+                    android:paddingBottom="18dp"
+                    android:text="1234567890"
+                    android:textColor="@color/text_color"
+                    android:textColorHighlight="@color/text_color"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
 
@@ -218,13 +254,43 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="37dp"
-            android:layout_marginTop="142dp"
+            android:layout_marginTop="91dp"
             android:fontFamily="@font/lato_bold"
             android:text="@string/create_your_account"
             android:textColor="@color/primary_color"
             android:textSize="25sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mbGoogleSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="37dp"
+            android:drawableStart="@drawable/ic_launcher_background"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/sign_in_with_google"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/google_login_color"
+            app:cornerRadius="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_create_account" />
+
+        <View
+            android:id="@+id/lineView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="37dp"
+            android:background="#4F0774"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mbGoogleSignUp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
