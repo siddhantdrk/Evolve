@@ -193,15 +193,21 @@
 
         </LinearLayout>
 
-        <TextView
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/tv_request_access"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
             android:layout_marginTop="86.25dp"
+            android:layout_marginEnd="39dp"
             android:fontFamily="@font/lato_bold"
-            android:text="@string/request_access"
-            android:textColor="@color/primary_color"
-            android:textSize="18sp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/request_password"
+            android:textAllCaps="false"
+            android:textColor="@color/app_background"
+            android:textSize="16sp"
+            app:cornerRadius="12dp"
             app:drawableEndCompat="@drawable/ic_arrow_right"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
