@@ -120,8 +120,8 @@
                 <com.rilixtech.widget.countrycodepicker.CountryCodePicker
                     android:layout_width="50dp"
                     android:layout_height="32dp"
-                    android:layout_marginStart="4dp"
                     android:layout_alignBottom="@id/tilPhone"
+                    android:layout_marginStart="4dp"
                     android:layout_marginBottom="12dp"
                     android:background="@drawable/ccp_round_corner_bg"
                     android:gravity="center"
