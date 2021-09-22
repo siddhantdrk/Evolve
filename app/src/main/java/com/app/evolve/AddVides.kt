@@ -17,7 +17,7 @@ class AddVides : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_vides)
+        setContentView(R.layout.activity_add_vibes)
 
         rvExplore  =findViewById(R.id.rvExplore)
         rvAmericanSport = findViewById(R.id.rvAmericanSport)
