@@ -94,4 +94,7 @@
     <string name="forgot_password_">Forgot Password?</string>
     <string name="enter_email_address">ENTER EMAIL ADDRESS</string>
     <string name="reset_password">Reset Password</string>
+    <string name="reset_request_sent">Reset Request sent!</string>
+    <string name="check_your_email_for_a_link_to_reset_your_wevolv_password">Check your email for a link to reset your Wevolv password.</string>
+    <string name="create_new_password">Create New Password</string>
 </resources>

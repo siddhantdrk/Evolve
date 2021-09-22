@@ -11,18 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Evolve">
+        <activity android:name=".CreateNewPassword"></activity>
+        <activity android:name=".ResetPasswordRequestSentActivity" />
         <activity
-            android:name=".ForgetPassword"
+            android:name=".ForgotPassword"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/Theme.Evolve.NoActionBar">
-
-        </activity>
-        <activity android:name=".AddVides"></activity>
+            android:theme="@style/Theme.Evolve.NoActionBar" />
+        <activity android:name=".AddVides" />
         <activity android:name=".AddInterests" />
-        <activity android:name=".AddTeam"></activity>
+        <activity android:name=".AddTeam" />
         <activity android:name=".ProfileSetup" />
         <activity android:name=".OnBoarding" />
         <activity android:name=".RequestSent" />
