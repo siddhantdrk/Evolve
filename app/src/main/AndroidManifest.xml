@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Evolve">
         <activity
+            android:name=".ForgetPassword"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.Evolve.NoActionBar">
@@ -21,13 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddVides">
-
-        </activity>
+        <activity android:name=".AddVides"></activity>
         <activity android:name=".AddInterests" />
-        <activity android:name=".AddTeam">
-
-        </activity>
+        <activity android:name=".AddTeam"></activity>
         <activity android:name=".ProfileSetup" />
         <activity android:name=".OnBoarding" />
         <activity android:name=".RequestSent" />
