@@ -234,6 +234,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="37dp"
             android:layout_marginTop="86.25dp"
+            android:letterSpacing="0.1"
             android:layout_marginEnd="39dp"
             android:fontFamily="@font/lato_bold"
             android:insetTop="0dp"
