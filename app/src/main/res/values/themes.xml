@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="EditTextTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+    <style name="PurpleEditTextTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
         <item name="colorControlNormal">@color/border_color</item>
         <item name="colorControlActivated">@color/border_color</item>
         <item name="colorControlHighlight">@color/border_color</item>

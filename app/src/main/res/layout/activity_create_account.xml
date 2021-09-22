@@ -43,7 +43,7 @@
                 android:layout_marginEnd="37dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:theme="@style/EditTextTheme"
+                    android:theme="@style/PurpleEditTextTheme"
                     android:id="@+id/tieFullName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
                 android:layout_marginEnd="37dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:theme="@style/EditTextTheme"
+                    android:theme="@style/PurpleEditTextTheme"
                     android:id="@+id/et_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -133,7 +133,7 @@
                     android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:theme="@style/EditTextTheme"
+                        android:theme="@style/PurpleEditTextTheme"
                         android:id="@+id/et_phone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -174,7 +174,7 @@
                 app:passwordToggleTint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:theme="@style/EditTextTheme"
+                    android:theme="@style/PurpleEditTextTheme"
                     android:id="@+id/et_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -211,7 +211,7 @@
                 app:passwordToggleTint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:theme="@style/EditTextTheme"
+                    android:theme="@style/PurpleEditTextTheme"
                     android:id="@+id/et_confirm_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
