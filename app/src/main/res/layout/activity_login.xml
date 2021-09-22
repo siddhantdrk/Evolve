@@ -110,6 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="38dp"
             android:layout_marginTop="45.25dp"
+            android:textSize="16sp"
             android:layout_marginEnd="37dp"
             android:drawableStart="@drawable/ic_launcher_background"
             android:insetTop="0dp"

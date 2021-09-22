@@ -33,9 +33,7 @@
                 android:fontFamily="@font/lato"
                 android:text="@string/full_name"
                 android:textColor="@color/text_color"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/et_email"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilFullName"
@@ -70,9 +68,7 @@
                 android:fontFamily="@font/lato"
                 android:text="@string/email"
                 android:textColor="@color/text_color"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/et_email"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:textSize="14sp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilEmail"
@@ -107,9 +103,7 @@
                 android:fontFamily="@font/lato"
                 android:text="@string/phone_number"
                 android:textColor="@color/text_color"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/et_email"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:textSize="14sp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -269,6 +263,7 @@
             android:layout_marginStart="38dp"
             android:layout_marginTop="18dp"
             android:layout_marginEnd="37dp"
+            android:textSize="16sp"
             android:drawableStart="@drawable/ic_launcher_background"
             android:insetTop="0dp"
             android:insetBottom="0dp"
