@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Evolve">
-        <activity android:name=".CreateNewPassword"></activity>
+        <activity
+            android:name=".EducationHistory"
+            android:exported="true" />
+        <activity android:name=".CreateNewPassword" />
         <activity android:name=".ResetPasswordRequestSentActivity" />
         <activity
             android:name=".ForgotPassword"

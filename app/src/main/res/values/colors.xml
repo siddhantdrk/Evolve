@@ -16,5 +16,6 @@
     <color name="profile_setup_bg">#69069A</color>
     <color name="black_alpha_70">#70000000</color>
     <color name="google_login_color">#4285F4</color>
+    <color name="app_background_with_opicity">#80F9FAF9</color>
 
 </resources>

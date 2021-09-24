@@ -97,4 +97,10 @@
     <string name="reset_request_sent">Reset Request sent!</string>
     <string name="check_your_email_for_a_link_to_reset_your_wevolv_password">Check your email for a link to reset your Wevolv password.</string>
     <string name="create_new_password">Create New Password</string>
+    <string name="step_4_education_history">Step 4: Education History</string>
+    <string name="school">SCHOOL</string>
+    <string name="degree">DEGREE</string>
+    <string name="field_of_study">FIELD OF STUDY</string>
+    <string name="wevolv_will_send_personalized_career_opportunities_your_way">“Wevolv will send personalized career opportunities your way.”</string>
+    <string name="skip">Skip</string>
 </resources>

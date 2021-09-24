@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/aworkspace/Evolve/app/src/main/res/layout/activity_create_account.xml" value="0.20416666666666666" />
+        <entry key="..\:/aworkspace/Evolve/app/src/main/res/layout/activity_education_history.xml" value="0.12894736842105264" />
         <entry key="..\:/aworkspace/Evolve/app/src/main/res/layout/activity_forget_password.xml" value="0.14" />
+        <entry key="..\:/aworkspace/Evolve/app/src/main/res/layout/activity_forgot_password.xml" value="0.12894736842105264" />
         <entry key="..\:/aworkspace/Evolve/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/aworkspace/Evolve/app/src/main/res/layout/activity_profile_setup.xml" value="0.20416666666666666" />
         <entry key="..\:/aworkspace/Evolve/app/src/main/res/layout/activity_splash.xml" value="0.14166666666666666" />
