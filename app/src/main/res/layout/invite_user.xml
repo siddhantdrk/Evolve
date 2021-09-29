@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="62dp"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:scrollbarSize="0dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constrainLayout"
@@ -77,23 +78,30 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtInviteUser" />
 
-        <EditText
-            android:id="@+id/etFullname"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="38.13dp"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="37.88dp"
-            android:backgroundTint="@color/border_color"
-            android:fontFamily="@font/lato"
-            android:paddingBottom="18dp"
-            android:text="Jori Davis"
-            android:textColor="@color/text_color"
-            android:textColorHighlight="@color/text_color"
-            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtName" />
+            app:layout_constraintTop_toBottomOf="@+id/txtName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/border_color"
+                android:fontFamily="@font/lato"
+                android:paddingBottom="18dp"
+                android:text="Jori Davis"
+                android:textColor="@color/text_color"
+                android:textColorHighlight="@color/text_color"
+                android:textSize="18sp"
+                android:theme="@style/PurpleEditTextTheme" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/txtEmail"
@@ -106,26 +114,34 @@
             android:textColor="@color/text_color"
             android:textSize="10sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etFullname" />
+            app:layout_constraintTop_toBottomOf="@+id/tilFullName" />
 
-        <EditText
-            android:id="@+id/etEmail"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="37.63dp"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="36.88dp"
-            android:backgroundTint="@color/border_color"
-            android:fontFamily="@font/lato"
-            android:inputType="textEmailAddress"
-            android:paddingBottom="18dp"
-            android:text="Davis.jori@gmail.com"
-            android:textColor="@color/text_color"
-            android:textColorHighlight="@color/text_color"
-            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/txtEmail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/border_color"
+                android:fontFamily="@font/lato"
+                android:inputType="textEmailAddress"
+                android:paddingBottom="18dp"
+                android:text="Davis.jori@gmail.com"
+                android:textColor="@color/text_color"
+                android:textColorHighlight="@color/text_color"
+                android:textSize="18sp"
+                android:theme="@style/PurpleEditTextTheme" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <TextView
             android:id="@+id/txtPhone"
@@ -139,7 +155,7 @@
             android:textColor="@color/text_color"
             android:textSize="10sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/tilEmail" />
 
         <RelativeLayout
             android:id="@+id/rlPhoneNumber"
@@ -153,10 +169,12 @@
             app:layout_constraintTop_toBottomOf="@+id/txtPhone">
 
             <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                android:id="@+id/ccpPhone"
                 android:layout_width="50dp"
                 android:layout_height="32dp"
+                android:layout_alignBottom="@id/tilPhone"
                 android:layout_marginStart="4dp"
-                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
                 android:background="@drawable/ccp_round_corner_bg"
                 android:gravity="center"
                 app:ccp_arrowSize="20dp"
@@ -165,22 +183,28 @@
                 app:ccp_textFont="@string/lato_regular"
                 app:ccp_textSize="14sp" />
 
-            <EditText
-                android:id="@+id/et_phone"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPhone"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/border_color"
-                android:fontFamily="@font/lato"
-                android:inputType="phone"
-                android:paddingStart="64dp"
-                android:paddingBottom="18dp"
-                android:text="123 456 7890"
-                android:textColor="@color/text_color"
-                android:textColorHighlight="@color/text_color"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="RtlSymmetry" />
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/border_color"
+                    android:fontFamily="@font/lato"
+                    android:inputType="phone"
+                    android:paddingStart="64dp"
+                    android:paddingBottom="18dp"
+                    android:text="123 456 7890"
+                    android:textColor="@color/text_color"
+                    android:textColorHighlight="@color/text_color"
+                    android:textSize="16sp"
+                    android:theme="@style/PurpleEditTextTheme"
+                    tools:ignore="RtlSymmetry" />
+
+            </com.google.android.material.textfield.TextInputLayout>
         </RelativeLayout>
 
         <com.google.android.material.button.MaterialButton
@@ -188,9 +212,9 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginStart="60dp"
+            android:layout_marginTop="99dp"
             android:layout_marginEnd="59dp"
             android:layout_marginBottom="99dp"
-            android:layout_marginTop="99dp"
             android:fontFamily="@font/lato_bold"
             android:insetTop="0dp"
             android:insetBottom="0dp"

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/profile_setup_bg"
-    android:background="@color/profile_setup_bg">
+    android:background="@color/profile_setup_bg"
+    android:backgroundTint="@color/profile_setup_bg">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,43 +13,61 @@
         android:paddingBottom="122dp"
         tools:context=".ProfileSetup">
 
-        <EditText
-            android:id="@+id/et_address"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="37dp"
-            android:layout_marginTop="12.36dp"
             android:layout_marginEnd="37dp"
-            android:backgroundTint="@color/app_background"
-            android:fontFamily="@font/lato"
-            android:hint="@string/begin_typing_your_city"
-            android:paddingBottom="18dp"
-            android:textColor="@color/app_background"
-            android:textColorHighlight="@color/text_color"
             android:textColorHint="@color/app_background"
-            android:textSize="16sp"
+            app:hintAnimationEnabled="false"
+            app:hintTextColor="@color/app_background"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txt_where_from" />
+            app:layout_constraintTop_toBottomOf="@id/txt_where_from">
 
-        <EditText
-            android:id="@+id/et_current_address"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/app_background"
+                android:fontFamily="@font/lato"
+                android:hint="@string/begin_typing_your_city"
+                android:paddingBottom="18dp"
+                android:textColor="@color/app_background"
+                android:textColorHint="@color/app_background"
+                android:textSize="16sp"
+                android:theme="@style/GreyEditTextTheme" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCurrentAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="37dp"
-            android:layout_marginTop="12.36dp"
             android:layout_marginEnd="37dp"
-            android:backgroundTint="@color/app_background"
-            android:fontFamily="@font/lato"
-            android:hint="@string/begin_typing_your_city"
-            android:paddingBottom="18dp"
-            android:textColor="@color/app_background"
-            android:textColorHighlight="@color/text_color"
             android:textColorHint="@color/app_background"
-            android:textSize="16sp"
+            app:hintAnimationEnabled="false"
+            app:hintTextColor="@color/app_background"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txt_currenty_located" />
+            app:layout_constraintTop_toBottomOf="@id/txt_currenty_located">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieCurrentAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/app_background"
+                android:fontFamily="@font/lato"
+                android:hint="@string/begin_typing_your_city"
+                android:paddingBottom="18dp"
+                android:textColor="@color/app_background"
+                android:textColorHint="@color/app_background"
+                android:textSize="16sp"
+                android:theme="@style/GreyEditTextTheme" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/tv_user_current_location"
@@ -62,7 +80,7 @@
             android:textColor="@color/app_background"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_current_address" />
+            app:layout_constraintTop_toBottomOf="@+id/tilCurrentAddress" />
 
         <TextView
             android:id="@+id/txt_where_from"
@@ -104,7 +122,7 @@
             android:textColor="@color/app_background"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_address" />
+            app:layout_constraintTop_toBottomOf="@+id/tilAddress" />
 
         <TextView
             android:id="@+id/txt_birthdate"
@@ -124,38 +142,38 @@
             android:id="@+id/tv_continue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="188dp"
+            android:layout_marginTop="120dp"
             android:fontFamily="@font/lato_bold"
             android:text="@string/continue_"
             android:textColor="@color/app_background"
             android:textSize="14sp"
+            app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_user_current_location"
-            app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_current_location" />
 
         <LinearLayout
             android:id="@+id/layout_birthday"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="37dp"
-            android:orientation="horizontal"
             android:layout_marginTop="17.5dp"
             android:layout_marginEnd="37dp"
+            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/txt_birthdate">
 
             <AutoCompleteTextView
                 android:id="@+id/et_month"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:backgroundTint="@color/app_background"
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:drawablePadding="11dp"
                 android:ellipsize="end"
                 android:fontFamily="@font/lato"
                 android:hint="@string/month"
                 android:maxEms="2"
-                android:drawablePadding="11dp"
                 android:maxLines="1"
                 android:paddingBottom="18dp"
                 android:singleLine="true"
@@ -163,6 +181,7 @@
                 android:textColorHighlight="@color/text_color"
                 android:textColorHint="@color/app_background"
                 android:textSize="16sp"
+                android:theme="@style/GreyEditTextTheme"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/et_day"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -172,19 +191,20 @@
             <AutoCompleteTextView
                 android:id="@+id/et_day"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
+                android:layout_weight="1"
                 android:backgroundTint="@color/app_background"
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
-                android:fontFamily="@font/lato"
                 android:drawablePadding="11dp"
+                android:fontFamily="@font/lato"
                 android:hint="@string/day"
                 android:paddingBottom="18dp"
                 android:textColor="@color/app_background"
                 android:textColorHighlight="@color/text_color"
                 android:textColorHint="@color/app_background"
                 android:textSize="16sp"
+                android:theme="@style/GreyEditTextTheme"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/et_year"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -195,12 +215,12 @@
             <AutoCompleteTextView
                 android:id="@+id/et_year"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
+                android:layout_weight="1"
                 android:backgroundTint="@color/app_background"
-                android:drawablePadding="11dp"
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:drawablePadding="11dp"
                 android:fontFamily="@font/lato"
                 android:hint="@string/year"
                 android:paddingBottom="18dp"
@@ -208,6 +228,7 @@
                 android:textColorHighlight="@color/text_color"
                 android:textColorHint="@color/app_background"
                 android:textSize="16sp"
+                android:theme="@style/GreyEditTextTheme"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"

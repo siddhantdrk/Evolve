@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constrainLayout"
     android:layout_width="match_parent"
-    android:layout_marginTop="62dp"
-    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
     android:layout_height="match_parent"
-    android:background="@drawable/bottom_sheet_bg">
+    android:layout_marginTop="62dp"
+    android:background="@drawable/bottom_sheet_bg"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cvDismiss"
@@ -33,20 +33,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cvDismiss" />
 
-    <EditText
-        android:id="@+id/editText"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTeamName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
-        android:layout_marginTop="52.8dp"
+        android:layout_marginTop="42.8dp"
         android:layout_marginEnd="38dp"
-        android:drawableEnd="@drawable/ic_baseline_search_24"
-        android:fontFamily="@font/lato_light"
-        android:paddingBottom="16.5dp"
-        android:text="Olimp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAddaTeam" />
+        app:layout_constraintTop_toBottomOf="@+id/txtAddaTeam">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieTeamName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_baseline_search_24"
+            android:fontFamily="@font/lato_light"
+            android:paddingBottom="16.5dp"
+            android:text="Olimp"
+            android:theme="@style/BlackEditTextTheme" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintTeam"
@@ -55,7 +64,7 @@
         android:layout_marginStart="40.60dp"
         android:layout_marginTop="43.11dp"
         android:layout_marginEnd="36.86dp"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/tilTeamName"
         tools:layout_editor_absoluteX="0dp">
 
         <ImageView
@@ -174,6 +183,7 @@
                 android:textColorHighlight="@color/text_color"
                 android:textColorHint="#707070"
                 android:textSize="16sp"
+                android:theme="@style/BlackEditTextTheme"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/et_day"
                 app:layout_constraintStart_toStartOf="parent"
@@ -221,6 +231,7 @@
                 android:textColorHighlight="@color/text_color"
                 android:textColorHint="#707070"
                 android:textSize="16sp"
+                android:theme="@style/BlackEditTextTheme"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/et_day"
                 app:layout_constraintHorizontal_bias="0.5"

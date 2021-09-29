@@ -32,23 +32,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cvDismiss" />
 
-    <EditText
-        android:id="@+id/editText"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTeamName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
-        android:layout_marginTop="52.8dp"
+        android:layout_marginTop="42.8dp"
         android:layout_marginEnd="38dp"
-        android:backgroundTint="@color/black"
-        android:drawableEnd="@drawable/ic_baseline_search_24"
-        android:fontFamily="@font/lato_light"
-        android:paddingBottom="16.5dp"
-        android:text="Olimp"
-        android:textColor="@color/black"
-        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAddaTeam" />
+        app:layout_constraintTop_toBottomOf="@+id/txtAddaTeam">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieTeamName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_baseline_search_24"
+            android:fontFamily="@font/lato_light"
+            android:paddingBottom="16.5dp"
+            android:text="Olimp"
+            android:theme="@style/BlackEditTextTheme" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/txtNotFound"
@@ -64,7 +69,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/tilTeamName" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/buttonAddTeam"

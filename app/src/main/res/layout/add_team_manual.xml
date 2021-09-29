@@ -57,20 +57,29 @@
         app:layout_constraintTop_toBottomOf="@+id/txtAddaTeam"
         app:layout_goneMarginStart="38dp" />
 
-    <EditText
-        android:id="@+id/etTeamName"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTeamName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:hintAnimationEnabled="false"
         android:layout_marginStart="37.5dp"
         android:layout_marginEnd="37dp"
-        android:backgroundTint="@color/border_color"
-        android:fontFamily="@font/lato"
-        android:inputType="textEmailAddress"
-        android:paddingBottom="18dp"
-        android:textColor="@color/text_color"
-        android:textColorHighlight="@color/text_color"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/txtTeamName" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTeamName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTeamName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:backgroundTint="@color/border_color"
+            android:fontFamily="@font/lato"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="18dp"
+            android:textColor="@color/text_color"
+            android:textColorHighlight="@color/text_color"
+            android:theme="@style/PurpleEditTextTheme" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/txtCountry"
@@ -83,23 +92,32 @@
         android:textColor="@color/text_color"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTeamName"
+        app:layout_constraintTop_toBottomOf="@+id/tilTeamName"
         app:layout_goneMarginStart="38dp" />
 
-    <EditText
-        android:id="@+id/etCountry"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCountry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:hintAnimationEnabled="false"
         android:layout_marginStart="37.5dp"
         android:layout_marginEnd="37dp"
-        android:backgroundTint="@color/border_color"
-        android:fontFamily="@font/lato"
-        android:inputType="textEmailAddress"
-        android:paddingBottom="18dp"
-        android:textColor="@color/text_color"
-        android:textColorHighlight="@color/text_color"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/txtCountry" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCountry">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:backgroundTint="@color/border_color"
+            android:fontFamily="@font/lato"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="18dp"
+            android:textColor="@color/text_color"
+            android:textColorHighlight="@color/text_color"
+            android:theme="@style/PurpleEditTextTheme" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -114,6 +132,6 @@
         app:drawableTint="@color/primary_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCountry" />
+        app:layout_constraintTop_toBottomOf="@+id/tilCountry" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
