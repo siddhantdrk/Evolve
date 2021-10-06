@@ -17,6 +17,6 @@
     <item
         android:width="18dp"
         android:height="18dp"
-        android:drawable="@drawable/google"
+        android:drawable="@drawable/ic_google_logo"
         android:gravity="center" />
 </layer-list>

@@ -171,6 +171,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="37dp"
                 android:layout_marginEnd="37dp"
+                app:passwordToggleDrawable="@drawable/password_toggle_icon_selector"
                 app:passwordToggleEnabled="true"
                 app:passwordToggleTint="@color/black">
 
@@ -208,6 +209,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="37dp"
                 android:layout_marginEnd="37dp"
+                app:passwordToggleDrawable="@drawable/password_toggle_icon_selector"
                 app:passwordToggleEnabled="true"
                 app:passwordToggleTint="@color/black">
 

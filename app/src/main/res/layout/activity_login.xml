@@ -47,6 +47,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="37dp"
             android:layout_marginEnd="37dp"
+            app:passwordToggleDrawable="@drawable/password_toggle_icon_selector"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_password">
@@ -75,7 +78,7 @@
             android:layout_marginEnd="225dp"
             android:layout_marginBottom="71.62dp"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/ic_wevolve_app_logo"
             app:layout_constraintBottom_toTopOf="@+id/txt_email"
             app:layout_constraintDimensionRatio="166:32.55"
             app:layout_constraintEnd_toEndOf="parent"
