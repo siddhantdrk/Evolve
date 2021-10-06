@@ -105,4 +105,6 @@
     <string name="skip">Skip</string>
     <string name="next">Next</string>
     <string name="save">Save</string>
+    <string name="step_4_who_is_your_agent">Step 4: Who Is Your Agent?</string>
+    <string name="enter_name">ENTER NAME</string>
 </resources>

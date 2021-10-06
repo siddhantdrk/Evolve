@@ -40,7 +40,7 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilSchool"
+            android:id="@+id/tilEnterName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="37dp"
@@ -48,7 +48,7 @@
             app:layout_constraintTop_toBottomOf="@id/txtSchool">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etSchool"
+                android:id="@+id/etEnterName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/app_background"
@@ -76,7 +76,7 @@
             android:textColor="@color/app_background"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tilSchool" />
+            app:layout_constraintTop_toBottomOf="@id/tilEnterName" />
 
 
         <com.google.android.material.textfield.TextInputLayout
