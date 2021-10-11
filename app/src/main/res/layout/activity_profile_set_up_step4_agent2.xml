@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_color"
+    android:fillViewport="true"
+    tools:context=".ui.ProfileSetUpStep4Agent2Activity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="89dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/step_4_who_is_your_agent"
+            android:textColor="@color/app_background"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/HowWouldYouRateTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="73dp"
+            android:layout_marginEnd="48dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/how_would_you_rate_name_as_an_agent"
+            android:textColor="#F9FAF9"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <RatingBar
+            android:id="@+id/AgentRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="47.03dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="31dp"
+            android:layout_marginEnd="26dp"
+            android:max="5"
+            android:numStars="5"
+            android:progressBackgroundTint="#838383"
+            android:progressDrawable="@drawable/custom_rating_bar_drawable"
+            android:progressTint="@color/app_background"
+            android:rating="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HowWouldYouRateTv" />
+
+        <TextView
+            android:id="@+id/HowWasExperienceTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="85.97dp"
+            android:layout_marginEnd="22dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/how_was_your_experience_working_with_name"
+            android:textColor="#F9FAF9"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AgentRatingBar" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilExperience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="33.5dp"
+            android:layout_marginTop="20.1dp"
+            app:hintAnimationEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HowWasExperienceTv">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieExperience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/app_background"
+                android:drawableEnd="@drawable/ic_purple_check_circle"
+                android:fontFamily="@font/lato_bold"
+                android:inputType="textEmailAddress"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingBottom="18dp"
+                android:text="@string/positive"
+                android:textColor="@color/app_background"
+                android:textColorHighlight="@color/app_background"
+                android:textSize="18sp"
+                android:theme="@style/GreyEditTextTheme" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/QualitiesChipGrp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="23dp"
+            android:layout_marginTop="24.5dp"
+            android:orientation="horizontal"
+            app:chipSpacingHorizontal="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilExperience">
+
+            <include layout="@layout/qualities_chip_layout" />
+
+            <include layout="@layout/qualities_chip_layout" />
+
+            <include layout="@layout/qualities_chip_layout" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+
+        <RadioGroup
+            android:id="@+id/NeutralNegativeRadioGrp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="23dp"
+            android:layout_marginTop="26.9dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/QualitiesChipGrp">
+
+            <RadioButton
+                android:id="@+id/NeutralRadioBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/ic_unchecked_radio_btn"
+                android:buttonTint="#707070"
+                android:fontFamily="@font/lato_bold"
+                android:layoutDirection="rtl"
+                android:text="@string/neutral"
+                android:textColor="@color/app_background"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/NegativeRadioBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="41.75dp"
+                android:button="@drawable/ic_unchecked_radio_btn"
+                android:buttonTint="#707070"
+                android:fontFamily="@font/lato_bold"
+                android:layoutDirection="rtl"
+                android:text="@string/negative"
+                android:textColor="@color/app_background"
+                android:textSize="20sp" />
+
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="62.4dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/done"
+            android:textColor="@color/app_background"
+            android:textSize="18sp"
+            app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/NeutralNegativeRadioGrp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/ownReviewCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="21.5dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginBottom="42dp"
+            android:minHeight="193dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="13dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDone"
+            app:strokeWidth="0dp">
+
+
+            <EditText
+                android:id="@+id/etReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="21dp"
+                android:layout_marginVertical="5dp"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/lato"
+                android:hint="@string/write_your_review_here"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black_opacity_80"
+                android:textColorHint="@color/black_opacity_80"
+                android:textSize="15sp" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

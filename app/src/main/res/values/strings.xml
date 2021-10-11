@@ -107,4 +107,11 @@
     <string name="save">Save</string>
     <string name="step_4_who_is_your_agent">Step 4: Who Is Your Agent?</string>
     <string name="enter_name">ENTER NAME</string>
+    <string name="_24_7_communication">24/7 Communication</string>
+    <string name="how_would_you_rate_name_as_an_agent">How would you rate {Name} as an agent?</string>
+    <string name="how_was_your_experience_working_with_name">How was your experience working with {Name}?</string>
+    <string name="positive">Positive</string>
+    <string name="neutral">Neutral</string>
+    <string name="negative">Negative</string>
+    <string name="write_your_review_here">Write your review here</string>
 </resources>

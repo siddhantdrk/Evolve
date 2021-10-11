@@ -47,7 +47,7 @@
             android:layout_marginEnd="37dp"
             app:layout_constraintTop_toBottomOf="@id/txtSchool">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <AutoCompleteTextView
                 android:id="@+id/etEnterName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -91,7 +91,8 @@
             app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/textViewSkip"
-            app:layout_constraintStart_toStartOf="@+id/textViewSkip" />
+            app:layout_constraintStart_toStartOf="@+id/textViewSkip"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSkip" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
