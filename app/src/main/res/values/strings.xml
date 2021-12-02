@@ -114,4 +114,9 @@
     <string name="neutral">Neutral</string>
     <string name="negative">Negative</string>
     <string name="write_your_review_here">Write your review here</string>
+    <string name="info">Info</string>
+    <string name="infoSave">SAVE</string>
+    <string name="nationality">NATIONALITY</string>
+    <string name="add_another_nationality">Add Another Nationality</string>
+    <string name="playing_status">PLAYING STATUS</string>
 </resources>
