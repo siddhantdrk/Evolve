@@ -7,6 +7,6 @@ import com.app.evolve.R
 class ProfileSetUpStep4Agent2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_profile_info)
+        setContentView(R.layout.fragment_player_profile_about_edit)
     }
 }

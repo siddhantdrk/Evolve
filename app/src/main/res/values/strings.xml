@@ -119,4 +119,28 @@
     <string name="nationality">NATIONALITY</string>
     <string name="add_another_nationality">Add Another Nationality</string>
     <string name="playing_status">PLAYING STATUS</string>
+    <string name="current_position">CURRENT POSITION</string>
+    <string name="country_region">COUNTRY/REGION</string>
+    <string name="locations_within_this_area">LOCATIONS WITHIN THIS AREA</string>
+    <string name="measurables">Measurables</string>
+    <string name="imperial">Imperial</string>
+    <string name="metric">Metric</string>
+    <string name="height">HEIGHT</string>
+    <string name="weight">WEIGHT</string>
+    <string name="wingspan">WINGSPAN</string>
+    <string-array name="playing_status">
+        <item>"Active"</item>
+    </string-array>
+
+    <string-array name="current_position">
+        <item>"Point Guard at Olimpiacos B.C."</item>
+    </string-array>
+
+    <string-array name="country_region">
+        <item>"Greece"</item>
+    </string-array>
+
+    <string-array name="loc_within_area">
+        <item>"Piraeus"</item>
+    </string-array>
 </resources>

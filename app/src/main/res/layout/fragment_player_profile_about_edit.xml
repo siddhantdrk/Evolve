@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profileInfoParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_bg"
+    android:paddingHorizontal="37dp"
+    tools:context=".fragments.ProfileInfoFragment">
+
+
+    <ImageView
+        android:id="@+id/backIv"
+        android:layout_width="13.5dp"
+        android:layout_height="23.62dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="31dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toStartOf="@+id/infoTv"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/infoTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/info"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/backIv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backIv" />
+
+    <TextView
+        android:id="@+id/saveTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/infoSave"
+        android:textColor="@color/profile_setup_bg"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/backIv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/infoTv"
+        app:layout_constraintTop_toTopOf="@+id/backIv" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/Sv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backIv">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Csl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileCiv"
+                android:layout_width="101dp"
+                android:layout_height="101dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cameraMcv"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:cardBackgroundColor="#FF3366"
+                app:cardCornerRadius="17dp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/profileCiv"
+                app:layout_constraintEnd_toEndOf="@+id/profileCiv">
+
+                <ImageView
+                    android:id="@+id/cameraIv"
+                    android:layout_width="14dp"
+                    android:layout_height="15sp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_launcher_background" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="41dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/full_name"
+                android:textColor="@color/profile_info_label"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profileCiv"
+                tools:ignore="SmallSp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#40707070"
+                    android:fontFamily="@font/lato"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="18dp"
+                    android:text="Jori Davis"
+                    android:textColor="@color/text_color"
+                    android:textColorHighlight="@color/text_color"
+                    android:textSize="18sp"
+                    android:theme="@style/ProfileInfoGreyEditTextTheme"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/nationalityTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/nationality"
+                android:textColor="@color/profile_info_label"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilFullName"
+                tools:ignore="SmallSp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNationality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nationalityTv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieNationality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#40707070"
+                    android:fontFamily="@font/lato"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="18dp"
+                    android:text="American"
+                    android:textColor="@color/text_color"
+                    android:textColorHighlight="@color/text_color"
+                    android:textSize="18sp"
+                    android:theme="@style/ProfileInfoGreyEditTextTheme"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/addNationalityTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/add_another_nationality"
+                android:textColor="@color/profile_info_add"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilNationality" />
+
+            <TextView
+                android:id="@+id/playingStatusTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/playing_status"
+                android:textColor="@color/profile_info_label"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addNationalityTv"
+                tools:ignore="SmallSp" />
+
+
+            <Spinner
+                android:id="@+id/playingStatusSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_info_spinner_bg"
+                android:backgroundTint="@color/black"
+                android:entries="@array/playing_status"
+                android:paddingHorizontal="0dp"
+                android:paddingBottom="18dp"
+                android:spinnerMode="dropdown"
+                android:theme="@style/StyleForSpinnerItem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/playingStatusTv" />
+
+            <TextView
+                android:id="@+id/currentPositionTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/current_position"
+                android:textColor="@color/profile_info_label"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/playingStatusSpinner"
+                tools:ignore="SmallSp" />
+
+
+            <Spinner
+                android:id="@+id/currentPositionSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_info_spinner_bg"
+                android:backgroundTint="@color/black"
+                android:entries="@array/current_position"
+                android:paddingHorizontal="0dp"
+                android:paddingBottom="18dp"
+                android:spinnerMode="dropdown"
+                android:theme="@style/StyleForSpinnerItem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/currentPositionTv" />
+
+            <TextView
+                android:id="@+id/countryRegionTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/country_region"
+                android:textColor="@color/profile_info_label"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/currentPositionSpinner"
+                tools:ignore="SmallSp" />
+
+
+            <Spinner
+                android:id="@+id/countryRegionSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_info_spinner_bg"
+                android:backgroundTint="@color/black"
+                android:entries="@array/country_region"
+                android:paddingHorizontal="0dp"
+                android:paddingBottom="18dp"
+                android:spinnerMode="dropdown"
+                android:theme="@style/StyleForSpinnerItem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/countryRegionTv" />
+
+            <TextView
+                android:id="@+id/useCurrentLocTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/use_current_location"
+                android:textColor="@color/profile_info_add"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/countryRegionSpinner" />
+
+            <TextView
+                android:id="@+id/locationWithinAreaTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/locations_within_this_area"
+                android:textColor="@color/profile_info_label"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/useCurrentLocTv"
+                tools:ignore="SmallSp" />
+
+
+            <Spinner
+                android:id="@+id/locationWithinAreaSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_info_spinner_bg"
+                android:backgroundTint="@color/black"
+                android:entries="@array/loc_within_area"
+                android:paddingHorizontal="0dp"
+                android:paddingBottom="18dp"
+                android:spinnerMode="dropdown"
+                android:theme="@style/StyleForSpinnerItem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationWithinAreaTv" />
+
+
+            <TextView
+                android:id="@+id/measurablesTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="51dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/measurables"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationWithinAreaSpinner" />
+
+
+            <RadioGroup
+                android:id="@+id/measurablesRdGrp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/measurablesTv">
+
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/imperialRdBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/measurable_radio_btn_bg"
+                    android:checked="true"
+                    android:fontFamily="@font/lato"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/imperial"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/metricRdBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="51dp"
+                    android:button="@drawable/measurable_radio_btn_bg"
+                    android:fontFamily="@font/lato"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/metric"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/heightTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/height"
+                android:textColor="@color/profile_info_label"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/measurablesRdGrp"
+                tools:ignore="SmallSp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/heightTv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#40707070"
+                    android:fontFamily="@font/lato"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="18dp"
+                    android:text="5 ft 8in"
+                    android:textColor="@color/text_color"
+                    android:textColorHighlight="@color/text_color"
+                    android:textSize="18sp"
+                    android:theme="@style/ProfileInfoGreyEditTextTheme" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/weightTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/weight"
+                android:textColor="@color/profile_info_label"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilHeight"
+                tools:ignore="SmallSp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weightTv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#40707070"
+                    android:fontFamily="@font/lato"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="18dp"
+                    android:text="160 lbs"
+                    android:textColor="@color/text_color"
+                    android:textColorHighlight="@color/text_color"
+                    android:textSize="18sp"
+                    android:theme="@style/ProfileInfoGreyEditTextTheme" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/wingspanTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/wingspan"
+                android:textColor="@color/profile_info_label"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilWeight"
+                tools:ignore="SmallSp" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilWingspan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wingspanTv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieWingspan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#40707070"
+                    android:fontFamily="@font/lato"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="18dp"
+                    android:text="5 ft"
+                    android:textColor="@color/text_color"
+                    android:textColorHighlight="@color/text_color"
+                    android:textSize="18sp"
+                    android:theme="@style/ProfileInfoGreyEditTextTheme" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/verticalTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/wingspan"
+                android:textColor="@color/profile_info_label"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilWingspan"
+                tools:ignore="SmallSp" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilVertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="69dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/verticalTv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieVertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#40707070"
+                    android:fontFamily="@font/lato"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="18dp"
+                    android:text="42 in"
+                    android:textColor="@color/text_color"
+                    android:textColorHighlight="@color/text_color"
+                    android:textSize="18sp"
+                    android:theme="@style/ProfileInfoGreyEditTextTheme" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
