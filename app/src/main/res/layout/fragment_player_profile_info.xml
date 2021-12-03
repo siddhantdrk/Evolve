@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rlAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvAbout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="41dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="About"
+                    android:textColor="@color/info_text_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/ivEditAbout"
+                    android:layout_width="19.6dp"
+                    android:layout_height="19.6dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="31.35dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvAboutDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="40dp"
+                android:fontFamily="@font/lato_light"
+                android:text="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in."
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/rlAbout" />
+
+            <RelativeLayout
+                android:id="@+id/rlExperience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toBottomOf="@id/tvAboutDescription">
+
+                <TextView
+                    android:id="@+id/tvExperience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="37dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Experience"
+                    android:textColor="@color/info_text_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/ivEditExperience"
+                    android:layout_width="19.6dp"
+                    android:layout_height="19.6dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="31.35dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvExperience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="21dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlExperience"
+                tools:itemCount="2"
+                tools:listitem="@layout/added_profile_info_item" />
+
+            <TextView
+                android:id="@+id/tvEducation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/lato"
+                android:text="Education"
+                android:textColor="@color/info_text_color"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/rvExperience" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEducation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="21dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEducation"
+                tools:itemCount="1"
+                tools:listitem="@layout/added_profile_info_item" />
+
+            <RelativeLayout
+                android:id="@+id/rlAccomplishments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toBottomOf="@id/rvEducation">
+
+                <TextView
+                    android:id="@+id/tvAccomplishments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="37dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Accomplishments"
+                    android:textColor="@color/info_text_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/ivEditAccomplishments"
+                    android:layout_width="19.6dp"
+                    android:layout_height="19.6dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="31.35dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAccomplishments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="21dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlAccomplishments"
+                tools:itemCount="2"
+                tools:listitem="@layout/added_accomplishments_item" />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="37.5dp"
+                android:layout_marginTop="53.4dp"
+                android:layout_marginEnd="36.5dp"
+                android:background="@color/primary_color"
+                app:layout_constraintTop_toBottomOf="@id/rvAccomplishments" />
+
+            <RelativeLayout
+                android:id="@+id/rlFollowing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="47.95dp"
+                app:layout_constraintTop_toBottomOf="@id/line1">
+
+                <TextView
+                    android:id="@+id/tvFollowing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="34.75dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Following"
+                    android:textColor="@color/info_text_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/ivEditFollowing"
+                    android:layout_width="19.6dp"
+                    android:layout_height="19.6dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="31.35dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvAthletes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35.5dp"
+                android:layout_marginTop="47.95dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Athletes"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/rlFollowing" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAthletes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23.5dp"
+                android:layout_marginTop="14.46dp"
+                android:layout_marginEnd="10.5dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAthletes"
+                tools:itemCount="3"
+                tools:listitem="@layout/added_athletes_item" />
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="18.08dp"
+                android:layout_marginEnd="39dp"
+                android:background="@color/grey_70"
+                app:layout_constraintTop_toBottomOf="@id/rvAthletes" />
+
+            <TextView
+                android:id="@+id/tvSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22.81dp"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:text="@string/see_more"
+                android:textColor="@color/profile_setup_bg"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line2" />
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="37.5dp"
+                android:layout_marginTop="68.38dp"
+                android:layout_marginEnd="36.5dp"
+                android:background="@color/grey_70"
+                app:layout_constraintTop_toBottomOf="@id/tvSeeMore" />
+
+            <RelativeLayout
+                android:id="@+id/rlContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="31.5dp"
+                app:layout_constraintTop_toBottomOf="@id/line3">
+
+                <TextView
+                    android:id="@+id/tvContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="37dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Contact"
+                    android:textColor="@color/info_text_color"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/ivEditContact"
+                    android:layout_width="19.6dp"
+                    android:layout_height="19.6dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="31.35dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="31dp"
+                android:layout_marginEnd="21dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlContact"
+                tools:itemCount="4"
+                tools:listitem="@layout/added_contact_item" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

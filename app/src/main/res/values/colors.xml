@@ -21,4 +21,7 @@
     <color name="profile_info_label">#838383</color>
     <color name="profile_info_input_border">#707070</color>
     <color name="profile_info_add">#490D90</color>
+    <color name="green">#30AA03</color>
+    <color name="info_text_color">#1D1D26</color>
+    <color name="grey_70">#22707070</color>
 </resources>

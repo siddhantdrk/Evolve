@@ -143,4 +143,7 @@
     <string-array name="loc_within_area">
         <item>"Piraeus"</item>
     </string-array>
+
+    <string name="trusted_pro">Trusted Pro</string>
+    <string name="see_more">See More</string>
 </resources>
