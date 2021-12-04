@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@id/highlightTitleTv" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/proExpRv"
+        android:id="@+id/edit_inside_highlight_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -60,6 +60,6 @@
         android:background="@color/primary_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/proExpRv" />
+        app:layout_constraintTop_toBottomOf="@id/edit_inside_highlight_rv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
