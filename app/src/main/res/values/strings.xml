@@ -154,5 +154,8 @@
     <string name="athletes">Athletes</string>
     <string name="pro_experience">PRO EXPERIENCE</string>
     <string name="collegiate_experience">COLLEGIATE EXPERIENCE</string>
-    <string name="following">Following</string>
+    <string name="tiktok">TikTok</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="instagram">Instagram</string>
+    <string name="email_cap_first">Email</string>
 </resources>

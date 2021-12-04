@@ -36,6 +36,7 @@
         android:id="@+id/tvAboutDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="visible"
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="14dp"
         android:fontFamily="@font/lato_light"
@@ -190,7 +191,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvFollowing"
         tools:itemCount="2"
-        tools:listitem="@layout/added_accomplishments_item" />
+        tools:listitem="@layout/following_rv_item" />
 
     <ImageView
         android:id="@+id/ivEditFollowing"
@@ -215,7 +216,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvFollowing" />
+        app:layout_constraintTop_toBottomOf="@id/rvFollowing" />
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -292,17 +293,229 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvContact" />
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvContact"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="37dp"
-        android:layout_marginTop="31dp"
-        android:nestedScrollingEnabled="false"
-        app:layout_constraintEnd_toEndOf="parent"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/LinkedInCv"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37dp"
+        app:cardBackgroundColor="@color/light_grey"
+        app:cardCornerRadius="18.75dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/LinkedInVll"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvContact"
-        tools:itemCount="4"
-        tools:listitem="@layout/added_contact_item" />
+        app:layout_constraintTop_toTopOf="@+id/LinkedInVll">
+
+        <ImageView
+            android:id="@+id/LinkedInIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_icon_awesome_linkedin_in" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/LinkedInVll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="37dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LinkedInCv"
+        app:layout_constraintTop_toBottomOf="@+id/tvContact">
+
+        <TextView
+            android:id="@+id/tvLinkedIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/linkedin"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvLinkedInUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/lato"
+            android:text="Linkedin.com/joridavis"
+            android:textColor="@color/profile_info_label"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/TikTokCv"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37dp"
+        app:cardBackgroundColor="@color/light_grey"
+        app:cardCornerRadius="18.75dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/TikTokVll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TikTokVll">
+
+        <ImageView
+            android:id="@+id/TikTokIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_icon_simple_tiktok" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/TikTokVll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="37dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TikTokCv"
+        app:layout_constraintTop_toBottomOf="@+id/LinkedInVll">
+
+        <TextView
+            android:id="@+id/tvTikTok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/tiktok"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvTikTokUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/lato"
+            android:text="/@jori.davis"
+            android:textColor="@color/profile_info_label"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/InstagramCv"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37dp"
+        app:cardBackgroundColor="@color/light_grey"
+        app:cardCornerRadius="18.75dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/InstagramVll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/InstagramVll">
+
+        <ImageView
+            android:id="@+id/InstagramIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_icon_feather_instagram" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/InstagramVll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="37dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/InstagramCv"
+        app:layout_constraintTop_toBottomOf="@+id/TikTokVll">
+
+        <TextView
+            android:id="@+id/tvInstagram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/instagram"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvInstagramUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/lato"
+            android:text="/@jorisays"
+            android:textColor="@color/profile_info_label"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/emailCv"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37dp"
+        app:cardBackgroundColor="@color/light_grey"
+        app:cardCornerRadius="18.75dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/emailVll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/emailVll">
+
+        <ImageView
+            android:id="@+id/emailIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_icon_awesome_envelope" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/emailVll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="39dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/emailCv"
+        app:layout_constraintTop_toBottomOf="@+id/InstagramVll">
+
+        <TextView
+            android:id="@+id/tvemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/email_cap_first"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvEmailUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/lato"
+            android:text="Jori.davis@gmail.com"
+            android:textColor="@color/profile_info_label"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
