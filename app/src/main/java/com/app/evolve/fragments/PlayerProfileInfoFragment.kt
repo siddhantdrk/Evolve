@@ -12,11 +12,12 @@ import com.app.evolve.adapter.AddAccomplishmentsAdapter
 import com.app.evolve.adapter.AddAthletesAdapter
 import com.app.evolve.adapter.AddEducationAdapter
 import com.app.evolve.adapter.AddExperienceAdapter
+import com.app.evolve.databinding.FragmentPlayerProfileInfoBinding
 
 
 class PlayerProfileInfoFragment:Fragment(){
-
-    lateinit var rvExperience : RecyclerView
+    lateinit var binding: FragmentPlayerProfileInfoBinding
+    lateinit var rvExperience: RecyclerView
     lateinit var rvEducation : RecyclerView
     lateinit var rvAccomplishments: RecyclerView
     lateinit var rvAthletes : RecyclerView
@@ -30,7 +31,8 @@ class PlayerProfileInfoFragment:Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_player_profile_info, container, false)
+        binding = FragmentPlayerProfileInfoBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -41,14 +43,23 @@ class PlayerProfileInfoFragment:Fragment(){
         rvAccomplishments = view.findViewById(R.id.rvAccomplishments)
         rvAthletes = view.findViewById(R.id.rvAthletes)
 
-        rvExperience.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL ,false)
-        rvEducation.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL ,false)
-        rvAccomplishments.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL ,false)
-        rvAthletes.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL ,false)
+        rvExperience.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        rvEducation.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        rvAccomplishments.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        rvAthletes.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
         rvExperience.adapter = AddExperienceAdapter(requireContext())
         rvEducation.adapter = AddEducationAdapter(requireContext())
         rvAccomplishments.adapter = AddAccomplishmentsAdapter(requireContext())
         rvAthletes.adapter = AddAthletesAdapter(requireContext())
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.root.requestLayout()
     }
 }

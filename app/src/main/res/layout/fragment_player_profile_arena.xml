@@ -1,339 +1,338 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:background="@color/app_background">
 
-    <androidx.core.widget.NestedScrollView
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvInfo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="19dp"
+        app:cardBackgroundColor="#043C1550"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:contentPaddingBottom="19dp"
+        app:contentPaddingLeft="15dp"
+        app:contentPaddingRight="15dp"
+        app:contentPaddingTop="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|top"
+            android:src="@drawable/ic_baseline_info_21"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/tvInfo"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/lato"
+            android:text="@string/use_this_as_your_digital_resume_to_share_with_other_players_and_coaches_take_control_over_how_you_are_marketed"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cvInfo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="23dp"
-                app:cardCornerRadius="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:id="@+id/tvInfo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15.03dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="15.03dp"
-                    android:layout_marginBottom="15dp"
-                    android:fontFamily="@font/lato"
-                    android:text="Use this as your digital resume to share with other players and coaches. Take control over how you are marketed"
-                    android:textColor="@color/text_color"
-                    android:textSize="16sp" />
-
-            </com.google.android.material.card.MaterialCardView>
+    </com.google.android.material.card.MaterialCardView>
 
 
-            <LinearLayout
-                android:id="@+id/llPersonalInfo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="21dp"
-                android:layout_marginEnd="50dp"
-                android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@+id/cvInfo">
+    <LinearLayout
+        android:id="@+id/llPersonalInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/cvInfo">
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/tvBirthYear"
-                        android:layout_width="wrap_content"
-                        android:layout_height="34dp"
-                        android:fontFamily="@font/lato_bold"
-                        android:text="‘95"
-                        android:textColor="@color/black"
-                        android:textSize="28sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="17dp"
-                        android:alpha="0.6"
-                        android:fontFamily="@font/lato"
-                        android:text="Birth Year"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        app:layout_constraintTop_toBottomOf="@+id/tvBirthYear" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/tvHeight"
-                        android:layout_width="wrap_content"
-                        android:layout_height="34dp"
-                        android:fontFamily="@font/lato_bold"
-                        android:text="5’8”"
-                        android:textColor="@color/black"
-                        android:textSize="28sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="17dp"
-                        android:alpha="0.6"
-                        android:fontFamily="@font/lato"
-                        android:text="Height"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        app:layout_constraintTop_toBottomOf="@+id/tvHeight" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/tvWeight"
-                        android:layout_width="wrap_content"
-                        android:layout_height="34dp"
-                        android:fontFamily="@font/lato_bold"
-                        android:text="160lbs"
-                        android:textColor="@color/black"
-                        android:textSize="28sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="17dp"
-                        android:alpha="0.6"
-                        android:fontFamily="@font/lato"
-                        android:text="Weight"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        app:layout_constraintTop_toBottomOf="@+id/tvHeight" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <RelativeLayout
-                android:id="@+id/rlPlayingStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="52.69dp"
-                app:layout_constraintTop_toBottomOf="@id/llPersonalInfo">
-
-                <TextView
-                    android:id="@+id/tvPlayingStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginStart="37dp"
-                    android:fontFamily="@font/lato_bold"
-                    android:text="Playing Style"
-                    android:textColor="@color/info_text_color"
-                    android:textSize="16sp" />
-
-                <ImageView
-                    android:id="@+id/ivEditPlayingStyle"
-                    android:layout_width="19.6dp"
-                    android:layout_height="19.6dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginEnd="31.31dp"
-                    android:scaleType="fitXY"
-                    android:src="@mipmap/ic_launcher" />
-            </RelativeLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvPlayingStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="21dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rlPlayingStyle"
-                tools:itemCount="1"
-                tools:listitem="@layout/added_profile_experience_item" />
-
-            <RelativeLayout
-                android:id="@+id/rlHighlights"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="46.5dp"
-                app:layout_constraintTop_toBottomOf="@id/rvPlayingStyle">
-
-                <TextView
-                    android:id="@+id/tvHighlights"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginStart="37dp"
-                    android:fontFamily="@font/lato_bold"
-                    android:text="Highlights"
-                    android:textColor="@color/info_text_color"
-                    android:textSize="16sp" />
-
-                <ImageView
-                    android:id="@+id/ivEditHighlights"
-                    android:layout_width="19.6dp"
-                    android:layout_height="19.6dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginEnd="31.31dp"
-                    android:scaleType="fitXY"
-                    android:src="@mipmap/ic_launcher" />
-            </RelativeLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvHighlights"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="21dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rlHighlights"
-                tools:itemCount="2"
-                tools:listitem="@layout/added_profile_experience_item" />
-
-            <View
-                android:id="@+id/line1"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginStart="37.5dp"
-                android:layout_marginTop="57.69dp"
-                android:layout_marginEnd="36.5dp"
-                android:background="@color/primary_color"
-                app:layout_constraintTop_toBottomOf="@id/rvHighlights" />
-
-            <RelativeLayout
-                android:id="@+id/rlSkillsEndorsements"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="37.61dp"
-                app:layout_constraintTop_toBottomOf="@id/line1">
-
-                <TextView
-                    android:id="@+id/tvSkillsEndorsements"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginStart="34.75dp"
-                    android:fontFamily="@font/lato_bold"
-                    android:text="Skills &amp; Endorsements"
-                    android:textColor="@color/info_text_color"
-                    android:textSize="20sp" />
-
-                <ImageView
-                    android:id="@+id/ivEditSkillsEndorsements"
-                    android:layout_width="19.6dp"
-                    android:layout_height="19.6dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginEnd="31.31dp"
-                    android:scaleType="fitXY"
-                    android:src="@mipmap/ic_launcher" />
-            </RelativeLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tvSkills"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="38dp"
-                android:layout_marginTop="33.21dp"
-                android:fontFamily="@font/lato_bold"
-                android:text="Skills"
-                android:textColor="@color/info_text_color"
-                android:textSize="16sp"
-                app:layout_constraintTop_toBottomOf="@id/rlSkillsEndorsements" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvSkills"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:layout_marginEnd="21dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvSkills"
-                tools:itemCount="2"
-                tools:listitem="@layout/added_skills_item" />
-
-            <TextView
-                android:id="@+id/tvSeeAllSkills"
+                android:id="@+id/tvBirthYear"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="22.81dp"
+                android:layout_height="34dp"
                 android:fontFamily="@font/lato_bold"
-                android:gravity="center"
-                android:text="@string/see_all"
-                android:textColor="@color/profile_setup_bg"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rvSkills" />
+                android:text="‘95"
+                android:textColor="@color/black"
+                android:textSize="28sp" />
 
             <TextView
-                android:id="@+id/tvEndorsements"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="38dp"
-                android:layout_marginTop="57.69dp"
-                android:fontFamily="@font/lato_bold"
-                android:text="Endorsements"
-                android:textColor="@color/info_text_color"
-                android:textSize="16sp"
-                app:layout_constraintTop_toBottomOf="@id/tvSeeAllSkills" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvEndorsements"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:layout_marginEnd="21dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvEndorsements"
-                tools:itemCount="2"
-                tools:listitem="@layout/added_endorsements_item" />
-
-            <TextView
-                android:id="@+id/tvSeeAllEndorsements"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="22.81dp"
-                android:fontFamily="@font/lato_bold"
-                android:gravity="center"
-                android:text="@string/see_all"
-                android:textColor="@color/profile_setup_bg"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rvEndorsements" />
+                android:layout_height="17dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/birth_year"
+                android:textColor="#60000000"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/tvBirthYear" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
-</RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="5’8”"
+                android:textColor="@color/black"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:alpha="0.6"
+                android:fontFamily="@font/lato"
+                android:text="@string/heightArena"
+                android:textColor="#60000000"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/tvHeight" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="160lbs"
+                android:textColor="@color/black"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:alpha="0.6"
+                android:fontFamily="@font/lato"
+                android:text="@string/weightArena"
+                android:textColor="#60000000"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/tvHeight" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvPlayingStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="52.69dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/playing_style"
+        android:textColor="@color/info_text_color"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llPersonalInfo" />
+
+    <ImageView
+        android:id="@+id/ivEditPlayingStyle"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="37dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPlayingStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvPlayingStyle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPlayingStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginTop="16dp"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlayingStyle"
+        tools:itemCount="1"
+        tools:listitem="@layout/palying_style_rv_item" />
+
+
+    <TextView
+        android:id="@+id/tvHighlights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="46.5dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/highlights"
+        android:textColor="@color/info_text_color"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvPlayingStyle" />
+
+    <ImageView
+        android:id="@+id/ivEditHighlights"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="37dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHighlights"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvHighlights" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHighlights"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginTop="26dp"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHighlights"
+        tools:itemCount="2"
+        tools:listitem="@layout/highlights_rv_item" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="37dp"
+        android:background="@color/primary_color"
+        app:layout_constraintTop_toBottomOf="@id/rvHighlights" />
+
+
+    <TextView
+        android:id="@+id/tvSkillsEndorsements"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="37.61dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/skills_amp_endorsements"
+        android:textColor="@color/info_text_color"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line1" />
+
+    <ImageView
+        android:id="@+id/ivEditSkillsEndorsements"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="37dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@id/tvSkillsEndorsements"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvSkillsEndorsements" />
+
+    <TextView
+        android:id="@+id/tvSkills"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="33.21dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/skills"
+        android:textColor="@color/info_text_color"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSkillsEndorsements" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSkills"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="37dp"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSkills"
+        tools:itemCount="2"
+        tools:listitem="@layout/added_skills_item" />
+
+    <TextView
+        android:id="@+id/tvSeeAllSkills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="@string/see_all"
+        android:textColor="@color/profile_setup_bg"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvSkills" />
+
+    <TextView
+        android:id="@+id/tvEndorsements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="57.69dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/endorsements"
+        android:textColor="@color/info_text_color"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSeeAllSkills" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvEndorsements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="37dp"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEndorsements"
+        tools:itemCount="2"
+        tools:listitem="@layout/added_endorsements_item" />
+
+    <TextView
+        android:id="@+id/tvSeeAllEndorsements"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="22.81dp"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="@string/see_all"
+        android:textColor="@color/profile_setup_bg"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvEndorsements" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 

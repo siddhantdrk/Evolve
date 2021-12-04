@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Evolve">
-        <activity android:name=".PlayerProfileEditFollowingActivity"></activity>
+        <activity android:name=".PlayerProfileEditHighlightsActivity"></activity>
+        <activity android:name=".PlayerProfileEditFollowingActivity" />
         <activity android:name=".PlayerProfileExperienceEditActivity" />
         <activity android:name=".PlayerProfileActivity">
             <intent-filter>

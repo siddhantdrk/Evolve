@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/app_background"
     android:paddingHorizontal="37dp"
-    tools:context=".PlayerProfileEditFollowingActivity">
+    tools:context=".PlayerProfileEditHighlightsActivity">
 
     <ImageView
         android:id="@+id/backIv"
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato_bold"
-        android:text="@string/following"
+        android:text="@string/highlights"
         android:textColor="@color/text_color"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/backIv"
@@ -34,36 +34,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/backIv" />
 
-    <AutoCompleteTextView
-        android:id="@+id/searchFollowingAcTv"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/saveTv"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
-        android:backgroundTint="@color/black"
-        android:drawableEnd="@drawable/ic_baseline_search_24"
-        android:fontFamily="@font/lato_light"
-        android:hint="Search Name"
-        android:paddingBottom="18dp"
-        android:textColor="@color/black"
-        android:textColorHint="#50000000"
-        android:textSize="18sp"
-        android:theme="@style/BlackEditTextTheme"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/infoSave"
+        android:textColor="@color/profile_setup_bg"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/backIv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/experienceTv" />
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/experienceTv"
+        app:layout_constraintTop_toTopOf="@+id/backIv" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/followingRv"
+        android:id="@+id/editHighlightsRv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
-        android:nestedScrollingEnabled="false"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@+id/searchFollowingAcTv"
-        tools:itemCount="4"
-        tools:layout_editor_absoluteX="37dp"
-        tools:listitem="@layout/following_rv_item" />
-
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backIv"
+        tools:itemCount="2"
+        tools:listitem="@layout/edit_highlights_rv_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
