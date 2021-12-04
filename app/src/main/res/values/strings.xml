@@ -169,4 +169,6 @@
     <string name="endorsements">Endorsements</string>
     <string name="approve">Approve</string>
     <string name="deny">Deny</string>
+    <string name="add_item">Add Item</string>
+    <string name="paste_from_clipboard">Paste from clipboard</string>
 </resources>
