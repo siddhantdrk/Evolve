@@ -13,15 +13,14 @@
         android:id="@+id/constraintProfileInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp">
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="17dp">
 
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cvInfoImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="15dp"
             app:cardCornerRadius="13dp"
             app:cardElevation="0dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +41,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
-            android:layout_marginTop="17dp"
             android:fontFamily="@font/lato_bold"
             android:text="Olimpiacos B.C."
             android:textColor="@color/text_color"

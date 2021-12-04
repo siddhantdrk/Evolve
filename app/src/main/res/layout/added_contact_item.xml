@@ -4,7 +4,7 @@
     android:id="@+id/constraintContact"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="36.32dp">
+    android:layout_marginBottom="36dp">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cvLogo"
@@ -13,6 +13,7 @@
         app:cardBackgroundColor="@color/light_grey"
         app:cardCornerRadius="18.75dp"
         app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -26,30 +27,36 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <TextView
-        android:id="@+id/tvContactSiteName"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10.5dp"
-        android:fontFamily="@font/lato"
-        android:text="LinkedIn"
-        android:textColor="@color/black"
-        android:textSize="16sp"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cvLogo"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/tvContactEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="11.75dp"
-        android:layout_marginTop="2dp"
-        android:fontFamily="@font/lato"
-        android:text="Linkedin.com/joridavis"
-        android:textColor="@color/profile_info_label"
-        android:textSize="13sp"
-        app:layout_constraintStart_toEndOf="@+id/cvLogo"
-        app:layout_constraintTop_toBottomOf="@id/tvContactSiteName" />
+        <TextView
+            android:id="@+id/tvContactSiteName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="LinkedIn"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvContactEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/lato"
+            android:text="Linkedin.com/joridavis"
+            android:textColor="@color/profile_info_label"
+            android:textSize="13sp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -12,15 +12,13 @@
         android:id="@+id/constraintAthletes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17.97dp"
-        android:layout_marginBottom="16.15dp">
+        android:paddingHorizontal="22dp"
+        android:paddingVertical="17dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/civAthletesImage"
             android:layout_width="72.25dp"
             android:layout_height="72.25dp"
-            android:layout_marginStart="21.12dp"
-            android:layout_marginEnd="22.62dp"
             android:src="@drawable/ic_launcher_background"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,9 +26,10 @@
 
         <TextView
             android:id="@+id/tvAthletesName"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="13.62dp"
+            android:gravity="center"
             android:fontFamily="@font/lato"
             android:text="Name"
             android:textColor="@color/profile_info_label"
@@ -41,8 +40,9 @@
 
         <TextView
             android:id="@+id/tvTeam"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:layout_marginTop="2dp"
             android:fontFamily="@font/lato"
             android:text="Team"
@@ -54,8 +54,9 @@
 
         <TextView
             android:id="@+id/tvAthletesStatus"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:layout_marginTop="2dp"
             android:fontFamily="@font/lato"
             android:text="Status"

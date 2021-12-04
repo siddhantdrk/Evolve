@@ -147,4 +147,9 @@
     <string name="trusted_pro">Trusted Pro</string>
     <string name="see_more">See More</string>
     <string name="see_all">See All</string>
+    <string name="about">About</string>
+    <string name="experience">Experience</string>
+    <string name="accomplishments">Accomplishments</string>
+    <string name="following">Following</string>
+    <string name="athletes">Athletes</string>
 </resources>

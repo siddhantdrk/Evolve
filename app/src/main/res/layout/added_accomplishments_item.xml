@@ -13,15 +13,14 @@
         android:id="@+id/constraintProfileInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp">
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="17dp">
 
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cvInfoImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="15dp"
             app:cardCornerRadius="13dp"
             app:cardElevation="0dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,33 +36,38 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-        <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/awardsVll"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
-            android:layout_marginTop="28.5dp"
-            android:fontFamily="@font/lato_bold"
-            android:text="Awards"
-            android:textColor="@color/text_color"
-            android:textSize="18sp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/cvInfoImage"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cvInfoImage"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/cvInfoImage">
 
-        <TextView
-            android:id="@+id/tvLocation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="28dp"
-            android:alpha="0.5"
-            android:fontFamily="@font/lato"
-            android:text="2019 League MVP"
-            android:textColor="@color/text_color"
-            android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@+id/cvInfoImage"
-            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:text="Awards"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:alpha="0.5"
+                android:fontFamily="@font/lato"
+                android:text="2019 League MVP"
+                android:textColor="@color/text_color"
+                android:textSize="15sp" />
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
