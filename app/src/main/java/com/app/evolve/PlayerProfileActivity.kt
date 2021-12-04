@@ -2,17 +2,13 @@ package com.app.evolve
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.app.evolve.fragments.MyCode
 import com.app.evolve.fragments.PlayerProfileArenaFragment
 import com.app.evolve.fragments.PlayerProfileInfoFragment
-import com.app.evolve.fragments.ScanACodeFragment
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import java.util.*
 
 class PlayerProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,18 +24,6 @@ class PlayerProfileActivity : AppCompatActivity() {
         viewPager?.adapter = adapter
         profileTabs!!.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
-                if (tab.position == 0) {
-                    profileTabs.setTabTextColors(
-                        ContextCompat.getColor(this@PlayerProfileActivity, R.color.app_background),
-                        ContextCompat.getColor(this@PlayerProfileActivity, R.color.text_color)
-                    )
-
-                } else {
-                    profileTabs.setTabTextColors(
-                        ContextCompat.getColor(this@PlayerProfileActivity, R.color.tab_unselected),
-                        ContextCompat.getColor(this@PlayerProfileActivity, R.color.text_color)
-                    )
-                }
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {}
