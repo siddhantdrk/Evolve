@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Evolve">
-        <activity android:name=".ui.ProfileSetUpStep4Agent2Activity">
+        <activity android:name=".PlayerProfileActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

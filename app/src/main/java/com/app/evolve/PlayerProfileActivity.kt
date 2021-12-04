@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.app.evolve.fragments.MyCode
+import com.app.evolve.fragments.PlayerProfileArenaFragment
+import com.app.evolve.fragments.PlayerProfileInfoFragment
 import com.app.evolve.fragments.ScanACodeFragment
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -52,18 +54,16 @@ class PlayerProfileActivity : AppCompatActivity() {
 
     class ViewPagerAdapter(fragmentActivity: PlayerProfileActivity) :
         FragmentStateAdapter(fragmentActivity) {
-        private val arrayList = ArrayList<Fragment>()
         override fun getItemCount(): Int {
             return 2
         }
 
         override fun createFragment(position: Int): Fragment {
             return if (position == 0) {
-                ScanACodeFragment()
+                PlayerProfileInfoFragment()
             } else {
-                MyCode()
+                PlayerProfileArenaFragment()
             }
-
         }
     }
 }

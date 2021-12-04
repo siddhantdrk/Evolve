@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="26.12dp">
+
+    <TextView
+        android:id="@+id/tvEndorsementsInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/lato"
+        android:text="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <TextView
+        android:id="@+id/tvEndorsementsTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/lato"
+        android:text="Jan 2020"
+        android:textColor="@color/profile_info_label"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@id/tvEndorsementsInfo"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintEndorsements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        app:layout_constraintTop_toBottomOf="@id/tvEndorsementsTime">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civProfile"
+            android:layout_width="65.75dp"
+            android:layout_height="65.75dp"
+            android:layout_marginStart="37dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11.25dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Julie Wojta"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/civProfile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11.25dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/lato"
+            android:text="Italian Basketball Superstar"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/civProfile"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+        <TextView
+            android:id="@+id/tvPlayedWith"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11.25dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/lato"
+            android:text="Played with Jori @ Olimpiacos B.C."
+            android:textColor="@color/profile_info_label"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/civProfile"
+            app:layout_constraintTop_toBottomOf="@id/tvRole" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="30.37dp"
+        android:layout_marginEnd="47dp"
+        android:background="@color/grey_70"
+        app:layout_constraintTop_toBottomOf="@id/constraintEndorsements" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
