@@ -18,7 +18,10 @@ class AddExperienceAdapter (val context: Context) : RecyclerView.Adapter<AddExpe
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.added_profile_info_item, parent, false))
+        return ViewHolder(
+            LayoutInflater.from(context)
+                .inflate(R.layout.added_profile_experience_item, parent, false)
+        )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

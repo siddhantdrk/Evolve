@@ -84,7 +84,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvExperience"
         tools:itemCount="2"
-        tools:listitem="@layout/added_profile_info_item" />
+        tools:listitem="@layout/added_profile_experience_item" />
 
     <TextView
         android:id="@+id/tvEducation"
@@ -112,7 +112,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvEducation"
         tools:itemCount="1"
-        tools:listitem="@layout/added_profile_info_item" />
+        tools:listitem="@layout/added_profile_experience_item" />
 
 
     <TextView

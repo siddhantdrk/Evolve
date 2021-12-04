@@ -11,6 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Evolve">
+        <activity android:name=".PlayerProfileEditFollowingActivity"></activity>
+        <activity android:name=".PlayerProfileExperienceEditActivity" />
         <activity android:name=".PlayerProfileActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,9 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.WhoIsYourAgentActivity">
-
-        </activity>
+        <activity android:name=".ui.WhoIsYourAgentActivity" />
         <activity
             android:name=".EducationHistory"
             android:exported="true" />
@@ -31,7 +31,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.Evolve.NoActionBar"></activity>
+            android:theme="@style/Theme.Evolve.NoActionBar" />
         <activity android:name=".AddVides" />
         <activity android:name=".AddInterests" />
         <activity android:name=".AddTeam" />
@@ -39,8 +39,7 @@
         <activity android:name=".OnBoarding" />
         <activity android:name=".RequestSent" />
         <activity android:name=".CreateAccount" />
-        <activity android:name=".LoginActivity">
-        </activity>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".SplashActivity" />
 
         <meta-data

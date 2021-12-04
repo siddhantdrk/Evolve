@@ -18,7 +18,7 @@
 
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cvInfoImage"
+            android:id="@+id/cvFollowingImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:cardCornerRadius="13dp"
@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/ivInfoImage"
+                android:id="@+id/ivFollowingImage"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:src="@drawable/ic_launcher_background"
@@ -42,14 +42,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
             android:fontFamily="@font/lato_bold"
-            android:text="Olimpiacos B.C."
+            android:text="Sam Smith"
             android:textColor="@color/text_color"
             android:textSize="18sp"
-            app:layout_constraintStart_toEndOf="@+id/cvInfoImage"
+            app:layout_constraintStart_toEndOf="@+id/cvFollowingImage"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvLocation"
+            android:id="@+id/tvAbout1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
@@ -57,14 +57,14 @@
             android:layout_marginEnd="28dp"
             android:alpha="0.5"
             android:fontFamily="@font/lato"
-            android:text="Piraeus, Greece"
+            android:text="Baltimore, MD"
             android:textColor="@color/text_color"
             android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@+id/cvInfoImage"
+            app:layout_constraintStart_toEndOf="@+id/cvFollowingImage"
             app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
         <TextView
-            android:id="@+id/tvDuration"
+            android:id="@+id/tvAbout2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
@@ -72,11 +72,11 @@
             android:layout_marginEnd="28dp"
             android:alpha="0.5"
             android:fontFamily="@font/lato"
-            android:text="Jan 2021 - Present • 3mons"
+            android:text="Barcelona B.C."
             android:textColor="@color/text_color"
             android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@+id/cvInfoImage"
-            app:layout_constraintTop_toBottomOf="@id/tvLocation" />
+            app:layout_constraintStart_toEndOf="@+id/cvFollowingImage"
+            app:layout_constraintTop_toBottomOf="@id/tvAbout1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
