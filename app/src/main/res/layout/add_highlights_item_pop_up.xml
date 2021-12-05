@@ -3,9 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="24dp"
     android:layout_marginBottom="24dp"
-    app:cardBackgroundColor="#99ffffff"
+    app:cardBackgroundColor="#D6D6D6"
     app:cardCornerRadius="17dp"
     app:cardElevation="0dp">
 
@@ -78,7 +77,7 @@
             android:maxLines="1"
             android:paddingVertical="0dp"
             android:text="https://www.youtube.com/watch?v=mg…"
-            android:textColor="#501D1D26"
+            android:textColor="#1D1D26"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

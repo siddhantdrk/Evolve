@@ -24,8 +24,8 @@ class EditHighlightsRvAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
             val popUp = showAlertFilter(holder.itemView.context)
             popUp.isOutsideTouchable = true
             if (!popUp.isShowing) {
-                popUp.showAsDropDown(holder.itemView.highlightAddIv, 40, 20, Gravity.END)
-                dimBehind(popUp)
+                popUp.showAsDropDown(holder.itemView.highlightAddIv, 0, 20, Gravity.END)
+//                dimBehind(popUp)
             }
         }
     }
@@ -41,7 +41,11 @@ class EditHighlightsRvAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
     private fun showAlertFilter(context: Context): PopupWindow {
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = inflater.inflate(R.layout.add_highlights_item_pop_up, null)
-        return PopupWindow(view, 976, ViewGroup.LayoutParams.WRAP_CONTENT)
+        return PopupWindow(
+            view,
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
     }
 
 

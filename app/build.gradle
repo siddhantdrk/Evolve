@@ -72,4 +72,7 @@ dependencies {
 
     //qr code
     implementation 'com.budiyev.android:code-scanner:2.1.0'
+
+    //blur view
+    implementation 'com.eightbitlab:blurview:1.6.6'
 }
