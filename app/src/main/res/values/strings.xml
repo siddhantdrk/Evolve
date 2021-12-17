@@ -171,4 +171,8 @@
     <string name="deny">Deny</string>
     <string name="add_item">Add Item</string>
     <string name="paste_from_clipboard">Paste from clipboard</string>
+    <string name="management_team">Management Team</string>
+    <string name="this_is_where_you_streamline_all_aspects_of_your_career_relationships_and_lifestyle_management_agents_consultants_service_providers_etc">This is where you streamline all aspects of your career, relationships, and lifestyle management (Agents, Consultants, Service providers, etc..)</string>
+    <string name="coming_soon">Coming Soon…</string>
+    <string name="see_more_resources">See More Resources</string>
 </resources>
