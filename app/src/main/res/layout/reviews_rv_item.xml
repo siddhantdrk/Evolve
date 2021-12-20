@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="45dp">
+
+    <TextView
+        android:id="@+id/reviewDescriptionTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_light"
+        android:text="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/reviewProfileCiv"
+        android:layout_width="65.75dp"
+        android:layout_height="65.75dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@+id/reviewProfileAbout2Tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/reviewProfileNameTv" />
+
+    <TextView
+        android:id="@+id/reviewProfileNameTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11.25dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/lato_bold"
+        android:maxLines="1"
+        android:text="Julie Wojta"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/reviewProfileCiv"
+        app:layout_constraintTop_toBottomOf="@+id/reviewDescriptionTv" />
+
+    <TextView
+        android:id="@+id/reviewProfileAboutTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11.25dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/lato"
+        android:maxLines="1"
+        android:text="Italian Basketball Superstar"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/reviewProfileCiv"
+        app:layout_constraintTop_toBottomOf="@+id/reviewProfileNameTv" />
+
+    <TextView
+        android:id="@+id/reviewProfileAbout2Tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11.25dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/lato"
+        android:maxLines="1"
+        android:text="Played with Jori @ Olimpiacos B.C."
+        android:textColor="#838383"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/reviewProfileCiv"
+        app:layout_constraintTop_toBottomOf="@+id/reviewProfileAboutTv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

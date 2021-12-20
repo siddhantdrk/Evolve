@@ -179,7 +179,6 @@
     <string name="team_info_teammates_schedule">Team info, Teammates, Schedule…</string>
     <string name="schedule">Schedule</string>
     <string name="daily_calendar">Daily calendar</string>
-    <string name="management_team">Management Team</string>
     <string name="agents_managers_trainers_advisors">Agents, Managers, Trainers, Advisors</string>
     <string name="wevibe">WeVibe</string>
     <string name="off_day_experiences_recommended">Off-day experiences recommended…</string>
@@ -188,4 +187,11 @@
     <string name="contracts">Contracts</string>
     <string name="manage_reviews_revisions">Manage, Reviews, Revisions</string>
     <string name="files">Files</string>
+    <string name="connect">Connect</string>
+    <string name="reviews">(<u>53 Reviews</u>)</string>
+    <string name="sport">Sport</string>
+    <string name="agency">Agency</string>
+    <string name="Reviews">Reviews</string>
+    <string name="leave_a_review">Leave A Review</string>
+    <string name="report_agent">Report Agent</string>
 </resources>

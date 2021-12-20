@@ -741,7 +741,7 @@
                         android:id="@+id/ivImageFiles"
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:src="@drawable/ic_contracts"
+                        android:src="@drawable/ic_files"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
