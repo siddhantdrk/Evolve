@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.chip.Chip xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="52dp"
+    android:backgroundTint="#69069A"
+    android:elevation="0dp"
+    android:fontFamily="@font/lato_bold"
+    android:text="24/7 Gym Access"
+    android:textAppearance="@style/QualitiesChipStyle"
+    android:textColor="#F9FAF9"
+    android:textSize="16sp"
+    app:chipCornerRadius="19dp"
+    app:chipEndPadding="12dp"
+    app:chipStartPadding="12dp" />

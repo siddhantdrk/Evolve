@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.evolve.adapter.ClientsRvAdapter
-import com.app.evolve.databinding.FragmentAgentProfileInfoUserViewClients1Binding
+import com.app.evolve.databinding.FragmentTeamProfileInfoUserViewInfo4Binding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -16,16 +16,14 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [AgentProfileInfoUserViewClients1Fragment.newInstance] factory method to
+ * Use the [TeamProfileInfoUserViewInfo4Fragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class AgentProfileInfoUserViewClients1Fragment : Fragment() {
+class TeamProfileInfoUserViewInfo4Fragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-
-    lateinit var binding: FragmentAgentProfileInfoUserViewClients1Binding
-
+    lateinit var binding: FragmentTeamProfileInfoUserViewInfo4Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -39,10 +37,9 @@ class AgentProfileInfoUserViewClients1Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding =
-            FragmentAgentProfileInfoUserViewClients1Binding.inflate(inflater, container, false)
-        binding.clientsRv.adapter = ClientsRvAdapter()
-        binding.clientsRv.layoutManager =
+        binding = FragmentTeamProfileInfoUserViewInfo4Binding.inflate(inflater, container, false)
+        binding.playersRv.adapter = ClientsRvAdapter()
+        binding.playersRv.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         return binding.root
     }
@@ -54,12 +51,12 @@ class AgentProfileInfoUserViewClients1Fragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment AgentProfileInfoUserViewClients1Fragment.
+         * @return A new instance of fragment TeamProfileInfoUserViewInfo4Fragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            AgentProfileInfoUserViewClients1Fragment().apply {
+            TeamProfileInfoUserViewInfo4Fragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

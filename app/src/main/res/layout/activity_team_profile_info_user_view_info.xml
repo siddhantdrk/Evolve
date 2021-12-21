@@ -1,26 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_background"
-    android:scrollbarSize="0dp">
+    tools:context=".TeamProfileInfoUserViewInfoActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/app_background"
-        tools:context=".AgentProfileInfoUserViewActivity">
+        android:background="@color/app_background">
+
+        <ImageView
+            android:id="@+id/backIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="31dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/connectTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="33dp"
             android:layout_marginEnd="40dp"
             android:fontFamily="@font/lato_bold"
-            android:text="@string/connect"
+            android:text="@string/follow"
             android:textColor="@color/text_color"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -30,108 +40,119 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0" />
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:id="@+id/profilePicCiv"
-            android:layout_width="149dp"
-            android:layout_height="149dp"
-            android:layout_marginTop="31dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="144dp"
+            android:layout_marginTop="45dp"
+            android:scaleType="fitXY"
             android:src="@drawable/ic_launcher_background"
+            app:layout_constraintDimensionRatio="109:125"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/weVibeCIv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="4dp"
-            android:layout_marginBottom="2dp"
-            android:src="@drawable/ic_we_vibe_circular"
-            app:layout_constraintBottom_toBottomOf="@+id/profilePicCiv"
-            app:layout_constraintEnd_toEndOf="@+id/profilePicCiv" />
 
         <TextView
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="17dp"
+            android:layout_marginTop="31dp"
             android:fontFamily="@font/lato_bold"
-            android:text="Chris Davis"
+            android:text="Olimpiacos B.C. (W)"
             android:textColor="@color/text_color"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profilePicCiv" />
 
-        <TextView
-            android:id="@+id/tvAbout"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/aboutHll"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
             android:layout_marginTop="17dp"
-            android:fontFamily="@font/lato_bold"
-            android:text="Player Agent"
-            android:textColor="@color/black"
-            android:textSize="18sp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+            app:layout_constraintTop_toBottomOf="@+id/llInfo">
+
+            <TextView
+                android:id="@+id/tvHeadCoach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato"
+                android:text="Head Coach:"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvHeadCoachName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Giorgos Pantelakis"
+                android:textColor="#4F0774"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llInfo" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/llInfo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="31dp"
+            android:gravity="center_horizontal"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvAbout">
+            app:layout_constraintTop_toBottomOf="@+id/tvName">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="0dp"
+
+            <TextView
+                android:id="@+id/tvCurrentLocation"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="1">
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Piraeus, Greece"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_icon_material_location_on"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/tvCurrentLocation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawablePadding="4dp"
-                    android:fontFamily="@font/lato"
-                    android:gravity="center"
-                    android:maxLines="1"
-                    android:text="New York, NY"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    app:drawableStartCompat="@drawable/ic_icon_material_location_on"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:layout_width="1dp"
-                android:layout_height="25dp"
-                android:layout_marginHorizontal="15dp"
-                android:background="@color/light_grey" />
+                android:layout_height="23dp"
+                android:layout_marginHorizontal="8.5dp"
+                android:background="@color/profile_info_input_border" />
 
             <TextView
                 android:id="@+id/tvNationality"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/lato"
-                android:gravity="center_horizontal"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="start"
                 android:maxLines="1"
-                android:paddingEnd="24dp"
-                android:text="American"
+                android:text="EuroLeague Women"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -146,7 +167,7 @@
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/llInfo">
+            app:layout_constraintTop_toBottomOf="@+id/aboutHll">
 
             <TextView
                 android:id="@+id/ratingTv"
@@ -215,4 +236,5 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.core.widget.NestedScrollView>

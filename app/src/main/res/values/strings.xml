@@ -194,4 +194,15 @@
     <string name="Reviews">Reviews</string>
     <string name="leave_a_review">Leave A Review</string>
     <string name="report_agent">Report Agent</string>
+    <string name="follow">Follow</string>
+    <string name="founded">Founded:</string>
+    <string name="color">Color:</string>
+    <string name="arena">Arena:</string>
+    <string name="capacity">Capacity:</string>
+    <string name="red_and_white">Red and White</string>
+    <string name="national_athletic_center"><u>National Athletic Center</u></string>
+    <string name="amenities">Amenities</string>
+    <string name="twitter">Twitter</string>
+    <string name="website">Website</string>
+    <string name="contact">Contact</string>
 </resources>

@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragments.TeamProfileInfoUserViewInfo3Fragment">
+
+    <TextView
+        android:id="@+id/aboutLabelTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="42dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/about"
+        android:textColor="#1D1D26"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/aboutTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/lato_light"
+        android:text="Olympiacos Women’s Basketball is the women’s basketball department of the major Greek multi-sport club Olympiacos CFP, based in Piraeus."
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboutLabelTv" />
+
+    <TextView
+        android:id="@+id/FoundedLabelTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/founded"
+        android:textColor="@color/text_color"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aboutTv" />
+
+    <TextView
+        android:id="@+id/FoundedTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="37dp"
+        android:fontFamily="@font/lato"
+        android:text="July 22, 2015"
+        android:textColor="#1D1D26"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/FoundedLabelTv"
+        app:layout_constraintTop_toBottomOf="@id/aboutTv" />
+
+    <TextView
+        android:id="@+id/colorLabelTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/color"
+        android:textColor="@color/text_color"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FoundedLabelTv" />
+
+    <TextView
+        android:id="@+id/colorTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="37dp"
+        android:fontFamily="@font/lato"
+        android:text="Red and White"
+        android:textColor="#1D1D26"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/colorLabelTv"
+        app:layout_constraintTop_toBottomOf="@id/FoundedTv" />
+
+    <TextView
+        android:id="@+id/arenaLabelTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/arena"
+        android:textColor="@color/text_color"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorLabelTv" />
+
+    <TextView
+        android:id="@+id/arenaTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="37dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/national_athletic_center"
+        android:textColor="#1D1D26"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/arenaLabelTv"
+        app:layout_constraintTop_toBottomOf="@id/colorTv" />
+
+    <TextView
+        android:id="@+id/capacityLabelTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/capacity"
+        android:textColor="@color/text_color"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arenaLabelTv" />
+
+    <TextView
+        android:id="@+id/capacityTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="37dp"
+        android:fontFamily="@font/lato"
+        android:text="3500"
+        android:textColor="#1D1D26"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/capacityLabelTv"
+        app:layout_constraintTop_toBottomOf="@id/arenaTv" />
+
+    <View
+        android:id="@+id/hLine1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="50dp"
+        android:background="#22707070"
+        app:layout_constraintTop_toBottomOf="@id/capacityTv" />
+
+    <TextView
+        android:id="@+id/amenitiesLabelTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/amenities"
+        android:textColor="#1D1D26"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hLine1" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/QualitiesChipGrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="23dp"
+        android:layout_marginTop="26dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:chipSpacingHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amenitiesLabelTv">
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:backgroundTint="#69069A"
+            android:elevation="0dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="24/7 Gym Access"
+            android:textAppearance="@style/QualitiesChipStyle"
+            android:textColor="#F9FAF9"
+            android:textSize="16sp"
+            app:chipCornerRadius="19dp"
+            app:chipEndPadding="12dp"
+            app:chipStartPadding="12dp" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:backgroundTint="#69069A"
+            android:elevation="0dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Vehicle"
+            android:textAppearance="@style/QualitiesChipStyle"
+            android:textColor="#F9FAF9"
+            android:textSize="16sp"
+            app:chipCornerRadius="19dp"
+            app:chipEndPadding="12dp"
+            app:chipStartPadding="12dp" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:backgroundTint="#69069A"
+            android:elevation="0dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Housing"
+            android:textAppearance="@style/QualitiesChipStyle"
+            android:textColor="#F9FAF9"
+            android:textSize="16sp"
+            app:chipCornerRadius="19dp"
+            app:chipEndPadding="12dp"
+            app:chipStartPadding="12dp" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:backgroundTint="#69069A"
+            android:elevation="0dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Support Staff"
+            android:textAppearance="@style/QualitiesChipStyle"
+            android:textColor="#F9FAF9"
+            android:textSize="16sp"
+            app:chipCornerRadius="19dp"
+            app:chipEndPadding="12dp"
+            app:chipStartPadding="12dp" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:backgroundTint="#69069A"
+            android:elevation="0dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Meals"
+            android:textAppearance="@style/QualitiesChipStyle"
+            android:textColor="#F9FAF9"
+            android:textSize="16sp"
+            app:chipCornerRadius="19dp"
+            app:chipEndPadding="12dp"
+            app:chipStartPadding="12dp" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:backgroundTint="#69069A"
+            android:elevation="0dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Recovery"
+            android:textAppearance="@style/QualitiesChipStyle"
+            android:textColor="#F9FAF9"
+            android:textSize="16sp"
+            app:chipCornerRadius="19dp"
+            app:chipEndPadding="12dp"
+            app:chipStartPadding="12dp" />
+
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <View
+        android:id="@+id/hLine2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="50dp"
+        android:background="#22707070"
+        app:layout_constraintTop_toBottomOf="@+id/QualitiesChipGrp" />
+
+    <TextView
+        android:id="@+id/tvContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/contact"
+        android:textColor="@color/info_text_color"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hLine2" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/LinkedInCv"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37dp"
+        app:cardBackgroundColor="@color/light_grey"
+        app:cardCornerRadius="18.75dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/LinkedInVll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/LinkedInVll">
+
+        <ImageView
+            android:id="@+id/LinkedInIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_icon_awesome_linkedin_in" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/LinkedInVll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="37dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LinkedInCv"
+        app:layout_constraintTop_toBottomOf="@+id/tvContact">
+
+        <TextView
+            android:id="@+id/tvLinkedIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/linkedin"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvLinkedInUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/lato"
+            android:text="Linkedin.com/joridavis"
+            android:textColor="@color/profile_info_label"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/TwitterCv"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37dp"
+        app:cardBackgroundColor="@color/light_grey"
+        app:cardCornerRadius="18.75dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/TwitterVll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TwitterVll">
+
+        <ImageView
+            android:id="@+id/TwitterIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_icon_simple_tiktok" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/TwitterVll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="37dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TwitterCv"
+        app:layout_constraintTop_toBottomOf="@+id/LinkedInVll">
+
+        <TextView
+            android:id="@+id/tvTwitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/twitter"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvTwitterUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/lato"
+            android:text="\@Olimpiacos_wbb"
+            android:textColor="@color/profile_info_label"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/InstagramCv"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37dp"
+        app:cardBackgroundColor="@color/light_grey"
+        app:cardCornerRadius="18.75dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/InstagramVll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/InstagramVll">
+
+        <ImageView
+            android:id="@+id/InstagramIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_icon_feather_instagram" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/InstagramVll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="37dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/InstagramCv"
+        app:layout_constraintTop_toBottomOf="@+id/TwitterVll">
+
+        <TextView
+            android:id="@+id/tvInstagram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/instagram"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvInstagramUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/lato"
+            android:text="/@jorisays"
+            android:textColor="@color/profile_info_label"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/WebsiteCv"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37dp"
+        app:cardBackgroundColor="@color/light_grey"
+        app:cardCornerRadius="18.75dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/WebsiteVll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/WebsiteVll">
+
+        <ImageView
+            android:id="@+id/WebsiteIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_icon_awesome_envelope" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/WebsiteVll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="39dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/WebsiteCv"
+        app:layout_constraintTop_toBottomOf="@+id/InstagramVll">
+
+        <TextView
+            android:id="@+id/tvWebsite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/website"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvWebsiteUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/lato"
+            android:text="www.olipmiacos.gr.com/bc/women"
+            android:textColor="@color/profile_info_label"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/hLine3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="50dp"
+        android:background="#22707070"
+        app:layout_constraintTop_toBottomOf="@+id/WebsiteVll" />
+
+    <TextView
+        android:id="@+id/reviewsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/Reviews"
+        android:textColor="#1D1D26"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hLine3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reviewsRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="25dp"
+        android:nestedScrollingEnabled="false"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reviewsTv"
+        tools:itemCount="2"
+        tools:listitem="@layout/reviews_rv_item" />
+
+    <View
+        android:id="@+id/hLine4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="37dp"
+        android:background="#22707070"
+        app:layout_constraintTop_toBottomOf="@id/reviewsRv" />
+
+    <TextView
+        android:id="@+id/tvSeeAllReviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="@string/see_all"
+        android:textColor="@color/profile_setup_bg"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hLine4" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/leaveAReviewMb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="48dp"
+        android:backgroundTint="#69069A"
+        android:fontFamily="@font/lato_bold"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0"
+        android:text="@string/leave_a_review"
+        android:textAllCaps="false"
+        android:textColor="@color/app_background"
+        android:textSize="16sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSeeAllReviews" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
