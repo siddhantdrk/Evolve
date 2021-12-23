@@ -47,7 +47,7 @@
             android:layout_marginHorizontal="144dp"
             android:layout_marginTop="45dp"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/ic_team_profile"
             app:layout_constraintDimensionRatio="109:125"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

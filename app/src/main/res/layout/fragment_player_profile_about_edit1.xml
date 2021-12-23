@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="37dp"
+    tools:context=".PlayerProfileAboutEdit1Activity">
+
+    <ImageView
+        android:id="@+id/backIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="31dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintEnd_toStartOf="@+id/AboutTv"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/AboutTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/about"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/backIv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backIv" />
+
+    <TextView
+        android:id="@+id/saveTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/infoSave"
+        android:textColor="@color/profile_setup_bg"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/AboutTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/AboutTv"
+        app:layout_constraintTop_toTopOf="@+id/backIv" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/aboutTil"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginBottom="48dp"
+        app:counterTextColor="@color/text_color"
+        app:hintAnimationEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AboutTv">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/aboutTie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fontFamily="@font/lato"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:maxLength="280"
+            android:textColor="@color/text_color"
+            android:textColorHint="#B9B9B9"
+            android:textSize="18sp"
+            android:theme="@style/ProfileInfoGreyEditTextTheme" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

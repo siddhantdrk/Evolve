@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".MyCareerTeamInfo1Activity">
+
+    <ImageView
+        android:id="@+id/profilePicCiv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="144dp"
+        android:layout_marginTop="45dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_team_profile"
+        app:layout_constraintDimensionRatio="113:130"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Olimpiacos B.C. (W)"
+        android:textColor="@color/text_color"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilePicCiv" />
+
+    <LinearLayout
+        android:id="@+id/aboutHll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="17dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llInfo">
+
+        <TextView
+            android:id="@+id/tvHeadCoach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="Head Coach:"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvHeadCoachName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Giorgos Pantelakis"
+            android:textColor="#4F0774"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llInfo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="31dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvName">
+
+
+        <TextView
+            android:id="@+id/tvCurrentLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Piraeus, Greece"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:drawableStartCompat="@drawable/ic_icon_material_location_on"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="23dp"
+            android:layout_marginHorizontal="8.5dp"
+            android:background="@color/profile_info_input_border" />
+
+        <TextView
+            android:id="@+id/tvNationality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="start"
+            android:maxLines="1"
+            android:text="EuroLeague Women"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/TeammatesCv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginTop="13dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="13dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aboutHll">
+
+        <TextView
+            android:id="@+id/TeammatesComingSoonTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/coming_soon"
+            android:textColor="#69069A"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintTeammates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="17dp"
+            android:visibility="visible">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvImageTeammates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="13dp"
+                app:cardElevation="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivImageManagementTeam"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_teammates"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/cvImageTeammates"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/cvImageTeammates"
+                app:layout_constraintTop_toTopOf="@+id/cvImageTeammates"
+                app:layout_constraintVertical_bias="0.517">
+
+                <TextView
+                    android:id="@+id/tvNameTeammates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/teammates"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvAboutTeammates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="28dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/lato"
+                    android:maxLines="1"
+                    android:text="@string/current_and_past_players"
+                    android:textColor="#50000000"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/contractsCv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginTop="7dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="13dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TeammatesCv">
+
+        <TextView
+            android:id="@+id/contractsComingSoonTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/coming_soon"
+            android:textColor="#69069A"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintContracts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.3"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="17dp"
+            android:visibility="visible">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvImageContracts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="13dp"
+                app:cardElevation="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivImageContracts"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_contracts"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/cvImageContracts"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/cvImageContracts"
+                app:layout_constraintTop_toTopOf="@+id/cvImageContracts"
+                app:layout_constraintVertical_bias="0.517">
+
+                <TextView
+                    android:id="@+id/tvNameContracts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/contracts"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvAboutContracts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="28dp"
+                    android:fontFamily="@font/lato"
+                    android:text="@string/manage_reviews_revisions"
+                    android:textColor="#50000000"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

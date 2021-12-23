@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:paddingHorizontal="37dp"
+    tools:context=".PlayerProfileEditTeamActivity">
+
+    <ImageView
+        android:id="@+id/backIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="31dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintEnd_toStartOf="@+id/editTeamTv"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/editTeamTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        android:text="Edit Olimpiacos B.C."
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/backIv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backIv" />
+
+    <TextView
+        android:id="@+id/saveTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/infoSave"
+        android:textColor="@color/profile_setup_bg"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/backIv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/editTeamTv"
+        app:layout_constraintTop_toTopOf="@+id/backIv" />
+
+    <ImageView
+        android:id="@+id/profilePicCiv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="120dp"
+        android:layout_marginTop="36dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_team_profile"
+        app:layout_constraintDimensionRatio="95:109"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTeamTv" />
+
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/helvetica_neue_regular"
+        android:text="Olimpiacos B.C."
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilePicCiv" />
+
+    <TextView
+        android:id="@+id/tvAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9.74dp"
+        android:fontFamily="@font/helvetica_neue_regular"
+        android:text="Athens, Greece"
+        android:textColor="#60000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <TextView
+        android:id="@+id/tvPrimaryPositionRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/avenir_medium"
+        android:text="@string/primary_position_role"
+        android:textColor="@color/profile_info_label"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAbout"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPrimaryPositionRole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrimaryPositionRole">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiePrimaryPositionRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#40707070"
+            android:fontFamily="@font/lato"
+            android:paddingTop="0dp"
+            android:paddingBottom="18dp"
+            android:text="Point Guard"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textSize="18sp"
+            android:theme="@style/ProfileInfoGreyEditTextTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/SecondaryPositionRoleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/avenir_medium"
+        android:text="@string/secondary_position_role"
+        android:textColor="@color/profile_info_label"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilPrimaryPositionRole"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilSecondaryPositionRole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SecondaryPositionRoleTv">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieSecondaryPositionRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#40707070"
+            android:fontFamily="@font/lato"
+            android:paddingTop="0dp"
+            android:paddingBottom="18dp"
+            android:text="Point Guard"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textSize="18sp"
+            android:theme="@style/ProfileInfoGreyEditTextTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/currentlyPlayCbx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:checked="true"
+        android:fontFamily="@font/avenir_medium"
+        android:text="@string/i_currently_play_for_this_team"
+        android:textColor="@color/profile_info_label"
+        android:textSize="12sp"
+        app:buttonTint="#490D90"
+        app:layout_constraintTop_toBottomOf="@+id/tilSecondaryPositionRole" />
+
+    <LinearLayout
+        android:id="@+id/dateHll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentlyPlayCbx">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txtStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="9.87dp"
+                android:fontFamily="@font/avenir_medium"
+                android:gravity="center|start"
+                android:text="@string/start_date_label"
+                android:textAllCaps="true"
+                android:textColor="@color/profile_info_label"
+                android:textSize="10sp" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SecondaryPositionRoleTv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#40707070"
+                    android:fontFamily="@font/lato"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="18dp"
+                    android:text="January 2021"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/black"
+                    android:textSize="18sp"
+                    android:theme="@style/ProfileInfoGreyEditTextTheme"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_medium"
+                android:gravity="center|start"
+                android:text="@string/end_date_label"
+                android:textAllCaps="true"
+                android:textColor="@color/profile_info_label"
+                android:textSize="10sp" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SecondaryPositionRoleTv">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#40707070"
+                    android:fontFamily="@font/lato"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="18dp"
+                    android:text="Present"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/black"
+                    android:textSize="18sp"
+                    android:theme="@style/ProfileInfoGreyEditTextTheme"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/deleteExperienceTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="24dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/delete_experience"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateHll" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

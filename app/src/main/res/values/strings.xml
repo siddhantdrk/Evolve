@@ -205,4 +205,23 @@
     <string name="twitter">Twitter</string>
     <string name="website">Website</string>
     <string name="contact">Contact</string>
+    <string name="teammates">Teammates</string>
+    <string name="current_and_past_players">Current and past players</string>
+    <string name="are_you_sure_you_want_nto_delete">Are you sure you want To delete?</string>
+    <string name="delete">Delete</string>
+    <string name="primary_position_role">PRIMARY POSITION/ROLE</string>
+    <string name="secondary_position_role">SECONDARY POSITION/ROLE</string>
+    <string name="i_currently_play_for_this_team">I CURRENTLY PLAY FOR THIS TEAM</string>
+    <string name="start_date_label">START DATE*</string>
+    <string name="end_date_label">END DATE*</string>
+    <string name="delete_experience">Delete Experience</string>
+    <string name="select_your_top_skills_other_players_will_be_able_to_validate_them_when_they_endorse_you">Select your top skills; other players will be able to validate them when they endorse you.</string>
+    <string name="select_up_to_4_options">Select up to 4 options:</string>
+    <string name="add_skills">Add Skills</string>
+    <string name="enter_skill">Enter Skill</string>
+    <string name="let_the_community_know_who_you_are_without_the_athlete_identity_we_are_all_champions_mvps_and_top_scorers_here">Let the community know who you are without the athlete identity. We are all champions, MVPs, and top scorers here.</string>
+    <string name="linkedin_all_cap">LINKEDIN</string>
+    <string name="twitter_all_cpas">TWITTER</string>
+    <string name="facebook_all_caps">FACEBOOK</string>
+    <string name="instagram_all_caps">INSTAGRAM</string>
 </resources>

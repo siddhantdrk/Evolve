@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:paddingHorizontal="37dp"
+    tools:context=".PlayerProfileContactEditActivity">
+
+    <ImageView
+        android:id="@+id/backIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="31dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintEnd_toStartOf="@+id/ContactTv"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ContactTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/contact"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/backIv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backIv" />
+
+    <TextView
+        android:id="@+id/saveTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/infoSave"
+        android:textColor="@color/profile_setup_bg"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ContactTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/ContactTv"
+        app:layout_constraintTop_toTopOf="@+id/backIv" />
+
+    <TextView
+        android:id="@+id/tvLinkedIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/avenir_medium"
+        android:text="@string/linkedin_all_cap"
+        android:textColor="@color/profile_info_label"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ContactTv"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilLinkedIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLinkedIn">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieLinkedIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#40707070"
+            android:fontFamily="@font/lato"
+            android:paddingTop="0dp"
+            android:paddingBottom="18dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textSize="18sp"
+            android:theme="@style/ProfileInfoGreyEditTextTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvTwitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_medium"
+        android:text="@string/twitter_all_cpas"
+        android:textColor="@color/profile_info_label"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilLinkedIn"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTwitter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTwitter">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieTwitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#40707070"
+            android:fontFamily="@font/lato"
+            android:paddingTop="0dp"
+            android:paddingBottom="18dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textSize="18sp"
+            android:theme="@style/ProfileInfoGreyEditTextTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvFacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_medium"
+        android:text="@string/facebook_all_caps"
+        android:textColor="@color/profile_info_label"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilTwitter"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFacebook">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#40707070"
+            android:fontFamily="@font/lato"
+            android:paddingTop="0dp"
+            android:paddingBottom="18dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textSize="18sp"
+            android:theme="@style/ProfileInfoGreyEditTextTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvInsta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_medium"
+        android:text="@string/instagram_all_caps"
+        android:textColor="@color/profile_info_label"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilFacebook"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilInsta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInsta">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieInsta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#40707070"
+            android:fontFamily="@font/lato"
+            android:paddingTop="0dp"
+            android:paddingBottom="18dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textSize="18sp"
+            android:theme="@style/ProfileInfoGreyEditTextTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvTikTok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_medium"
+        android:text="@string/tiktok"
+        android:textAllCaps="true"
+        android:textColor="@color/profile_info_label"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilInsta"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTikTok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTikTok">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieTikTok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#40707070"
+            android:fontFamily="@font/lato"
+            android:paddingTop="0dp"
+            android:paddingBottom="18dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textSize="18sp"
+            android:theme="@style/ProfileInfoGreyEditTextTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_medium"
+        android:text="@string/email"
+        android:textAllCaps="true"
+        android:textColor="@color/profile_info_label"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilTikTok"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#40707070"
+            android:fontFamily="@font/lato"
+            android:paddingTop="0dp"
+            android:paddingBottom="18dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textSize="18sp"
+            android:theme="@style/ProfileInfoGreyEditTextTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvWebsite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_medium"
+        android:text="@string/website"
+        android:textAllCaps="true"
+        android:textColor="@color/profile_info_label"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilEmail"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilWebsite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWebsite">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieWebsite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#40707070"
+            android:fontFamily="@font/lato"
+            android:paddingTop="0dp"
+            android:paddingBottom="18dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textSize="18sp"
+            android:theme="@style/ProfileInfoGreyEditTextTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,17 +11,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Evolve">
-        <activity android:name=".TeamProfileInfoUserViewInfoActivity">
+        <activity android:name=".PlayerProfileContactEditActivity"></activity>
+        <activity android:name=".PlayerProfileAboutEdit1Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AgentProfileInfoUserViewActivity"></activity>
+        <activity android:name=".PlayerProfileAddSkillActivity" />
+        <activity android:name=".PlayerProfileSkillsEditActivity" />
+        <activity android:name=".PlayerProfileEditTeamActivity" />
+        <activity android:name=".MyCareerTeamInfo1Activity" />
+        <activity android:name=".TeamProfileInfoUserViewInfoActivity"></activity>
+        <activity android:name=".AgentProfileInfoUserViewActivity" />
         <activity android:name=".MyCareerMVPHomeActivity" />
         <activity android:name=".MyCareerMgmtTeam1Activity" />
-        <activity android:name=".PlayerProfileEditHighlightsActivity"></activity>
+        <activity android:name=".PlayerProfileEditHighlightsActivity" />
         <activity android:name=".PlayerProfileEditFollowingActivity" />
         <activity android:name=".PlayerProfileExperienceEditActivity" />
         <activity android:name=".PlayerProfileActivity" />
