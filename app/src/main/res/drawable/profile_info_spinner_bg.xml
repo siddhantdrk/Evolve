@@ -22,7 +22,7 @@
         <shape android:shape="line">
             <stroke
                 android:width="0.5dp"
-                android:color="#40707070" />
+                android:color="#66707070" />
         </shape>
     </item>
 

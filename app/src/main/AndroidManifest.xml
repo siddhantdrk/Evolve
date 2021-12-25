@@ -11,19 +11,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Evolve">
-        <activity android:name=".PlayerProfileContactEditActivity"></activity>
-        <activity android:name=".PlayerProfileAboutEdit1Activity">
+        <activity android:name=".LocationProfileReviewActivity"></activity>
+        <activity android:name=".TeamProfileReviewActivity" />
+        <activity android:name=".AgentProfileReviewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".WevolvWeVibeVibesSearchActivity" />
+        <activity android:name=".WevolvWeVibeLocationsRankItActivity" />
+        <activity android:name=".WevolvWeVibeAddATrustedConnect" />
+        <activity android:name=".WevolvWeVibeAddALocationOrVibeActivity" />
+        <activity android:name=".WevolvWeVibeAthletesSearchActivity" />
+        <activity android:name=".WevolvWeVibeLocationsSearchActivity" />
+        <activity android:name=".WevolvWeVibeAthletes1Activity" />
+        <activity android:name=".PlayerProfileContactEditActivity" />
+        <activity android:name=".PlayerProfileAboutEdit1Activity" />
         <activity android:name=".PlayerProfileAddSkillActivity" />
         <activity android:name=".PlayerProfileSkillsEditActivity" />
         <activity android:name=".PlayerProfileEditTeamActivity" />
         <activity android:name=".MyCareerTeamInfo1Activity" />
-        <activity android:name=".TeamProfileInfoUserViewInfoActivity"></activity>
+        <activity android:name=".TeamProfileInfoUserViewInfoActivity" />
         <activity android:name=".AgentProfileInfoUserViewActivity" />
         <activity android:name=".MyCareerMVPHomeActivity" />
         <activity android:name=".MyCareerMgmtTeam1Activity" />

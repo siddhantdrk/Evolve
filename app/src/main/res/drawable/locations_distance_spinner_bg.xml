@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="1dp"
+                android:color="#707070" />
+            <corners android:radius="5dp" />
+            <solid android:color="#F9FAF9" />
+            <padding android:left="8dp" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="0.5dp"
+        android:drawable="@drawable/ic_baseline_arrow_drop_down_black_24"
+        android:gravity="end|bottom" />
+
+    <item
+        android:drawable="@drawable/ic_baseline_arrow_drop_up_black_24"
+        android:gravity="end|top"
+        android:top="0.5dp" />
+
+</layer-list>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tagsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/tags"
+        android:textColor="#1D1D26"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/vibesChipGrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tagsTv">
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:elevation="0dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Active"
+            android:textAppearance="@style/QualitiesChipStyle"
+            android:textColor="#F9FAF9"
+            android:textSize="16sp"
+            app:chipBackgroundColor="#69069A"
+            app:chipCornerRadius="19dp"
+            app:chipEndPadding="12dp"
+            app:chipStartPadding="12dp" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:elevation="0dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Chill"
+            android:textAppearance="@style/QualitiesChipStyle"
+            android:textColor="#404040"
+            android:textSize="16sp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="19dp"
+            app:chipEndPadding="12dp"
+            app:chipStartPadding="12dp"
+            app:chipStrokeColor="#707070"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:elevation="0dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Hiking"
+            android:textAppearance="@style/QualitiesChipStyle"
+            android:textColor="#404040"
+            android:textSize="16sp"
+            app:chipBackgroundColor="@color/white"
+            app:chipCornerRadius="19dp"
+            app:chipEndPadding="12dp"
+            app:chipStartPadding="12dp"
+            app:chipStrokeColor="#707070"
+            app:chipStrokeWidth="1dp" />
+
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/rangeTil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="11dp"
+        android:elevation="0dp"
+        app:boxBackgroundColor="#F0F1F0"
+        app:boxBackgroundMode="filled"
+        app:boxCornerRadiusBottomEnd="6dp"
+        app:boxCornerRadiusBottomStart="6dp"
+        app:boxCornerRadiusTopEnd="6dp"
+        app:boxCornerRadiusTopStart="6dp"
+        app:boxStrokeColor="@android:color/transparent"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintAnimationEnabled="false"
+        app:layout_constraintEnd_toStartOf="@id/distanceSpinner"
+        app:layout_constraintStart_toEndOf="@+id/showResultsWithinTv"
+        app:layout_constraintTop_toBottomOf="@+id/vibesChipGrp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rangeTie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fontFamily="@font/lato_bold"
+            android:paddingHorizontal="11dp"
+            android:paddingVertical="6dp"
+            android:text="5"
+            android:textColor="#1D1D26"
+            android:textSize="20sp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/showResultsWithinTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/show_results_within"
+        android:textColor="#1D1D26"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rangeTil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rangeTil" />
+
+    <Spinner
+        android:id="@+id/distanceSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="37dp"
+        android:background="@drawable/locations_distance_spinner_bg"
+        android:entries="@array/distance_spinner"
+        android:minWidth="66dp"
+        android:popupBackground="@color/app_background"
+        android:theme="@style/StyleForSpinnerItemBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/rangeTil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rangeTil" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/topLocationsResultsRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginTop="55dp"
+        android:nestedScrollingEnabled="false"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rangeTil"
+        tools:itemCount="3"
+        tools:listitem="@layout/locations_rv_item" />
+
+    <View
+        android:id="@+id/hLine1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="40dp"
+        android:background="#4F0774"
+        app:layout_constraintTop_toBottomOf="@id/topLocationsResultsRv" />
+
+    <TextView
+        android:id="@+id/moreResultsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/more_results"
+        android:textColor="#1D1D26"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hLine1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/MoreLocationsResultsRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:nestedScrollingEnabled="false"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moreResultsTv"
+        app:layout_constraintVertical_bias="0"
+        tools:itemCount="3"
+        tools:listitem="@layout/locations_rv_item" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

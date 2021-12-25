@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
     android:layout_marginBottom="24dp"
     app:cardBackgroundColor="#D6D6D6"
     app:cardCornerRadius="17dp"
@@ -39,51 +40,57 @@
             app:layout_constraintTop_toTopOf="@+id/closeIv" />
 
         <ImageView
-            android:id="@+id/pasteIv"
-            android:layout_width="24dp"
-            android:layout_height="27dp"
+            android:id="@+id/plusIv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="52dp"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/ic_icon_awesome_plus_purple"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/closeIv" />
 
         <TextView
-            android:id="@+id/pasteTv"
+            android:id="@+id/suggestATrustedProTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/suggest_a_trusted_connect"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            app:drawableEndCompat="@drawable/ic_icon_awesome_info_circle"
+            app:layout_constraintBottom_toBottomOf="@+id/plusIv1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/plusIv1"
+            app:layout_constraintTop_toTopOf="@+id/plusIv1" />
+
+        <ImageView
+            android:id="@+id/plusIv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="52dp"
+            android:src="@drawable/ic_icon_awesome_plus_purple"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/plusIv1" />
+
+        <TextView
+            android:id="@+id/AddALocationTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:fontFamily="@font/lato_bold"
-            android:text="@string/paste_from_clipboard"
+            android:text="@string/add_a_location"
             android:textColor="@color/text_color"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/pasteIv"
+            app:layout_constraintBottom_toBottomOf="@+id/plusIv2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintStart_toEndOf="@+id/pasteIv"
-            app:layout_constraintTop_toTopOf="@+id/pasteIv" />
+            app:layout_constraintStart_toEndOf="@+id/plusIv2"
+            app:layout_constraintTop_toTopOf="@+id/plusIv2" />
 
-        <EditText
-            android:textIsSelectable="true"
-            android:id="@+id/highlightLinkEdt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="40dp"
-            android:backgroundTint="@android:color/transparent"
-            android:ellipsize="end"
-            android:focusedByDefault="false"
-            android:fontFamily="@font/lato"
-            android:inputType="text"
-            android:theme="@style/PopUpEditTextTheme"
-            android:maxLines="1"
-            android:paddingVertical="0dp"
-            android:text="https://www.youtube.com/watch?v=mg…"
-            android:textColor="#1D1D26"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pasteIv" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

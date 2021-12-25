@@ -224,4 +224,73 @@
     <string name="twitter_all_cpas">TWITTER</string>
     <string name="facebook_all_caps">FACEBOOK</string>
     <string name="instagram_all_caps">INSTAGRAM</string>
+    <string name="search">Search</string>
+    <string name="ask_a_question">Ask A Question</string>
+    <string name="rate_it">Rate It</string>
+    <string name="more_like_this">More Like This</string>
+    <string name="vibes">Vibes</string>
+    <string name="more_vibes">More Vibes</string>
+    <string name="show_results_within">Show results within</string>
+    <string name="more_results">More Results</string>
+    <string name="filter">Filter</string>
+    <string name="suggest_a_trusted_connect">Suggest A Trusted Connect</string>
+    <string name="add_a_location">Add a Location</string>
+    <string name="add_a_Vibe">Add a Vibe</string>
+    <string name="add_a_location_to_the_map">Add a location to the map</string>
+    <string name="please_provide_as_much_information_as_possible_this_will_be_publicly_visible_to_the_other_community_members">Please provide as much information as possible. This will be publicly visible to the other community members.</string>
+    <string name="name_mandatory">NAME*</string>
+    <string name="add_name">Add name</string>
+    <string name="vibe">VIBE*</string>
+    <string name="add_vibe">Add vibe</string>
+    <string name="location">LOCATION*</string>
+    <string name="add_address">Add address</string>
+    <string name="update_location_on_the_map">Update location on the map</string>
+    <string name="location_host">LOCATION HOST</string>
+    <string name="add_a_trusted_connect">Add a Trusted Connect</string>
+    <string name="add_a_trusted_connect_to_the_map">Add a trusted connect to the map</string>
+    <string name="nationality_mandatory">NATIONALITY*</string>
+    <string name="base_location">BASE LOCATION*</string>
+    <string name="restaurant_club_etc">Restaurant, club, etc.</string>
+    <string name="why_this_person_is_a_trusted_connect">Why this person is a trusted connect</string>
+    <string name="how_would_you_rank_this_place">How would you rank this place?</string>
+    <string name="the_spot">The Spot</string>
+    <string name="good_stuff">Good Stuff</string>
+    <string name="decent">Decent</string>
+    <string name="not_for_me">Not for me</string>
+    <string name="avoid">Avoid</string>
+    <string name="who_can_see_this_this">Who can see this this?</string>
+    <string name="tags">Tags</string>
+    <string name="how_would_you_rate_chris_as_an_agent">How would you rate Chris as an agent?</string>
+    <string name="how_was_your_experience_working_with_chris">How was your experience working with Chris?</string>
+    <string name="leave_a_written_review">Leave a written review</string>
+    <string name="submit_review">Submit Review</string>
+    <string name="would_you_recommend_this_team">Would you recommend this team?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="do_you_vibe_with_this_place">Do you vibe with this place?</string>
+    <string-array name="map_search_spinner_athletes">
+        <item>"Athletes"</item>
+        <item>"Locations"</item>
+        <item>"Vibes"</item>
+    </string-array>
+
+    <string-array name="map_search_spinner_locations">
+        <item>"Locations"</item>
+        <item>"Athletes"</item>
+        <item>"Vibes"</item>
+    </string-array>
+
+    <string-array name="map_search_spinner_vibes">
+        <item>"Vibes"</item>
+        <item>"Locations"</item>
+        <item>"Athletes"</item>
+    </string-array>
+
+    <string-array name="distance_spinner">
+        <item>"km"</item>
+    </string-array>
+
+    <string-array name="who_can_see_spinner">
+        <item>"Private (Only you)"</item>
+    </string-array>
 </resources>

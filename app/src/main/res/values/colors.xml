@@ -25,4 +25,5 @@
     <color name="info_text_color">#1D1D26</color>
     <color name="grey_70">#22707070</color>
     <color name="experience_edit_black_variant">#1D1D26</color>
+    <color name="pop_up_bg">#D6D6D6</color>
 </resources>

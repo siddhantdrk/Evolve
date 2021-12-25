@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".WevolvWeVibeAthletes1Activity">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/backIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:src="@drawable/ic_icon_ionic_ios_arrow_back"
+        app:layout_constraintBottom_toBottomOf="@+id/searchMCv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchMCv" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/searchMCv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="11dp"
+        app:cardBackgroundColor="#88F9FAF9"
+        app:cardCornerRadius="26dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backIv"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_baseline_search_24"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/lato"
+                android:hint="@string/search"
+                android:inputType="text"
+                android:padding="14dp"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/profile_info_label"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/searchSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/search_spinner_bg"
+                android:entries="@array/map_search_spinner_athletes"
+                android:minWidth="124dp"
+                android:popupBackground="#69069A"
+                android:textAlignment="center"
+                android:theme="@style/StyleForSpinnerItemWhite" />
+
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

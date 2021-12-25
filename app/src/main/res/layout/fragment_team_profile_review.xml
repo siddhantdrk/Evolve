@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:scrollbarSize="0dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_background"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="44dp"
+        tools:context=".TeamProfileReviewActivity">
+
+        <ImageView
+            android:id="@+id/teamProfilePicCiv"
+            android:layout_width="69dp"
+            android:layout_height="79dp"
+            android:src="@drawable/ic_team_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/HowWouldYouRateTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="29dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="How would you rate Olimpiacos as a Team?"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/teamProfilePicCiv"
+            app:layout_constraintTop_toTopOf="@+id/teamProfilePicCiv" />
+
+        <RatingBar
+            android:id="@+id/AgentRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="33.35dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:max="5"
+            android:numStars="5"
+            android:progressBackgroundTint="#b9b9b9"
+            android:progressDrawable="@drawable/custom_review_rating_bar_small"
+            android:progressTint="#69069a"
+            android:rating="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/teamProfilePicCiv"
+            app:layout_constraintTop_toBottomOf="@+id/teamProfilePicCiv" />
+
+        <TextView
+            android:id="@+id/HowWasExperienceTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50.66dp"
+            android:fontFamily="@font/lato"
+            android:letterSpacing="0"
+            android:text="How was your experience playing for Olimpiacos?"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AgentRatingBar" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilExperience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.1dp"
+            app:hintAnimationEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HowWasExperienceTv">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieExperience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#82707070"
+                android:drawableEnd="@drawable/ic_purple_check_circle"
+                android:fontFamily="@font/lato_bold"
+                android:inputType="textEmailAddress"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingBottom="18dp"
+                android:text="@string/positive"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/app_background"
+                android:textSize="20sp"
+                android:theme="@style/ProfileInfoGreyEditTextTheme" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/QualitiesChipGrp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24.5dp"
+            android:orientation="horizontal"
+            app:chipSpacingHorizontal="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilExperience">
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:elevation="0dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Good Communication"
+                android:textAppearance="@style/QualitiesChipStyle"
+                android:textColor="#F9FAF9"
+                android:textSize="16sp"
+                app:chipBackgroundColor="#69069A"
+                app:chipCornerRadius="19dp"
+                app:chipEndPadding="16dp"
+                app:chipStartPadding="16dp" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:elevation="0dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Contacts"
+                android:textAppearance="@style/QualitiesChipStyle"
+                android:textColor="#404040"
+                android:textSize="16sp"
+                app:chipBackgroundColor="@color/white"
+                app:chipCornerRadius="19dp"
+                app:chipEndPadding="16dp"
+                app:chipStartPadding="16dp"
+                app:chipStrokeColor="#707070"
+                app:chipStrokeWidth="1dp" />
+
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:elevation="0dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Local"
+                android:textAppearance="@style/QualitiesChipStyle"
+                android:textColor="#404040"
+                android:textSize="16sp"
+                app:chipBackgroundColor="@color/white"
+                app:chipCornerRadius="19dp"
+                app:chipEndPadding="16dp"
+                app:chipStartPadding="16dp"
+                app:chipStrokeColor="#707070"
+                app:chipStrokeWidth="1dp" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:elevation="0dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Negotiation"
+                android:textAppearance="@style/QualitiesChipStyle"
+                android:textColor="#F9FAF9"
+                android:textSize="16sp"
+                app:chipBackgroundColor="#69069A"
+                app:chipCornerRadius="19dp"
+                app:chipEndPadding="16dp"
+                app:chipStartPadding="16dp" />
+
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:elevation="0dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Other (Specify)"
+                android:textAppearance="@style/QualitiesChipStyle"
+                android:textColor="#404040"
+                android:textSize="16sp"
+                app:chipBackgroundColor="@color/white"
+                app:chipCornerRadius="19dp"
+                app:chipEndPadding="16dp"
+                app:chipStartPadding="16dp"
+                app:chipStrokeColor="#707070"
+                app:chipStrokeWidth="1dp" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+
+        <RadioGroup
+            android:id="@+id/NeutralNegativeRadioGrp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26.9dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/QualitiesChipGrp">
+
+            <RadioButton
+                android:id="@+id/NeutralRadioBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/radio_btn_bg"
+                android:fontFamily="@font/lato_bold"
+                android:layoutDirection="rtl"
+                android:text="@string/neutral"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/NegativeRadioBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="41.75dp"
+                android:button="@drawable/radio_btn_bg"
+                android:fontFamily="@font/lato_bold"
+                android:layoutDirection="rtl"
+                android:text="@string/negative"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+
+        </RadioGroup>
+
+        <View
+            android:id="@+id/hLine1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="49dp"
+            android:background="#4F0774"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/NeutralNegativeRadioGrp" />
+
+        <TextView
+            android:id="@+id/amenitiesLabelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/amenities"
+            android:textColor="#1D1D26"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hLine1" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/AmenitiesChipGrp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:chipSpacingHorizontal="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amenitiesLabelTv">
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:backgroundTint="#69069A"
+                android:elevation="0dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="24/7 Gym Access"
+                android:textAppearance="@style/QualitiesChipStyle"
+                android:textColor="#F9FAF9"
+                android:textSize="16sp"
+                app:chipCornerRadius="19dp"
+                app:chipEndPadding="12dp"
+                app:chipStartPadding="12dp" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:backgroundTint="#69069A"
+                android:elevation="0dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Vehicle"
+                android:textAppearance="@style/QualitiesChipStyle"
+                android:textColor="#F9FAF9"
+                android:textSize="16sp"
+                app:chipCornerRadius="19dp"
+                app:chipEndPadding="12dp"
+                app:chipStartPadding="12dp" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:backgroundTint="#69069A"
+                android:elevation="0dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Housing"
+                android:textAppearance="@style/QualitiesChipStyle"
+                android:textColor="#F9FAF9"
+                android:textSize="16sp"
+                app:chipCornerRadius="19dp"
+                app:chipEndPadding="12dp"
+                app:chipStartPadding="12dp" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:backgroundTint="#69069A"
+                android:elevation="0dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Support Staff"
+                android:textAppearance="@style/QualitiesChipStyle"
+                android:textColor="#F9FAF9"
+                android:textSize="16sp"
+                app:chipCornerRadius="19dp"
+                app:chipEndPadding="12dp"
+                app:chipStartPadding="12dp" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:backgroundTint="#69069A"
+                android:elevation="0dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Meals"
+                android:textAppearance="@style/QualitiesChipStyle"
+                android:textColor="#F9FAF9"
+                android:textSize="16sp"
+                app:chipCornerRadius="19dp"
+                app:chipEndPadding="12dp"
+                app:chipStartPadding="12dp" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:backgroundTint="#69069A"
+                android:elevation="0dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Recovery"
+                android:textAppearance="@style/QualitiesChipStyle"
+                android:textColor="#F9FAF9"
+                android:textSize="16sp"
+                app:chipCornerRadius="19dp"
+                app:chipEndPadding="12dp"
+                app:chipStartPadding="12dp" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <View
+            android:id="@+id/hLine2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="50dp"
+            android:background="#4F0774"
+            app:layout_constraintTop_toBottomOf="@+id/AmenitiesChipGrp" />
+
+        <TextView
+            android:id="@+id/WhyTrustedTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/leave_a_written_review"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hLine2" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/reviewTil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:elevation="0dp"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="filled"
+            app:boxCornerRadiusBottomEnd="13dp"
+            app:boxCornerRadiusBottomStart="13dp"
+            app:boxCornerRadiusTopEnd="13dp"
+            app:boxCornerRadiusTopStart="13dp"
+            app:boxStrokeColor="@android:color/transparent"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="500"
+            app:counterTextAppearance="@style/counterTextStyle"
+            app:counterTextColor="@color/text_color"
+            app:hintAnimationEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/WhyTrustedTv">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/reviewTie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fontFamily="@font/lato"
+                android:gravity="start|top"
+                android:hint="@string/write_your_review_here"
+                android:inputType="textMultiLine"
+                android:minLines="10"
+                android:padding="20dp"
+                android:textColor="@color/text_color"
+                android:textColorHint="#80000000"
+                android:textSize="15sp" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/hLine3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="29dp"
+            android:background="#4F0774"
+            app:layout_constraintTop_toBottomOf="@+id/reviewTil" />
+
+
+        <TextView
+            android:id="@+id/recommendTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/would_you_recommend_this_team"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hLine3" />
+
+
+        <RadioGroup
+            android:id="@+id/recommendRdGrp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recommendTv">
+
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/yesRdBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/measurable_radio_btn_bg"
+                android:checked="true"
+                android:fontFamily="@font/lato"
+                android:paddingStart="15dp"
+                android:paddingEnd="0dp"
+                android:text="@string/yes"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/noRdBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:button="@drawable/measurable_radio_btn_bg"
+                android:fontFamily="@font/lato"
+                android:paddingStart="15dp"
+                android:paddingEnd="0dp"
+                android:text="@string/no"
+                android:textColor="@color/text_color"
+                android:textSize="18sp" />
+
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="71dp"
+            android:backgroundTint="#69069A"
+            android:fontFamily="@font/lato_bold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:letterSpacing="0"
+            android:text="@string/submit_review"
+            android:textAllCaps="false"
+            android:textColor="@color/app_background"
+            android:textSize="16sp"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recommendRdGrp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
