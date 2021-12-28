@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_marginBottom="24dp"
+    app:cardBackgroundColor="@color/pop_up_bg"
+    app:cardCornerRadius="17dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="30dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="27dp">
+
+        <ImageView
+            android:id="@+id/closeIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icon_ionic_md_close"
+            app:layout_constraintEnd_toStartOf="@+id/SubmitForReviewTv"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/SubmitForReviewTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/submit_for_review_pop_up"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/closeIv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/closeIv" />
+
+
+        <TextView
+            android:id="@+id/Description1Tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="51dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center_vertical"
+            android:text="@string/one_of_our_trusted_lawyers_will_review_your_contract_to_ensure_you_are_getting_the_best_deal_possible"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/SubmitForReviewTv" />
+
+
+        <TextView
+            android:id="@+id/Description2Tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center_vertical"
+            android:text="@string/our_reviews_typically_take_24hrs_from_the_time_it_is_received_we_will_update_the_status_in_your_contracts_folder"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Description1Tv" />
+
+        <CheckBox
+            android:id="@+id/agreeCbx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:button="@drawable/ic_checkbox_unselected_btn_bg"
+            android:fontFamily="@font/lato_bold"
+            android:paddingStart="13dp"
+            android:paddingEnd="0dp"
+            android:text="@string/i_agree_to_wevolv_s_contract_review_terms"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/Description2Tv" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/submitMb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#69069A"
+            android:fontFamily="@font/lato_bold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:letterSpacing="0"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:textColor="@color/app_background"
+            android:textSize="16sp"
+            app:cornerRadius="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/agreeCbx" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

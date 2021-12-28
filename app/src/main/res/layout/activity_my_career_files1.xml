@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".MyCareerContracts1Activity">
+
+    <ImageView
+        android:id="@+id/contactsIv"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/ic_files"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/contractsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="27dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/files"
+        android:textColor="@color/text_color"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactsIv" />
+
+    <TextView
+        android:id="@+id/foldersTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/folders"
+        android:textColor="@color/text_color"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contractsTv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/foldersRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="26dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foldersTv"
+        tools:listitem="@layout/folders_rv_item" />
+
+    <TextView
+        android:id="@+id/filesTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/files"
+        android:textColor="@color/text_color"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foldersRv" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/filesRv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginTop="11dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filesTv"
+        tools:listitem="@layout/files_rv_item" />
+
+
+    <ImageView
+        android:id="@+id/fabIv"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="30dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_fab_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/filesRv"
+        app:layout_constraintEnd_toEndOf="@+id/filesRv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

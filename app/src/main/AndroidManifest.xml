@@ -11,15 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Evolve">
-        <activity android:name=".LocationProfileReviewActivity"></activity>
-        <activity android:name=".TeamProfileReviewActivity" />
-        <activity android:name=".AgentProfileReviewActivity">
+        <activity android:name=".MyCareerFilesNewNoteActivity"></activity>
+        <activity android:name=".MyCareerFilesCreateFileActivity" />
+        <activity android:name=".MyCareerFilesSingleFileActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MyCareerFiles2Activity" />
+        <activity android:name=".MyCareerFiles1Activity" />
+        <activity android:name=".MyCareerContracts1Activity" />
+        <activity android:name=".LocationProfileReviewActivity" />
+        <activity android:name=".TeamProfileReviewActivity" />
+        <activity android:name=".AgentProfileReviewActivity" />
         <activity android:name=".WevolvWeVibeVibesSearchActivity" />
         <activity android:name=".WevolvWeVibeLocationsRankItActivity" />
         <activity android:name=".WevolvWeVibeAddATrustedConnect" />

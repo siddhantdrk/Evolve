@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".MyCareerFilesSingleFileActivity">
+
+    <ImageView
+        android:id="@+id/backIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="31dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintEnd_toStartOf="@+id/TitleTv"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        android:text="Olimpiacos Contract"
+        android:textColor="@color/text_color"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/backIv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backIv" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="33.5dp"
+        android:scrollbarSize="0dp"
+        app:layout_constraintBottom_toTopOf="@id/SubmitForReviewTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TitleTv">
+
+        <TextView
+            android:id="@+id/fileTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_neue_regular"
+            android:text="@string/file_content"
+            android:textColor="#707070"
+            android:textSize="14sp" />
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/SubmitForReviewTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginBottom="52dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/submit_for_review"
+        android:textColor="@color/profile_setup_bg"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/deleteIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="37dp"
+        android:src="@drawable/ic_icon_awesome_trash"
+        app:layout_constraintBottom_toBottomOf="@+id/SubmitForReviewTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/SubmitForReviewTv" />
+
+    <ImageView
+        android:id="@+id/shareIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="33dp"
+        android:src="@drawable/ic_icon_awesome_share_alt"
+        app:layout_constraintBottom_toBottomOf="@+id/SubmitForReviewTv"
+        app:layout_constraintEnd_toStartOf="@id/deleteIv"
+        app:layout_constraintTop_toTopOf="@+id/SubmitForReviewTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

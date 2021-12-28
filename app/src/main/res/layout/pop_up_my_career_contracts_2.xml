@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_marginBottom="24dp"
+    app:cardBackgroundColor="#D6D6D6"
+    app:cardCornerRadius="17dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="30dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="48dp">
+
+        <ImageView
+            android:id="@+id/closeIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icon_ionic_md_close"
+            app:layout_constraintEnd_toStartOf="@+id/uploadTv"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/uploadTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/upload"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/closeIv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/closeIv" />
+
+
+        <TextView
+            android:id="@+id/photosTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="63dp"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center_vertical"
+            android:text="@string/photos"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/ic_icon_metro_file_picture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/closeIv" />
+
+
+        <TextView
+            android:id="@+id/ScanDocumentTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center_vertical"
+            android:text="@string/scan_document"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/ic_noun_folder_3946909_pop_up_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/photosTv" />
+
+        <TextView
+            android:id="@+id/FilesTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center_vertical"
+            android:text="@string/files"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/ic_noun_folder_3946909_pop_up_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ScanDocumentTv" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
